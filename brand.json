@@ -1,15 +1,15 @@
 {
   "company": {
     "name": "IKIGAI COMPANY",
-    "cnpj": "[A CONFIRMAR]",
+    "cnpj": null,
     "tagline": "INTELLIGENCE • PURPOSE • FUTURE",
     "headlineStatement": "A Nova Era da Tecnologia e Infraestrutura",
     "whatsapp": "5511943758957",
     "whatsappDisplay": "+55 11 94375-8957",
     "whatsappUrl": "https://wa.me/5511943758957",
-    "email": "[A CONFIRMAR]",
-    "instagram": "[A CONFIRMAR]",
-    "location": "São Paulo - SP (Atendimento Nacional) [A CONFIRMAR]"
+    "email": null,
+    "instagram": null,
+    "location": "Atendimento Comercial Oficial via WhatsApp"
   },
   "designSystem": {
     "concept": "Obsidian & Platinum Monolithic Engineering",
