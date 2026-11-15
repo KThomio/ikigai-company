@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none" role="img" aria-label="Símbolo Geométrico IKIGAI COMPANY">
+  <defs>
+    <linearGradient id="ikigai-metal" x1="24" y1="20" x2="216" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F2F4F8"/>
+      <stop offset="48%" stop-color="#C8CCD4"/>
+      <stop offset="100%" stop-color="#7F8591"/>
+    </linearGradient>
+    <linearGradient id="ikigai-metal-dim" x1="40" y1="40" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#B9BEC8"/>
+      <stop offset="100%" stop-color="#696E78"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 4 Cantoneiras Técnicas Ortogonais -->
+  <g stroke="url(#ikigai-metal)" stroke-width="6.5" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M 48 72 V 48 H 72"/>
+    <path d="M 168 48 H 192 V 72"/>
+    <path d="M 192 168 V 192 H 168"/>
+    <path d="M 72 192 H 48 V 168"/>
+  </g>
+
+  <!-- Lobos Concêntricos Esquerdo e Direito (Segundo Plano) -->
+  <g stroke="url(#ikigai-metal-dim)" stroke-width="9" stroke-linecap="round">
+    <path d="M 76 74 A 48 48 0 0 0 76 166"/>
+    <path d="M 88 86 A 34 34 0 0 0 88 154"/>
+    <path d="M 164 74 A 48 48 0 0 1 164 166"/>
+    <path d="M 152 86 A 34 34 0 0 1 152 154"/>
+  </g>
+
+  <!-- Lobos Concêntricos Superior e Inferior + Cruzamento Diagonal em X -->
+  <g stroke="#0D0E11" stroke-width="15" stroke-linecap="round">
+    <path d="M 74 84 A 48 48 0 0 1 166 84"/>
+    <path d="M 86 96 A 34 34 0 0 1 154 96"/>
+    <path d="M 74 156 A 48 48 0 0 0 166 156"/>
+    <path d="M 86 144 A 34 34 0 0 0 154 144"/>
+    <path d="M 86 96 L 154 144"/>
+    <path d="M 154 96 L 86 144"/>
+  </g>
+
+  <g stroke="url(#ikigai-metal)" stroke-width="9" stroke-linecap="round">
+    <path d="M 74 84 A 48 48 0 0 1 166 84"/>
+    <path d="M 86 96 A 34 34 0 0 1 154 96"/>
+    <path d="M 74 156 A 48 48 0 0 0 166 156"/>
+    <path d="M 86 144 A 34 34 0 0 0 154 144"/>
+    <path d="M 90 94 L 150 146"/>
+  </g>
+
+  <!-- Passagem Superior da Diagonal Oposta para Efeito de Entrelaçamento -->
+  <path d="M 150 94 L 90 146" stroke="#0D0E11" stroke-width="15" stroke-linecap="round"/>
+  <path d="M 150 94 L 90 146" stroke="url(#ikigai-metal)" stroke-width="9" stroke-linecap="round"/>
+</svg>

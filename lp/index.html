@@ -1,0 +1,1878 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IKIGAI COMPANY | Inteligência Artificial, Automação, Web &amp; Experiências NFC</title>
+  <meta name="description" content="Empresa independente de tecnologia e soluções digitais. Inteligência Artificial, automação de processos, desenvolvimento de sites de alta performance e experiências físico-digitais NFC.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="IKIGAI COMPANY">
+  <meta name="theme-color" content="#0D0E11">
+  <link rel="canonical" href="https://ikigaicompany.vercel.app/">
+  <link rel="alternate" type="text/plain" href="llms.txt" title="LLMs GEO Context">
+
+  <!-- Favicons Oficiais -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
+
+  <!-- Open Graph & Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ikigaicompany.vercel.app/">
+  <meta property="og:title" content="IKIGAI COMPANY | Intelligence • Purpose • Future">
+  <meta property="og:description" content="Inteligência artificial, automação de processos, desenvolvimento web sob medida e experiências NFC interativas.">
+  <meta property="og:image" content="assets/images/ikigai-selo-oficial.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IKIGAI COMPANY | Tecnologia &amp; Infraestrutura Digital">
+  <meta name="twitter:description" content="A Nova Era da Tecnologia e Infraestrutura. IA, Automação, Desenvolvimento Web e NFC.">
+  <meta name="twitter:image" content="assets/images/ikigai-selo-oficial.png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'ik-obsidian': '#0D0E11',
+            'ik-carbon': '#13151A',
+            'ik-graphite': '#1C1F26',
+            'ik-slate': '#353840',
+            'ik-light': '#F5F6F8',
+            'ik-platinum': '#EAECEF',
+            'ik-silver': '#C4C8D0',
+            'ik-steel': '#8C919C'
+          },
+          fontFamily: {
+            'display': ['"Montserrat"', 'system-ui', 'sans-serif'],
+            'sans': ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            'mono': ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Montserrat + Plus Jakarta Sans + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Montserrat:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- GSAP + ScrollTrigger + Lenis -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js" defer></script>
+
+  <!-- Schema.org JSON-LD: Organization + OfferCatalog NFC + FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://ikigaicompany.vercel.app/#organization",
+        "name": "IKIGAI COMPANY",
+        "slogan": "INTELLIGENCE • PURPOSE • FUTURE",
+        "url": "https://ikigaicompany.vercel.app/",
+        "logo": "https://ikigaicompany.vercel.app/assets/images/ikigai-selo-oficial.png",
+        "telephone": "+55-11-94375-8957",
+        "description": "Empresa independente de tecnologia especializada em Inteligência Artificial, automação de processos, desenvolvimento de sites e landing pages, experiências NFC e design digital.",
+        "sameAs": [
+          "https://wa.me/5511943758957"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Catálogo NFC e Soluções Digitais IKIGAI COMPANY",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Etiqueta NFC 7x4 (50 unidades)" }, "price": "3.00", "priceCurrency": "BRL" },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Etiqueta NFC 7x4 (16 unidades)" }, "price": "5.70", "priceCurrency": "BRL" },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Placa NFC 8x8" }, "price": "80.00", "priceCurrency": "BRL" },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Suporte acrílico 15x10" }, "price": "120.00", "priceCurrency": "BRL" },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Cartão NFC" }, "price": "150.00", "priceCurrency": "BRL" }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ikigaicompany.vercel.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Como funcionam as experiências NFC da IKIGAI COMPANY?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ao aproximar um smartphone compatível (Android ou iPhone) da placa, etiqueta, suporte acrílico ou cartão NFC, uma ação digital abre instantaneamente sem aplicativo extra: avaliações no Google, WhatsApp comercial, cardápio, página de serviços ou cartão digital."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Arte personalizada e frete estão inclusos nos preços base de NFC?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. Os valores listados referem-se exclusivamente aos dispositivos NFC especificados. Arte personalizada, embalagem, frete e criação de páginas exclusivas são avaliados e orçados à parte conforme a necessidade do cliente."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --ik-obsidian: #0D0E11;
+      --ik-carbon: #13151A;
+      --ik-graphite: #1C1F26;
+      --ik-slate: #353840;
+      --ik-light: #F5F6F8;
+      --ik-platinum: #EAECEF;
+      --ik-silver: #C4C8D0;
+      --ik-steel: #8C919C;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+
+    html {
+      background-color: var(--ik-obsidian);
+      color: var(--ik-platinum);
+      overflow-x: clip;
+      max-width: 100%;
+    }
+    html.lenis, html.lenis body { height: auto; }
+    .lenis.lenis-smooth { scroll-behavior: auto !important; }
+
+    body {
+      margin: 0;
+      background-color: var(--ik-obsidian);
+      color: var(--ik-platinum);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      overflow-x: clip;
+      max-width: 100%;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Textura sutil Film Grain (<2.8%) */
+    .ik-grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* Matriz de Pontos da Prancha Oficial */
+    .ik-dot-matrix {
+      background-image: radial-gradient(rgba(234, 236, 239, 0.22) 1px, transparent 1px);
+      background-size: 14px 14px;
+    }
+    .ik-dot-matrix-dark {
+      background-image: radial-gradient(rgba(13, 14, 17, 0.16) 1px, transparent 1px);
+      background-size: 16px 16px;
+    }
+
+    /* Grade Arquitetônica para seções Off-White */
+    .ik-arch-grid {
+      background-color: var(--ik-light);
+      color: var(--ik-obsidian);
+      background-image:
+        linear-gradient(to right, rgba(13, 14, 17, 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(13, 14, 17, 0.045) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+
+    /* Canvas sutil de partículas prata */
+    #ik-particles {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* React Bits: ShinyText Platina */
+    .ik-shiny-text {
+      background: linear-gradient(110deg, #9CA2AE 0%, #C4C8D0 35%, #FFFFFF 50%, #D8DCE3 65%, #9CA2AE 100%);
+      background-size: 220% auto;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: ikShine 6s linear infinite;
+    }
+    @keyframes ikShine {
+      0% { background-position: 200% center; }
+      100% { background-position: -20% center; }
+    }
+
+    /* SpotlightCard Prata Especular */
+    .ik-card {
+      position: relative;
+      background: linear-gradient(155deg, rgba(28, 31, 38, 0.88) 0%, rgba(13, 14, 17, 0.96) 100%);
+      border: 1px solid rgba(234, 236, 239, 0.13);
+      box-shadow: 0 22px 55px -16px rgba(0, 0, 0, 0.72), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      transition: border-color 0.3s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+    }
+    .ik-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(480px circle at var(--mx, 50%) var(--my, 20%), rgba(234, 236, 239, 0.09), transparent 48%);
+      z-index: 0;
+    }
+    .ik-card > * { position: relative; z-index: 1; }
+    .ik-card:hover {
+      border-color: rgba(234, 236, 239, 0.34);
+      box-shadow: 0 28px 65px -14px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+    }
+
+    /* Cantoneiras Técnicas (Marca IKIGAI) */
+    .ik-corner-tl, .ik-corner-tr, .ik-corner-bl, .ik-corner-br {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      pointer-events: none;
+      opacity: 0.45;
+      border-color: #C4C8D0;
+      z-index: 2;
+    }
+    .ik-corner-tl { top: 10px; left: 10px; border-top: 1.5px solid; border-left: 1.5px solid; }
+    .ik-corner-tr { top: 10px; right: 10px; border-top: 1.5px solid; border-right: 1.5px solid; }
+    .ik-corner-bl { bottom: 10px; left: 10px; border-bottom: 1.5px solid; border-left: 1.5px solid; }
+    .ik-corner-br { bottom: 10px; right: 10px; border-bottom: 1.5px solid; border-right: 1.5px solid; }
+
+    /* Botões Oficiais (Corte Reto 0px Suíço) */
+    .ik-btn-primary {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 12px 24px;
+      border-radius: 0px;
+      background: linear-gradient(135deg, #F2F4F8 0%, #D2D6DE 55%, #B6BCC6 100%);
+      color: #0D0E11;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      box-shadow: 0 10px 28px -8px rgba(234, 236, 239, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+      overflow: hidden;
+    }
+    .ik-btn-primary::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -65%;
+      width: 45%;
+      height: 200%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.65), transparent);
+      transform: rotate(25deg);
+      animation: ikSweep 4.8s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes ikSweep {
+      0%, 62% { left: -65%; }
+      100% { left: 135%; }
+    }
+    .ik-btn-primary:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.04);
+      box-shadow: 0 16px 36px -8px rgba(234, 236, 239, 0.35);
+    }
+
+    .ik-btn-dark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 12px 24px;
+      border-radius: 0px;
+      background-color: #0D0E11;
+      color: #EAECEF;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border: 1px solid rgba(13, 14, 17, 0.2);
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+    .ik-btn-dark:hover { background-color: #1C1F26; transform: translateY(-1px); }
+
+    .ik-btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 12px 22px;
+      border-radius: 0px;
+      background: rgba(28, 31, 38, 0.45);
+      border: 1px solid rgba(234, 236, 239, 0.24);
+      color: var(--ik-platinum);
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: background-color 0.22s ease, border-color 0.22s ease;
+    }
+    .ik-btn-outline:hover {
+      background: rgba(234, 236, 239, 0.09);
+      border-color: rgba(234, 236, 239, 0.52);
+    }
+
+    /* Header */
+    .ik-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: linear-gradient(180deg, rgba(13, 14, 17, 0.92) 0%, rgba(13, 14, 17, 0.55) 75%, transparent 100%);
+      border-bottom: 1px solid transparent;
+      transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+    }
+    .ik-header.is-scrolled {
+      background: rgba(13, 14, 17, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom-color: rgba(234, 236, 239, 0.14);
+    }
+
+    /* Frame Técnico 1:1 no Hero (Corte Reto 0px + Slot Nativo Remotion 1080x1080) */
+    .ik-motion-stage {
+      position: relative;
+      width: 100%;
+      max-width: 344px;
+      margin: 0 auto;
+      background: #0D0E11;
+      border: 1px solid rgba(234, 236, 239, 0.18);
+      touch-action: pan-y;
+      user-select: none;
+    }
+    @media (min-width: 640px) {
+      .ik-motion-stage { max-width: 420px; }
+    }
+    .ik-motion-viewport {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        linear-gradient(to right, rgba(234, 236, 239, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(234, 236, 239, 0.04) 1px, transparent 1px);
+      background-size: 36px 36px;
+      perspective: 900px;
+    }
+    .ik-motion-emblem {
+      transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+      transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: transform;
+    }
+    .ik-stage-tab {
+      min-height: 44px;
+      padding: 8px 6px;
+      background: #13151A;
+      color: #8C919C;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      cursor: pointer;
+    }
+    .ik-stage-tab:hover {
+      color: #EAECEF;
+      background: #1C1F26;
+    }
+    .ik-stage-tab.is-active {
+      background: #EAECEF;
+      color: #0D0E11;
+      font-weight: 600;
+    }
+
+    /* Pulso de Ondas NFC */
+    .nfc-pulse {
+      animation: nfcWave 2.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+    }
+    @keyframes nfcWave {
+      0% { transform: scale(0.82); opacity: 0.75; }
+      100% { transform: scale(1.45); opacity: 0; }
+    }
+
+    .ik-hairline-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(234, 236, 239, 0.22) 50%, transparent 100%);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ik-radar-ring, .ik-shiny-text, .ik-btn-primary::after, .nfc-pulse { animation: none !important; }
+    }
+  </style>
+</head>
+<body class="selection:bg-ik-platinum selection:text-ik-obsidian relative">
+
+  <div class="ik-grain" aria-hidden="true"></div>
+  <canvas id="ik-particles" aria-hidden="true"></canvas>
+
+  <!-- HEADER INSTITUCIONAL -->
+  <header id="ik-header" class="ik-header">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-3">
+      <!-- Assinatura Horizontal Oficial -->
+      <a href="#hero" class="flex items-center gap-3 min-h-[48px] group" aria-label="IKIGAI COMPANY Início">
+        <img
+          src="assets/images/ikigai-simbolo-transparente.png"
+          alt="Símbolo IKIGAI COMPANY"
+          width="42"
+          height="42"
+          class="w-10 h-10 object-contain group-hover:scale-105 transition-transform duration-300"
+        >
+        <div class="leading-none">
+          <span class="font-display font-extrabold text-base sm:text-lg tracking-[0.08em] text-ik-platinum block">IKIGAI</span>
+          <span class="font-display font-medium text-[9px] sm:text-[10px] tracking-[0.38em] text-ik-silver block mt-1">COMPANY</span>
+        </div>
+      </a>
+
+      <!-- Menu Desktop -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs uppercase tracking-[0.16em] text-ik-steel font-medium" aria-label="Navegação principal">
+        <a href="#empresa" class="hover:text-ik-platinum transition-colors py-2">A Empresa</a>
+        <a href="#solucoes" class="hover:text-ik-platinum transition-colors py-2">Soluções</a>
+        <a href="#nfc-studio" class="hover:text-ik-platinum transition-colors py-2">Experiências NFC</a>
+        <a href="#nfc-catalogo" class="hover:text-ik-platinum transition-colors py-2">Preços NFC</a>
+        <a href="#portfolio" class="hover:text-ik-platinum transition-colors py-2">Portfólio</a>
+        <a href="#processo" class="hover:text-ik-platinum transition-colors py-2">Processo</a>
+      </nav>
+
+      <div class="flex items-center gap-2.5">
+        <a
+          href="#contato"
+          class="ik-btn-primary !min-h-[44px] !px-4 sm:!px-5 !py-2 !text-xs"
+        >
+          Iniciar Projeto
+        </a>
+        <button
+          type="button"
+          id="open-mobile-nav"
+          class="lg:hidden w-12 h-12 rounded-none border border-ik-platinum/25 bg-ik-carbon/90 text-ik-platinum flex items-center justify-center"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Abrir menu"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M10 17h10"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MENU MOBILE FULLSCREEN -->
+  <div id="mobile-nav" class="fixed inset-0 z-[60] bg-ik-obsidian/98 backdrop-blur-xl flex flex-col justify-between p-6 overflow-y-auto" hidden>
+    <div class="flex items-center justify-between border-b border-white/10 pb-4">
+      <div class="flex items-center gap-3">
+        <img src="assets/images/ikigai-simbolo-transparente.png" alt="Símbolo IKIGAI" width="38" height="38" class="w-9 h-9">
+        <div class="leading-none">
+          <span class="font-display font-extrabold text-sm tracking-[0.08em] text-ik-platinum block">IKIGAI</span>
+          <span class="font-display font-medium text-[9px] tracking-[0.36em] text-ik-silver block mt-1">COMPANY</span>
+        </div>
+      </div>
+      <button type="button" id="close-mobile-nav" class="w-12 h-12 rounded-none border border-white/20 text-ik-platinum flex items-center justify-center" aria-label="Fechar menu">✕</button>
+    </div>
+
+    <nav class="my-auto py-6 space-y-1" aria-label="Menu mobile">
+      <a href="#empresa" class="js-nav-item flex items-center justify-between py-3.5 border-b border-white/10 font-display text-lg text-ik-platinum"><span>A Empresa</span><span class="font-mono text-xs text-ik-steel">01</span></a>
+      <a href="#solucoes" class="js-nav-item flex items-center justify-between py-3.5 border-b border-white/10 font-display text-lg text-ik-platinum"><span>Soluções &amp; IA</span><span class="font-mono text-xs text-ik-steel">02</span></a>
+      <a href="#nfc-studio" class="js-nav-item flex items-center justify-between py-3.5 border-b border-white/10 font-display text-lg text-ik-platinum"><span>Experiências NFC</span><span class="font-mono text-xs text-ik-steel">03</span></a>
+      <a href="#nfc-catalogo" class="js-nav-item flex items-center justify-between py-3.5 border-b border-white/10 font-display text-lg text-ik-platinum"><span>Produtos &amp; Preços NFC</span><span class="font-mono text-xs text-ik-steel">04</span></a>
+      <a href="#portfolio" class="js-nav-item flex items-center justify-between py-3.5 border-b border-white/10 font-display text-lg text-ik-platinum"><span>Portfólio</span><span class="font-mono text-xs text-ik-steel">05</span></a>
+      <a href="#processo" class="js-nav-item flex items-center justify-between py-3.5 border-b border-white/10 font-display text-lg text-ik-platinum"><span>Processo</span><span class="font-mono text-xs text-ik-steel">06</span></a>
+    </nav>
+
+    <div class="space-y-3">
+      <a href="https://wa.me/5511943758957" target="_blank" rel="noopener noreferrer" class="ik-btn-primary w-full">
+        WhatsApp Comercial: +55 11 94375-8957
+      </a>
+    </div>
+  </div>
+
+  <main id="hero" class="relative z-10">
+
+    <!-- SEÇÃO 01 — HERO INSTITUCIONAL -->
+    <section class="relative min-h-screen pt-28 sm:pt-32 pb-16 px-5 sm:px-8 flex flex-col justify-between overflow-hidden">
+      <!-- Fundo de Circuito Ortogonal SVG (fiel ao Wallpaper e Banner da Prancha) -->
+      <svg class="absolute inset-0 w-full h-full opacity-[0.14] pointer-events-none -z-10" viewBox="0 0 1440 900" fill="none" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <path d="M0 180 H260 L320 240 H540" stroke="#C4C8D0" stroke-width="1"/>
+        <path d="M1440 220 H1160 L1100 280 H880" stroke="#C4C8D0" stroke-width="1"/>
+        <path d="M120 900 V680 L190 610 H410" stroke="#8C919C" stroke-width="1"/>
+        <path d="M1320 900 V650 L1240 570 H1020" stroke="#8C919C" stroke-width="1"/>
+        <circle cx="540" cy="240" r="3" fill="#EAECEF"/>
+        <circle cx="880" cy="280" r="3" fill="#EAECEF"/>
+        <circle cx="410" cy="610" r="3" fill="#EAECEF"/>
+        <circle cx="1020" cy="570" r="3" fill="#EAECEF"/>
+      </svg>
+
+      <!-- Iluminação Radial Platina + Matrizes de Pontos nos Cantos -->
+      <div class="absolute inset-0 -z-10 pointer-events-none bg-[radial-gradient(60%_50%_at_65%_40%,rgba(234,236,239,0.09)_0%,transparent_70%)]"></div>
+      <div class="hidden sm:block absolute top-28 right-10 w-36 h-36 ik-dot-matrix opacity-40 pointer-events-none -z-10" aria-hidden="true"></div>
+      <div class="hidden sm:block absolute bottom-24 left-10 w-32 h-24 ik-dot-matrix opacity-35 pointer-events-none -z-10" aria-hidden="true"></div>
+
+      <div class="max-w-6xl mx-auto w-full my-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <!-- Coluna de Posicionamento -->
+        <div class="lg:col-span-7 space-y-6 order-2 lg:order-1">
+          <div class="gsap-hero inline-flex items-center gap-3 pl-3 py-1 border-l-2 border-ik-platinum">
+            <span class="w-1.5 h-1.5 bg-ik-platinum"></span>
+            <span class="font-mono text-[11px] tracking-[0.22em] uppercase ik-shiny-text">
+              INTELLIGENCE • PURPOSE • FUTURE
+            </span>
+          </div>
+
+          <h1 class="gsap-hero font-display font-extrabold text-[clamp(2.15rem,4.6vw,3.9rem)] leading-[1.08] tracking-[-0.02em] text-ik-platinum">
+            Engenharia digital, inteligência artificial e experiências interativas para operações reais.
+          </h1>
+
+          <p class="gsap-hero text-ik-silver text-base sm:text-lg font-light leading-relaxed max-w-2xl">
+            A <strong class="text-ik-platinum font-semibold">IKIGAI COMPANY</strong> projeta sistemas com IA, automações comerciais, plataformas web de alta performance e dispositivos NFC que conectam o ponto de atendimento físico ao ecossistema digital da sua empresa.
+          </p>
+
+          <div class="gsap-hero pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 max-w-md sm:max-w-none">
+            <a href="#contato" class="ik-btn-primary">
+              Solicitar Diagnóstico do Projeto
+            </a>
+            <a href="#nfc-studio" class="ik-btn-outline">
+              Explorar Soluções &amp; NFC
+            </a>
+          </div>
+
+          <div class="gsap-hero pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 border-t border-white/10 text-xs font-mono text-ik-steel">
+            <div><span class="text-ik-platinum block font-semibold">01 // AI</span>Soluções com IA</div>
+            <div><span class="text-ik-platinum block font-semibold">02 // AUTO</span>Automação Comercial</div>
+            <div><span class="text-ik-platinum block font-semibold">03 // WEB</span>Sites &amp; LPs</div>
+            <div><span class="text-ik-platinum block font-semibold">04 // NFC</span>Físico-Digital</div>
+          </div>
+        </div>
+
+        <!-- Coluna Visual: Frame Técnico Quadrado 1:1 (Corte Reto 0px + Vídeo Remotion 1080x1080 60fps) -->
+        <div class="lg:col-span-5 flex flex-col items-center justify-center order-1 lg:order-2">
+          <div
+            id="ik-motion-stage"
+            class="ik-motion-stage"
+            data-remotion-slot="assets/videos/ikigai-hero-showreel.mp4"
+            aria-label="Palco técnico 1:1 exibindo o showreel oficial IKIGAI COMPANY em 1080x1080 a 60 FPS"
+          >
+            <!-- Barra Superior de Telemetria -->
+            <div class="flex items-center justify-between px-3.5 py-2 border-b border-white/15 bg-ik-carbon font-mono text-[9px] tracking-[0.18em] text-ik-silver uppercase">
+              <span>IKIGAI // STAGE 1:1</span>
+              <span class="text-emerald-400">60 FPS · LIVE REEL</span>
+            </div>
+
+            <!-- Viewport 1:1 com Cantoneiras Oficiais + Showreel Remotion -->
+            <div id="ik-motion-viewport" class="ik-motion-viewport">
+              <span class="ik-corner-tl"></span><span class="ik-corner-tr"></span>
+              <span class="ik-corner-bl"></span><span class="ik-corner-br"></span>
+
+              <video
+                id="ik-hero-reel"
+                src="assets/videos/ikigai-hero-showreel.mp4"
+                poster="assets/images/ikigai-selo-oficial.png"
+                autoplay
+                loop
+                muted
+                playsinline
+                preload="auto"
+                aria-label="Animação oficial de identidade visual IKIGAI COMPANY em loop contínuo"
+                class="relative z-[1] w-full h-full object-cover block"
+              ></video>
+            </div>
+
+            <!-- Barra Segmentada de Módulos (Sem pílulas arredondadas) -->
+            <div class="grid grid-cols-4 divide-x divide-white/15 border-t border-white/15">
+              <button type="button" class="ik-stage-tab is-active" data-hub="ia">01 // IA</button>
+              <button type="button" class="ik-stage-tab" data-hub="automacao">02 // AUTO</button>
+              <button type="button" class="ik-stage-tab" data-hub="web">03 // WEB</button>
+              <button type="button" class="ik-stage-tab" data-hub="nfc">04 // NFC</button>
+            </div>
+
+            <!-- Leitura Técnica Contínua -->
+            <div id="ik-hub-readout" class="border-t border-white/15 bg-ik-carbon px-4 py-3 text-left">
+              <p id="ik-hub-title" class="font-mono text-[10px] tracking-[0.16em] text-ik-platinum uppercase m-0">
+                AI SYSTEMS · INTELIGÊNCIA APLICADA &amp; GEO
+              </p>
+              <p id="ik-hub-desc" class="text-[11px] text-ik-silver mt-1 mb-0 leading-relaxed">
+                Assistentes especializados, llms.txt e estruturas de dados prontas para buscadores de IA.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-6xl mx-auto w-full pt-8 mt-8 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 font-mono text-xs text-ik-steel">
+        <span>A NOVA ERA DA TECNOLOGIA E INFRAESTRUTURA</span>
+        <span>WHATSAPP COMERCIAL: +55 11 94375-8957</span>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 02 — APRESENTAÇÃO & FILOSOFIA (OFF-WHITE CIRÚRGICO #F5F6F8) -->
+    <section id="empresa" class="ik-arch-grid py-20 sm:py-28 px-5 sm:px-8 border-y border-black/15 relative overflow-hidden">
+      <div class="max-w-6xl mx-auto space-y-14">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-5 space-y-3 gsap-reveal">
+            <span class="font-mono text-xs tracking-[0.2em] uppercase text-neutral-500 block">
+              [ 01 // POSICIONAMENTO INSTITUCIONAL ]
+            </span>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl leading-[1.1] text-ik-obsidian">
+              Tecnologia com propósito. Design com precisão.
+            </h2>
+          </div>
+
+          <div class="lg:col-span-7 space-y-5 text-neutral-700 text-base sm:text-lg leading-relaxed gsap-reveal">
+            <p class="m-0">
+              O mercado está saturado de sites genéricos feitos em série e ferramentas desconectadas. A <strong>IKIGAI COMPANY</strong> atua na interseção entre engenharia de software, inteligência artificial aplicada, automação operacional e experiências físicas interativas via NFC.
+            </p>
+            <p class="m-0">
+              Não entregamos apenas código ou peças visuais isoladas: estruturamos a infraestrutura digital completa que organiza o atendimento da sua empresa, eleva a percepção da marca e transforma o contato presencial ou online em oportunidade real de negócio.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3 Pilares Construtivos em Matriz Contínua 1px (Sem Caixas Arredondadas) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-black/15 border border-black/15">
+          <div class="bg-white p-6 sm:p-8 space-y-3 relative">
+            <div class="flex items-center justify-between font-mono text-xs text-neutral-500 border-b border-black/10 pb-2.5">
+              <span>PILAR 01</span>
+              <span>+ ENGENHARIA</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-ik-obsidian">Arquitetura Sob Medida</h3>
+            <p class="text-sm text-neutral-600 leading-relaxed m-0">
+              Cada projeto nasce da estratégia comercial do cliente — do código enxuto com carregamento instantâneo à estrutura modular pronta para evoluir.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 sm:p-8 space-y-3 relative">
+            <div class="flex items-center justify-between font-mono text-xs text-neutral-500 border-b border-black/10 pb-2.5">
+              <span>PILAR 02</span>
+              <span>+ CONVERGÊNCIA</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-ik-obsidian">Ponte Físico-Digital</h3>
+            <p class="text-sm text-neutral-600 leading-relaxed m-0">
+              Unimos o ambiente presencial (balcão, recepção, reuniões via hardware NFC) ao fluxo digital (WhatsApp, Google Avaliações e sistemas com IA).
+            </p>
+          </div>
+
+          <div class="bg-white p-6 sm:p-8 space-y-3 relative">
+            <div class="flex items-center justify-between font-mono text-xs text-neutral-500 border-b border-black/10 pb-2.5">
+              <span>PILAR 03</span>
+              <span>+ BLINDAGEM</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-ik-obsidian">Segurança, SEO &amp; GEO</h3>
+            <p class="text-sm text-neutral-600 leading-relaxed m-0">
+              Infraestrutura preparada com cabeçalhos HTTP de proteção, conformidade LGPD, Schema estruturado e otimização nativa para buscadores de IA.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 03 — SOLUÇÕES & ÁREAS DE ATUAÇÃO (5 VERTICAIS) -->
+    <section id="solucoes" class="py-20 sm:py-28 px-5 sm:px-8 relative">
+      <div class="max-w-6xl mx-auto space-y-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 gsap-reveal">
+          <div class="space-y-3 max-w-2xl">
+            <span class="font-mono text-xs tracking-[0.2em] uppercase text-ik-steel block">
+              [ 02 // ARQUITETURA DE SOLUÇÕES ]
+            </span>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl text-ik-platinum">
+              Cinco Verticais de Execução Tecnológica
+            </h2>
+          </div>
+          <p class="text-sm sm:text-base text-ik-silver font-light max-w-md m-0">
+            Estrutura modular desenhada para atender demandas pontuais ou construir o ecossistema completo da empresa.
+          </p>
+        </div>
+
+        <!-- Matriz Arquitetônica Contínua 1px (Sem Retângulos Arredondados) -->
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-px bg-white/15 border border-white/15">
+          <!-- 01. Inteligência Artificial -->
+          <article class="md:col-span-3 ik-card rounded-none !border-0 !bg-ik-obsidian p-6 sm:p-8 flex flex-col justify-between gap-6">
+            <span class="ik-corner-tl"></span><span class="ik-corner-br"></span>
+            <div class="space-y-4">
+              <div class="flex items-center justify-between font-mono text-xs text-ik-steel border-b border-white/10 pb-3">
+                <span>VERTICAL 01 // AI SYSTEMS</span>
+                <span class="px-2.5 py-0.5 bg-white/5 border border-white/15 text-ik-platinum">IA APLICADA</span>
+              </div>
+              <h3 class="font-display font-bold text-2xl text-ik-platinum">Inteligência Artificial &amp; Soluções com IA</h3>
+              <p class="text-sm sm:text-base text-ik-silver font-light leading-relaxed m-0">
+                Assistentes digitais treinados no contexto real do negócio, estruturação de bases de conhecimento e otimização GEO (<code>llms.txt</code>) para recomendações em IAs.
+              </p>
+              <div class="p-3.5 bg-ik-carbon border-l-2 border-ik-platinum border border-white/10 text-xs text-ik-platinum">
+                <strong class="font-mono text-ik-silver block mb-1">BENEFÍCIO DIRETO:</strong>
+                Atendimento qualificado em escala, respostas precisas e posicionamento da empresa nas buscas generativas.
+              </div>
+            </div>
+            <a href="https://wa.me/5511943758957?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20Solu%C3%A7%C3%B5es%20com%20Intelig%C3%AAncia%20Artificial%20na%20IKIGAI%20COMPANY." target="_blank" rel="noopener noreferrer" class="ik-btn-outline w-full sm:w-auto self-start">
+              Consultar Soluções de IA
+            </a>
+          </article>
+
+          <!-- 02. Automação de Processos -->
+          <article class="md:col-span-3 ik-card rounded-none !border-0 !bg-ik-obsidian p-6 sm:p-8 flex flex-col justify-between gap-6">
+            <span class="ik-corner-tl"></span><span class="ik-corner-br"></span>
+            <div class="space-y-4">
+              <div class="flex items-center justify-between font-mono text-xs text-ik-steel border-b border-white/10 pb-3">
+                <span>VERTICAL 02 // WORKFLOWS</span>
+                <span class="px-2.5 py-0.5 bg-white/5 border border-white/15 text-ik-platinum">AUTOMAÇÃO</span>
+              </div>
+              <h3 class="font-display font-bold text-2xl text-ik-platinum">Automação de Processos</h3>
+              <p class="text-sm sm:text-base text-ik-silver font-light leading-relaxed m-0">
+                Integração entre formulários inteligentes, triagem de orçamentos, envio estruturado para o WhatsApp comercial e fluxos operacionais sem intervenção manual.
+              </p>
+              <div class="p-3.5 bg-ik-carbon border-l-2 border-ik-platinum border border-white/10 text-xs text-ik-platinum">
+                <strong class="font-mono text-ik-silver block mb-1">BENEFÍCIO DIRETO:</strong>
+                Elimina gargalos operacionais, reduz tempo de resposta ao cliente e padroniza a entrada de pedidos.
+              </div>
+            </div>
+            <a href="https://wa.me/5511943758957?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Automa%C3%A7%C3%A3o%20de%20Processos%20com%20a%20IKIGAI%20COMPANY." target="_blank" rel="noopener noreferrer" class="ik-btn-outline w-full sm:w-auto self-start">
+              Mapear Automação
+            </a>
+          </article>
+
+          <!-- 03. Sites & Landing Pages -->
+          <article class="md:col-span-2 ik-card rounded-none !border-0 !bg-ik-obsidian p-6 sm:p-7 flex flex-col justify-between gap-6">
+            <div class="space-y-3">
+              <span class="font-mono text-xs text-ik-steel block border-b border-white/10 pb-2.5">VERTICAL 03 // WEB</span>
+              <h3 class="font-display font-bold text-xl text-ik-platinum">Desenvolvimento de Sites &amp; Landing Pages</h3>
+              <p class="text-sm text-ik-silver font-light leading-relaxed m-0">
+                Páginas institucionais e landing pages focadas em conversão, Mobile-First real, SEO estruturado e blindagem de segurança HTTP.
+              </p>
+              <p class="text-xs text-ik-platinum/90 pt-2 border-t border-white/10 m-0">
+                <strong>Benefício:</strong> Autoridade imediata e funil claro para transformar visitantes em contatos no WhatsApp.
+              </p>
+            </div>
+            <a href="https://wa.me/5511943758957?text=Ol%C3%A1!%20Quero%20desenvolver%20um%20Site%20ou%20Landing%20Page%20com%20a%20IKIGAI%20COMPANY." target="_blank" rel="noopener noreferrer" class="ik-btn-outline w-full">
+              Solicitar Projeto Web
+            </a>
+          </article>
+
+          <!-- 04. Experiências NFC -->
+          <article class="md:col-span-2 ik-card rounded-none !border-0 !bg-ik-carbon p-6 sm:p-7 flex flex-col justify-between gap-6">
+            <div class="space-y-3">
+              <span class="font-mono text-xs text-ik-platinum block border-b border-white/15 pb-2.5">VERTICAL 04 // HARDWARE + DIGITAL</span>
+              <h3 class="font-display font-bold text-xl text-ik-platinum">Experiências NFC &amp; Soluções Interativas</h3>
+              <p class="text-sm text-ik-silver font-light leading-relaxed m-0">
+                Placas, suportes acrílicos, cartões e etiquetas inteligentes que acionam ações digitais instantâneas ao aproximar o celular.
+              </p>
+              <p class="text-xs text-ik-platinum/90 pt-2 border-t border-white/10 m-0">
+                <strong>Benefício:</strong> Mais avaliações no Google e atendimento sem atrito no ponto físico.
+              </p>
+            </div>
+            <a href="#nfc-catalogo" class="ik-btn-primary w-full">
+              Ver Preços NFC
+            </a>
+          </article>
+
+          <!-- 05. Design Digital & Motion -->
+          <article class="md:col-span-2 ik-card rounded-none !border-0 !bg-ik-obsidian p-6 sm:p-7 flex flex-col justify-between gap-6">
+            <div class="space-y-3">
+              <span class="font-mono text-xs text-ik-steel block border-b border-white/10 pb-2.5">VERTICAL 05 // VISUAL</span>
+              <h3 class="font-display font-bold text-xl text-ik-platinum">Design Digital, Motion Design &amp; 3D</h3>
+              <p class="text-sm text-ik-silver font-light leading-relaxed m-0">
+                Interfaces exclusivas, comparadores visuais de produto, interações 3D/WebGL e direções visuais alinhadas ao branding da marca.
+              </p>
+              <p class="text-xs text-ik-platinum/90 pt-2 border-t border-white/10 m-0">
+                <strong>Benefício:</strong> Diferenciação visual de alto nível que comunica valor sem parecer template pronto.
+              </p>
+            </div>
+            <a href="https://wa.me/5511943758957?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Design%20Digital%20e%20Experi%C3%AAncias%20Visuais%20na%20IKIGAI%20COMPANY." target="_blank" rel="noopener noreferrer" class="ik-btn-outline w-full">
+              Criar Experiência Visual
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="ik-hairline-divider"></div>
+
+    <!-- SEÇÃO 04 — EXPERIÊNCIAS NFC + SIMULADOR INTERATIVO DE APROXIMAÇÃO -->
+    <section id="nfc-studio" class="py-20 sm:py-28 px-5 sm:px-8 relative bg-ik-carbon/60">
+      <div class="max-w-6xl mx-auto space-y-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end gsap-reveal">
+          <div class="lg:col-span-7 space-y-3">
+            <span class="font-mono text-xs tracking-[0.2em] uppercase text-ik-platinum block">
+              [ 03 // DESTAQUE COMERCIAL · EXPERIÊNCIAS NFC ]
+            </span>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl text-ik-platinum leading-tight">
+              Aproxime o Celular. Conecte o Físico ao Digital em 1 Segundo.
+            </h2>
+          </div>
+          <div class="lg:col-span-5">
+            <p class="text-sm sm:text-base text-ik-silver font-light m-0">
+              Sem câmera, sem digitar URLs, sem aplicativos extras. Produzimos <strong class="text-ik-platinum">etiquetas, placas, suportes acrílicos, cartões e experiências personalizadas</strong> para gerar ação imediata do seu cliente.
+            </p>
+          </div>
+        </div>
+
+        <!-- Simulador Interativo NFC (Corte Reto 0px) -->
+        <div class="ik-card rounded-none p-5 sm:p-8 lg:p-10">
+          <span class="ik-corner-tl"></span><span class="ik-corner-tr"></span><span class="ik-corner-bl"></span><span class="ik-corner-br"></span>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Seletor de Cenários de Uso (Esquerda) -->
+            <div class="lg:col-span-6 space-y-0 border border-white/15 divide-y divide-white/10">
+              <span class="font-mono text-xs text-ik-steel uppercase tracking-widest block px-4 py-3 bg-ik-obsidian">
+                SIMULADOR // SELECIONE UMA APLICAÇÃO NFC:
+              </span>
+
+              <button type="button" class="js-nfc-tab w-full text-left p-4 rounded-none border border-ik-platinum/45 bg-ik-graphite/90 transition-all min-h-[64px]" data-nfc="google">
+                <div class="flex items-center justify-between gap-2">
+                  <strong class="font-display text-base text-ik-platinum">01. Avaliações no Google</strong>
+                  <span class="font-mono text-[11px] text-ik-silver">PLACA / ACRÍLICO</span>
+                </div>
+                <p class="text-xs text-ik-silver mt-1 mb-0">Aproximação no balcão abre direto a janela de avaliação 5 estrelas no Google.</p>
+              </button>
+
+              <button type="button" class="js-nfc-tab w-full text-left p-4 rounded-none border border-white/10 bg-ik-obsidian/60 hover:border-white/25 transition-all min-h-[64px]" data-nfc="whatsapp">
+                <div class="flex items-center justify-between gap-2">
+                  <strong class="font-display text-base text-ik-platinum">02. Direcionamento ao WhatsApp</strong>
+                  <span class="font-mono text-[11px] text-ik-steel">ETIQUETA / ADESIVO</span>
+                </div>
+                <p class="text-xs text-ik-steel mt-1 mb-0">Toque em embalagens ou mesas abre conversa com mensagem automática pronta.</p>
+              </button>
+
+              <button type="button" class="js-nfc-tab w-full text-left p-4 rounded-none border border-white/10 bg-ik-obsidian/60 hover:border-white/25 transition-all min-h-[64px]" data-nfc="servicos">
+                <div class="flex items-center justify-between gap-2">
+                  <strong class="font-display text-base text-ik-platinum">03. Apresentação de Serviços &amp; Cardápio</strong>
+                  <span class="font-mono text-[11px] text-ik-steel">DISPLAY / SUPORTE</span>
+                </div>
+                <p class="text-xs text-ik-steel mt-1 mb-0">Carrega o catálogo digital, tabela de serviços ou página de agendamento.</p>
+              </button>
+
+              <button type="button" class="js-nfc-tab w-full text-left p-4 rounded-none border border-white/10 bg-ik-obsidian/60 hover:border-white/25 transition-all min-h-[64px]" data-nfc="cartao">
+                <div class="flex items-center justify-between gap-2">
+                  <strong class="font-display text-base text-ik-platinum">04. Cartão Executivo &amp; Experiências Sob Medida</strong>
+                  <span class="font-mono text-[11px] text-ik-steel">CARTÃO NFC</span>
+                </div>
+                <p class="text-xs text-ik-steel mt-1 mb-0">Transfere contato (vCard), portfólio e redes comerciais em reuniões presenciais.</p>
+              </button>
+            </div>
+
+            <!-- Visor de Demonstração (Direita) -->
+            <div class="lg:col-span-6">
+              <div class="relative rounded-none bg-ik-obsidian border border-white/15 p-6 sm:p-8 flex flex-col items-center justify-center text-center min-h-[360px] overflow-hidden">
+                <div class="absolute inset-0 ik-dot-matrix opacity-25 pointer-events-none" aria-hidden="true"></div>
+
+                <!-- Dispositivo + Onda 13.56 MHz (Corte Reto 0px) -->
+                <div class="relative mb-6 flex items-center justify-center">
+                  <div class="absolute w-24 h-24 rounded-none border border-ik-silver/40 nfc-pulse"></div>
+                  <div class="w-16 h-16 rounded-none bg-ik-graphite border border-ik-platinum/40 flex items-center justify-center relative z-10">
+                    <img src="assets/images/ikigai-simbolo-transparente.png" alt="" width="36" height="36" class="w-9 h-9">
+                  </div>
+                </div>
+
+                <span id="nfc-sim-badge" class="font-mono text-[11px] tracking-[0.2em] uppercase px-3 py-1 rounded-none border border-white/15 bg-white/5 text-ik-platinum mb-3 relative z-10">
+                  SINAL NFC 13.56 MHz // GOOGLE REVIEWS
+                </span>
+
+                <h3 id="nfc-sim-title" class="font-display font-bold text-xl sm:text-2xl text-ik-platinum mb-2 relative z-10">
+                  Avaliação Instantânea no Google
+                </h3>
+
+                <p id="nfc-sim-desc" class="text-sm text-ik-silver max-w-md leading-relaxed mb-5 relative z-10">
+                  O cliente encosta o smartphone no Suporte Acrílico 15×10 ou Placa NFC 8×8 e é levado imediatamente para a tela de avaliação da sua empresa.
+                </p>
+
+                <div class="w-full max-w-sm rounded-none bg-ik-carbon border border-white/15 p-3.5 text-left relative z-10">
+                  <span class="font-mono text-[10px] text-ik-steel uppercase block">FORMATOS INDICADOS PARA ESTE FLUXO:</span>
+                  <span id="nfc-sim-formats" class="text-xs text-ik-platinum font-medium mt-1 block">
+                    Suporte Acrílico 15×10 (R$ 120,00) · Placa NFC 8×8 (R$ 80,00)
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galeria Real: NFC em Operação (Sem Bordas Arredondadas) -->
+        <div class="pt-6 border-t border-white/15 space-y-6 gsap-reveal">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+            <div>
+              <span class="font-mono text-xs tracking-[0.18em] uppercase text-ik-steel block mb-1">
+                [ DEMONSTRATIVO REAL // HARDWARE EM OPERAÇÃO ]
+              </span>
+              <h3 class="font-display font-bold text-2xl sm:text-3xl text-ik-platinum m-0">
+                Da aproximação à ação imediata no smartphone
+              </h3>
+            </div>
+            <p class="text-xs sm:text-sm text-ik-silver max-w-md m-0">
+              Registros reais de dispositivos físicos NFC IKIGAI acionando atendimento comercial no WhatsApp e captação de avaliações no Google.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/15 border border-white/15">
+            <!-- Card Vídeo Real -->
+            <div class="rounded-none overflow-hidden bg-ik-obsidian flex flex-col">
+              <div class="relative bg-black border-b border-white/10">
+                <video
+                  src="assets/videos/nfc-murano-operacao.mp4"
+                  poster="assets/images/case-murano-capa.png"
+                  controls
+                  muted
+                  playsinline
+                  preload="metadata"
+                  class="w-full aspect-[4/3] object-cover block"
+                ></video>
+              </div>
+              <div class="p-5 sm:p-6 space-y-2 mt-auto">
+                <span class="font-mono text-[10px] tracking-[0.16em] uppercase text-emerald-400">
+                  VÍDEO REAL // DISPLAY NFC + WHATSAPP AUTOMÁTICO
+                </span>
+                <h4 class="font-display font-bold text-lg text-ik-platinum m-0">
+                  Operação ao Vivo — Murano Vidraçaria
+                </h4>
+                <p class="text-xs text-ik-silver leading-relaxed m-0">
+                  Demonstração real do smartphone aproximando-se do display acrílico de balcão e abrindo instantaneamente o canal de atendimento e orçamento no WhatsApp.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card Foto Real Placas Google -->
+            <div class="rounded-none overflow-hidden bg-ik-obsidian flex flex-col">
+              <div class="relative overflow-hidden bg-ik-carbon border-b border-white/10">
+                <img
+                  src="assets/images/nfc-placas-google-reais.jpg"
+                  alt="Placas NFC reais da IKIGAI para avaliações no Google: azul e preta com ícone NFC e celular"
+                  width="576"
+                  height="1024"
+                  loading="lazy"
+                  class="w-full aspect-[4/3] object-cover object-center block"
+                >
+              </div>
+              <div class="p-5 sm:p-6 space-y-2 mt-auto">
+                <span class="font-mono text-[10px] tracking-[0.16em] uppercase text-ik-platinum">
+                  PRODUTO FÍSICO REAL // GOOGLE REVIEWS 5★
+                </span>
+                <h4 class="font-display font-bold text-lg text-ik-platinum m-0">
+                  Placas Acrílicas NFC — Avaliações no Google
+                </h4>
+                <p class="text-xs text-ik-silver leading-relaxed m-0">
+                  Acabamento personalizado em acrílico com leitor NFC integrado. O cliente encosta o aparelho e avalia sua empresa no Google em segundos, sem digitar links.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ik-hairline-divider"></div>
+
+    <!-- SEÇÃO 05 — PRODUTOS E PREÇOS NFC (MATRIZ CONSULTIVA DE INVESTIMENTO) -->
+    <section id="nfc-catalogo" class="py-20 sm:py-28 px-5 sm:px-8 relative">
+      <div class="max-w-6xl mx-auto space-y-10">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 gsap-reveal">
+          <div class="space-y-3 max-w-2xl">
+            <span class="font-mono text-xs tracking-[0.2em] uppercase text-ik-steel block">
+              [ 04 // ESPECIFICAÇÕES &amp; VALORES OFICIAIS NFC ]
+            </span>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl text-ik-platinum">
+              Dispositivos NFC &amp; Investimento Base
+            </h2>
+          </div>
+          <p class="text-sm text-ik-silver font-light max-w-md m-0">
+            Selecione os dispositivos desejados para montar automaticamente a solicitação de orçamento no WhatsApp.
+          </p>
+        </div>
+
+        <!-- Lista de Produtos NFC (Corte Reto 0px — ficha técnica) -->
+        <div class="ik-card rounded-none overflow-hidden">
+          <div class="divide-y divide-white/10" id="nfc-price-list">
+            <!-- Item 1 -->
+            <div class="p-5 sm:px-8 sm:py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-white/[0.02] transition-colors">
+              <div class="space-y-1">
+                <div class="flex flex-wrap items-center gap-2.5">
+                  <h3 class="font-display font-bold text-lg text-ik-platinum m-0">Etiqueta NFC 7×4 — 50 unidades</h3>
+                  <span class="font-mono text-[11px] px-2.5 py-0.5 rounded-none border border-white/25 bg-white/5 text-ik-platinum">LOTE ESCALA</span>
+                </div>
+                <p class="text-xs text-ik-steel m-0">Formato 7 × 4 cm · Pacote com 50 unidades (Total do lote: R$ 150,00)</p>
+              </div>
+              <div class="flex items-center justify-between sm:justify-end gap-4">
+                <div class="text-left sm:text-right">
+                  <span class="font-mono font-semibold text-lg text-ik-platinum block">R$ 3,00 <span class="text-xs text-ik-silver font-normal">/ un</span></span>
+                </div>
+                <button type="button" class="js-select-nfc ik-btn-outline !min-h-[48px] !px-4 !text-xs shrink-0" data-item="Etiqueta NFC 7x4 (Lote 50 un - R$ 3,00/un)">
+                  + Selecionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="p-5 sm:px-8 sm:py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-white/[0.02] transition-colors">
+              <div class="space-y-1">
+                <h3 class="font-display font-bold text-lg text-ik-platinum m-0">Etiqueta NFC 7×4 — 16 unidades</h3>
+                <p class="text-xs text-ik-steel m-0">Formato 7 × 4 cm · Pacote com 16 unidades (Total do lote: R$ 91,20)</p>
+              </div>
+              <div class="flex items-center justify-between sm:justify-end gap-4">
+                <div class="text-left sm:text-right">
+                  <span class="font-mono font-semibold text-lg text-ik-platinum block">R$ 5,70 <span class="text-xs text-ik-silver font-normal">/ un</span></span>
+                </div>
+                <button type="button" class="js-select-nfc ik-btn-outline !min-h-[48px] !px-4 !text-xs shrink-0" data-item="Etiqueta NFC 7x4 (Lote 16 un - R$ 5,70/un)">
+                  + Selecionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="p-5 sm:px-8 sm:py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-white/[0.02] transition-colors">
+              <div class="space-y-1">
+                <h3 class="font-display font-bold text-lg text-ik-platinum m-0">Placa NFC 8×8</h3>
+                <p class="text-xs text-ik-steel m-0">Formato 8 × 8 cm · Aplicação em parede, mesa ou ponto de atendimento</p>
+              </div>
+              <div class="flex items-center justify-between sm:justify-end gap-4">
+                <div class="text-left sm:text-right">
+                  <span class="font-mono font-semibold text-lg text-ik-platinum block">R$ 80,00</span>
+                </div>
+                <button type="button" class="js-select-nfc ik-btn-outline !min-h-[48px] !px-4 !text-xs shrink-0" data-item="Placa NFC 8x8 (R$ 80,00)">
+                  + Selecionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="p-5 sm:px-8 sm:py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-white/[0.02] transition-colors">
+              <div class="space-y-1">
+                <h3 class="font-display font-bold text-lg text-ik-platinum m-0">Suporte acrílico 15×10</h3>
+                <p class="text-xs text-ik-steel m-0">Formato 15 × 10 cm · Estrutura em acrílico vertical para balcão e recepção</p>
+              </div>
+              <div class="flex items-center justify-between sm:justify-end gap-4">
+                <div class="text-left sm:text-right">
+                  <span class="font-mono font-semibold text-lg text-ik-platinum block">R$ 120,00</span>
+                </div>
+                <button type="button" class="js-select-nfc ik-btn-outline !min-h-[48px] !px-4 !text-xs shrink-0" data-item="Suporte acrilico 15x10 (R$ 120,00)">
+                  + Selecionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Item 5 + Upsell Mini-Site -->
+            <div class="p-5 sm:px-8 sm:py-6 flex flex-col gap-4 hover:bg-white/[0.02] transition-colors">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="space-y-1">
+                  <h3 class="font-display font-bold text-lg text-ik-platinum m-0">Cartão NFC</h3>
+                  <p class="text-xs text-ik-steel m-0">Formato padrão executivo · Compartilhamento profissional com 1 aproximação</p>
+                </div>
+                <div class="flex items-center justify-between sm:justify-end gap-4">
+                  <div class="text-left sm:text-right">
+                    <span class="font-mono font-semibold text-lg text-ik-platinum block">R$ 150,00</span>
+                  </div>
+                  <button type="button" class="js-select-nfc ik-btn-outline !min-h-[48px] !px-4 !text-xs shrink-0" data-item="Cartao NFC (R$ 150,00)">
+                    + Selecionar
+                  </button>
+                </div>
+              </div>
+
+              <!-- Upsell Mini-Site Personalizado (Linha Técnica 0px) -->
+              <div class="rounded-none border-l-2 border-ik-platinum border border-white/15 bg-ik-obsidian/70 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div class="space-y-1">
+                  <span class="inline-block font-mono text-[10px] tracking-[0.14em] uppercase text-ik-platinum border border-white/25 bg-white/5 px-2.5 py-0.5 rounded-none">
+                    Upsell Opcional · Central Inteligente
+                  </span>
+                  <h4 class="font-display font-semibold text-sm text-ik-platinum m-0 pt-1">
+                    Adicionar Mini-Site / Central de Links IKIGAI no Cartão
+                  </h4>
+                  <p class="text-xs text-ik-silver m-0 leading-relaxed">
+                    Ao aproximar o cartão, direcione o cliente para uma página exclusiva conectada ao Instagram, WhatsApp, Avaliações no Google ou Site Oficial.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between sm:justify-end gap-3 shrink-0">
+                  <span class="font-mono text-xs uppercase tracking-wider text-ik-silver">Sob consulta</span>
+                  <button type="button" class="js-select-nfc ik-btn-outline !min-h-[48px] !px-4 !text-xs shrink-0" data-item="Upsell Mini-Site / Central de Links NFC (Instagram, WhatsApp, Google Avaliacoes ou Site - Sob consulta)">
+                    + Incluir Upsell
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="p-5 sm:px-8 sm:py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-white/[0.02] transition-colors">
+              <div class="space-y-1">
+                <h3 class="font-display font-bold text-lg text-ik-platinum m-0">Adesivo NFC 10×15</h3>
+                <p class="text-xs text-ik-steel m-0">Formato 10 × 15 cm · Superfícies amplas, vitrines e pontos estratégicos</p>
+              </div>
+              <div class="flex items-center justify-between sm:justify-end gap-4">
+                <div class="text-left sm:text-right">
+                  <span class="font-mono font-medium text-base text-ik-silver block">Sob consulta</span>
+                </div>
+                <button type="button" class="js-select-nfc ik-btn-outline !min-h-[48px] !px-4 !text-xs shrink-0" data-item="Adesivo NFC 10x15 (Sob consulta)">
+                  + Consultar
+                </button>
+              </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="p-5 sm:px-8 sm:py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-white/[0.02] transition-colors">
+              <div class="space-y-1">
+                <h3 class="font-display font-bold text-lg text-ik-platinum m-0">Display acrílico</h3>
+                <p class="text-xs text-ik-steel m-0">Formato especial de mesa/balcão conforme projeto e demanda</p>
+              </div>
+              <div class="flex items-center justify-between sm:justify-end gap-4">
+                <div class="text-left sm:text-right">
+                  <span class="font-mono font-medium text-base text-ik-silver block">Sob consulta</span>
+                </div>
+                <button type="button" class="js-select-nfc ik-btn-outline !min-h-[48px] !px-4 !text-xs shrink-0" data-item="Display acrilico (Sob consulta)">
+                  + Consultar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rodapé Comercial da Tabela -->
+          <div class="p-5 sm:px-8 sm:py-6 bg-ik-obsidian/90 border-t border-white/15 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+            <div class="space-y-1 max-w-2xl">
+              <p class="text-xs text-ik-silver leading-relaxed m-0">
+                <strong class="text-ik-platinum">Condições comerciais transparentes:</strong> Os valores acima referem-se exclusivamente aos dispositivos listados. Desenvolvimento de arte, criação de página de destino exclusiva, personalização especial, embalagem e frete não estão inclusos e são orçados à parte conforme confirmação.
+              </p>
+              <p id="nfc-selected-summary" class="font-mono text-xs text-ik-platinum m-0 pt-1">
+                Nenhum item selecionado ainda — selecione acima ou envie uma consulta geral.
+              </p>
+            </div>
+            <a
+              id="nfc-whatsapp-cta"
+              href="https://wa.me/5511943758957?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20or%C3%A7amento%20para%20os%20produtos%20NFC%20da%20IKIGAI%20COMPANY."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="ik-btn-primary shrink-0 w-full lg:w-auto"
+            >
+              Solicitar Pedido NFC no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ik-hairline-divider"></div>
+
+    <!-- SEÇÃO 06 — PORTFÓLIO DE CASES REAIS AUDITADOS -->
+    <section id="portfolio" class="py-20 sm:py-28 px-5 sm:px-8 relative">
+      <div class="max-w-6xl mx-auto space-y-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 gsap-reveal">
+          <div class="space-y-3 max-w-2xl">
+            <span class="font-mono text-xs tracking-[0.2em] uppercase text-ik-steel block">
+              [ 05 // PROJETOS DESENVOLVIDOS ]
+            </span>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl text-ik-platinum">
+              Portfólio &amp; Entregas Verificáveis
+            </h2>
+          </div>
+          <p class="text-sm text-ik-silver font-light max-w-md m-0">
+            Projetos reais arquitetados para empresas distintas, aplicando identidade própria, engenharia visual interativa e conversão direta.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-px bg-white/15 border border-white/15">
+          <!-- CASE 01: STUDIO CARAVELLA -->
+          <article class="ik-card rounded-none !border-0 !bg-ik-obsidian overflow-hidden flex flex-col justify-between">
+            <span class="ik-corner-tl"></span><span class="ik-corner-tr"></span>
+            <div>
+              <div class="relative aspect-[16/10] overflow-hidden bg-ik-obsidian border-b border-white/10">
+                <img
+                  src="assets/images/case-caravella-capa.jpg"
+                  alt="Placa oficial de fachada do projeto Studio Caravella"
+                  width="1024"
+                  height="640"
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-ik-obsidian via-transparent to-transparent"></div>
+                <span class="absolute top-4 left-4 font-mono text-[11px] px-3 py-1 rounded-none bg-ik-obsidian/95 border border-white/25 text-ik-platinum">
+                  CASE 01 // BARBEARIA HERITAGE
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-8 space-y-4">
+                <div>
+                  <span class="font-mono text-xs text-ik-steel block mb-1">Experiência Digital · WebGL 3D · Conversão Mobile</span>
+                  <h3 class="font-display font-bold text-2xl sm:text-3xl text-ik-platinum m-0">Studio Caravella</h3>
+                </div>
+                <p class="text-sm text-ik-silver font-light leading-relaxed m-0">
+                  Plataforma digital de lançamento para barbearia em Sorocaba/SP, integrando Medalhão 3D oficial interativo ao toque (Three.js), comparador tátil Antes &amp; Depois, vitrine expansível de serviços e direcionamento direto ao AppBarber.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="font-mono text-[11px] px-2.5 py-1 rounded-none bg-white/5 border border-white/15 text-ik-platinum">Three.js WebGL</span>
+                  <span class="font-mono text-[11px] px-2.5 py-1 rounded-none bg-white/5 border border-white/15 text-ik-platinum">GSAP + Lenis</span>
+                  <span class="font-mono text-[11px] px-2.5 py-1 rounded-none bg-white/5 border border-white/15 text-ik-platinum">Slider Visagismo</span>
+                  <span class="font-mono text-[11px] px-2.5 py-1 rounded-none bg-white/5 border border-white/15 text-ik-platinum">SEO / GEO / LGPD</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-6 sm:px-8 pb-6 sm:pb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <button type="button" class="js-open-case ik-btn-primary w-full sm:w-auto" data-case="caravella">
+                Inspecionar Case &amp; Galeria
+              </button>
+              <span class="font-mono text-[10px] tracking-[0.14em] uppercase text-ik-steel border border-white/15 rounded-none px-3.5 py-2.5 text-center">
+                Projeto Registrado · Redirecionamento em Breve
+              </span>
+            </div>
+          </article>
+
+          <!-- CASE 02: MURANO VIDRAÇARIA -->
+          <article class="ik-card rounded-none !border-0 !bg-ik-obsidian overflow-hidden flex flex-col justify-between">
+            <span class="ik-corner-tl"></span><span class="ik-corner-tr"></span>
+            <div>
+              <div class="relative aspect-[16/10] overflow-hidden bg-ik-obsidian border-b border-white/10">
+                <img
+                  src="assets/images/case-murano-capa.png"
+                  alt="Projeto real executado para Murano Vidraçaria"
+                  width="1024"
+                  height="640"
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-ik-obsidian via-transparent to-transparent"></div>
+                <span class="absolute top-4 left-4 font-mono text-[11px] px-3 py-1 rounded-none bg-ik-obsidian/95 border border-white/25 text-ik-platinum">
+                  CASE 02 // ARQUITETURA &amp; VIDRO
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-8 space-y-4">
+                <div>
+                  <span class="font-mono text-xs text-ik-steel block mb-1">Engenharia Visual · Simulador Técnico · Automação WhatsApp</span>
+                  <h3 class="font-display font-bold text-2xl sm:text-3xl text-ik-platinum m-0">Murano Vidraçaria</h3>
+                </div>
+                <p class="text-sm text-ik-silver font-light leading-relaxed m-0">
+                  Landing page técnica de alto padrão para especialista em envidraçamento de sacadas e projetos em vidro em Sorocaba/SP. Inclui simulador interativo de abertura, especificações conforme ABNT NBR 16259/14 e configurador de orçamento estruturado para WhatsApp.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="font-mono text-[11px] px-2.5 py-1 rounded-none bg-white/5 border border-white/15 text-ik-platinum">Simulador de Abertura</span>
+                  <span class="font-mono text-[11px] px-2.5 py-1 rounded-none bg-white/5 border border-white/15 text-ik-platinum">GSAP Lightbox</span>
+                  <span class="font-mono text-[11px] px-2.5 py-1 rounded-none bg-white/5 border border-white/15 text-ik-platinum">Orçamento 2 Toques</span>
+                  <span class="font-mono text-[11px] px-2.5 py-1 rounded-none bg-white/5 border border-white/15 text-ik-platinum">GEO + Headers A+</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-6 sm:px-8 pb-6 sm:pb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <button type="button" class="js-open-case ik-btn-primary w-full sm:w-auto" data-case="murano">
+                Inspecionar Case &amp; Galeria
+              </button>
+              <span class="font-mono text-[10px] tracking-[0.14em] uppercase text-ik-steel border border-white/15 rounded-none px-3.5 py-2.5 text-center">
+                Projeto Registrado · Redirecionamento em Breve
+              </span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 07 — DIFERENCIAIS & SEÇÃO 08 — PROCESSO DE TRABALHO (CONTRASTE OFF-WHITE #F5F6F8) -->
+    <section id="diferenciais" class="ik-arch-grid py-20 sm:py-28 px-5 sm:px-8 border-y border-black/10 relative">
+      <div class="max-w-6xl mx-auto space-y-20">
+        <!-- Diferenciais -->
+        <div class="space-y-10">
+          <div class="max-w-2xl space-y-3 gsap-reveal">
+            <span class="font-mono text-xs tracking-[0.2em] uppercase text-neutral-500 block">
+              [ 06 // DIFERENCIAIS COMPETITIVOS ]
+            </span>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl text-ik-obsidian">
+              Por que Empresas Escolhem a IKIGAI
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-black/15 border border-black/15">
+            <div class="bg-white p-5 space-y-2">
+              <span class="font-mono text-xs text-neutral-400">01 // FUSÃO</span>
+              <h3 class="font-display font-bold text-base text-ik-obsidian">Tecnologia + Criatividade</h3>
+              <p class="text-xs text-neutral-600 leading-relaxed m-0">Código limpo, interfaces interativas e direção visual trabalhando juntos pelo negócio.</p>
+            </div>
+            <div class="bg-white p-5 space-y-2">
+              <span class="font-mono text-xs text-neutral-400">02 // SOB MEDIDA</span>
+              <h3 class="font-display font-bold text-base text-ik-obsidian">Soluções Personalizadas</h3>
+              <p class="text-xs text-neutral-600 leading-relaxed m-0">Zero templates engessados. Respeito integral à identidade e aos objetivos da marca.</p>
+            </div>
+            <div class="bg-white p-5 space-y-2">
+              <span class="font-mono text-xs text-neutral-400">03 // INTERFACE</span>
+              <h3 class="font-display font-bold text-base text-ik-obsidian">Experiências Digitais</h3>
+              <p class="text-xs text-neutral-600 leading-relaxed m-0">Interação tátil via NFC, simuladores visuais e jornadas web de alta retenção.</p>
+            </div>
+            <div class="bg-white p-5 space-y-2">
+              <span class="font-mono text-xs text-neutral-400">04 // RETORNO</span>
+              <h3 class="font-display font-bold text-base text-ik-obsidian">IA na Prática</h3>
+              <p class="text-xs text-neutral-600 leading-relaxed m-0">Aplicação objetiva de inteligência artificial onde gera produtividade e resposta rápida.</p>
+            </div>
+            <div class="bg-white p-5 space-y-2">
+              <span class="font-mono text-xs text-neutral-400">05 // ESTRATÉGIA</span>
+              <h3 class="font-display font-bold text-base text-ik-obsidian">Atendimento Consultivo</h3>
+              <p class="text-xs text-neutral-600 leading-relaxed m-0">Diagnóstico técnico honesto antes do código para investir somente no que traz retorno.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seção 08: Processo de Trabalho em 5 Etapas (Corte Reto 0px Contínuo) -->
+        <div id="processo" class="space-y-10 pt-8 border-t border-black/15">
+          <div class="max-w-2xl space-y-3 gsap-reveal">
+            <span class="font-mono text-xs tracking-[0.2em] uppercase text-neutral-500 block">
+              [ 07 // PROCESSO DE TRABALHO ]
+            </span>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl text-ik-obsidian">
+              Do Diagnóstico à Entrega em Produção
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-px bg-white/15 border border-black/25">
+            <div class="bg-ik-obsidian text-ik-platinum p-6 space-y-3">
+              <span class="font-mono text-xs text-ik-silver block border-b border-white/10 pb-2">ETAPA 01</span>
+              <h3 class="font-display font-bold text-lg">Entendimento da Necessidade</h3>
+              <p class="text-xs text-ik-silver leading-relaxed m-0">Imersão no modelo de operação, público, canais de venda e requisitos técnicos.</p>
+            </div>
+            <div class="bg-ik-obsidian text-ik-platinum p-6 space-y-3">
+              <span class="font-mono text-xs text-ik-silver block border-b border-white/10 pb-2">ETAPA 02</span>
+              <h3 class="font-display font-bold text-lg">Planejamento</h3>
+              <p class="text-xs text-ik-silver leading-relaxed m-0">Definição da arquitetura, Design System, jornada de conversão e escopo de entregas.</p>
+            </div>
+            <div class="bg-ik-obsidian text-ik-platinum p-6 space-y-3">
+              <span class="font-mono text-xs text-ik-silver block border-b border-white/10 pb-2">ETAPA 03</span>
+              <h3 class="font-display font-bold text-lg">Desenvolvimento</h3>
+              <p class="text-xs text-ik-silver leading-relaxed m-0">Implementação de código limpo, automações, interfaces e programação de hardware NFC.</p>
+            </div>
+            <div class="bg-ik-obsidian text-ik-platinum p-6 space-y-3">
+              <span class="font-mono text-xs text-ik-silver block border-b border-white/10 pb-2">ETAPA 04</span>
+              <h3 class="font-display font-bold text-lg">Validação</h3>
+              <p class="text-xs text-ik-silver leading-relaxed m-0">Testes reais em mobile e desktop, auditoria de segurança, SEO/GEO e aprovação final.</p>
+            </div>
+            <div class="bg-ik-carbon text-ik-platinum p-6 space-y-3">
+              <span class="font-mono text-xs text-ik-platinum block border-b border-white/25 pb-2">ETAPA 05 // PRODUÇÃO</span>
+              <h3 class="font-display font-bold text-lg">Entrega</h3>
+              <p class="text-xs text-ik-silver leading-relaxed m-0">Publicação no ar, ativação das rotas comerciais e entrega técnica documentada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 09 — CONTATO COMERCIAL & CONFIGURADOR DE ORÇAMENTO -->
+    <section id="contato" class="py-20 sm:py-28 px-5 sm:px-8 relative">
+      <div class="max-w-5xl mx-auto">
+        <div class="ik-card rounded-none p-6 sm:p-12">
+          <span class="ik-corner-tl"></span><span class="ik-corner-tr"></span><span class="ik-corner-bl"></span><span class="ik-corner-br"></span>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <!-- Coluna Direta -->
+            <div class="lg:col-span-5 space-y-5">
+              <span class="font-mono text-xs tracking-[0.2em] uppercase text-ik-steel block">
+                [ 08 // CENTRAL COMERCIAL ]
+              </span>
+              <h2 class="font-display font-bold text-3xl sm:text-4xl text-ik-platinum leading-tight">
+                Vamos Estruturar Sua Próxima Solução
+              </h2>
+              <p class="text-sm sm:text-base text-ik-silver font-light leading-relaxed m-0">
+                Converse diretamente com a equipe da IKIGAI COMPANY para projetos sob medida de IA, automação, sites ou pedidos da linha NFC.
+              </p>
+
+              <div class="p-4 rounded-none bg-ik-obsidian/80 border border-white/15 space-y-2">
+                <span class="font-mono text-[11px] text-ik-steel uppercase block">WHATSAPP COMERCIAL OFICIAL</span>
+                <p class="font-mono text-lg sm:text-xl font-semibold text-ik-platinum m-0">+55 11 94375-8957</p>
+                <a href="https://wa.me/5511943758957" target="_blank" rel="noopener noreferrer" class="ik-btn-outline w-full mt-2">
+                  Abrir WhatsApp Direto
+                </a>
+              </div>
+            </div>
+
+            <!-- Formulário Zero-Storage que monta mensagem WhatsApp -->
+            <form id="ik-quote-form" class="lg:col-span-7 space-y-5 bg-ik-obsidian/60 border border-white/15 rounded-none p-5 sm:p-7">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="lead-name" class="font-mono text-xs text-ik-silver block mb-1.5">Seu Nome *</label>
+                  <input id="lead-name" type="text" required placeholder="Ex: Kaike / Empresa" class="w-full min-h-[48px] px-4 rounded-none bg-ik-carbon border border-white/15 text-sm text-ik-platinum focus:outline-none focus:border-ik-platinum">
+                </div>
+                <div>
+                  <label for="lead-company" class="font-mono text-xs text-ik-silver block mb-1.5">Empresa / Segmento</label>
+                  <input id="lead-company" type="text" placeholder="Ex: Clínica, Barbearia, Indústria" class="w-full min-h-[48px] px-4 rounded-none bg-ik-carbon border border-white/15 text-sm text-ik-platinum focus:outline-none focus:border-ik-platinum">
+                </div>
+              </div>
+
+              <div>
+                <span class="font-mono text-xs text-ik-silver block mb-2">Área de Interesse:</span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+                  <label class="flex items-center gap-2.5 p-3 rounded-none bg-ik-carbon border border-white/15 cursor-pointer min-h-[48px]">
+                    <input type="checkbox" name="scope" value="Soluções com IA" class="w-4 h-4 accent-neutral-200">
+                    <span>Soluções com IA</span>
+                  </label>
+                  <label class="flex items-center gap-2.5 p-3 rounded-none bg-ik-carbon border border-white/15 cursor-pointer min-h-[48px]">
+                    <input type="checkbox" name="scope" value="Automação de Processos" class="w-4 h-4 accent-neutral-200">
+                    <span>Automação de Processos</span>
+                  </label>
+                  <label class="flex items-center gap-2.5 p-3 rounded-none bg-ik-carbon border border-white/15 cursor-pointer min-h-[48px]">
+                    <input type="checkbox" name="scope" value="Site ou Landing Page" class="w-4 h-4 accent-neutral-200">
+                    <span>Site / Landing Page</span>
+                  </label>
+                  <label class="flex items-center gap-2.5 p-3 rounded-none bg-ik-carbon border border-white/15 cursor-pointer min-h-[48px]">
+                    <input type="checkbox" name="scope" value="Experiências & Produtos NFC" class="w-4 h-4 accent-neutral-200">
+                    <span>Experiências &amp; Produtos NFC</span>
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label for="lead-notes" class="font-mono text-xs text-ik-silver block mb-1.5">Resumo do Projeto ou Pedido NFC</label>
+                <textarea id="lead-notes" rows="3" placeholder="Descreva brevemente o objetivo ou quantidades desejadas..." class="w-full p-3.5 rounded-none bg-ik-carbon border border-white/15 text-sm text-ik-platinum focus:outline-none focus:border-ik-platinum"></textarea>
+              </div>
+
+              <label class="flex items-start gap-2.5 text-xs text-ik-silver cursor-pointer">
+                <input id="lead-lgpd" type="checkbox" required checked class="mt-0.5 w-4 h-4 accent-neutral-200">
+                <span>Concordo em iniciar atendimento via WhatsApp conforme a <button type="button" class="js-open-lgpd underline text-ik-platinum">Política de Privacidade &amp; LGPD</button>.</span>
+              </label>
+
+              <button type="submit" class="ik-btn-primary w-full">
+                Enviar Solicitação no WhatsApp (+55 11 94375-8957)
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER INSTITUCIONAL -->
+  <footer class="relative z-10 border-t border-white/10 bg-ik-obsidian pt-14 pb-28 md:pb-14 px-5 sm:px-8 text-center">
+    <div class="max-w-4xl mx-auto space-y-5">
+      <img src="assets/images/ikigai-simbolo-transparente.png" alt="Emblema IKIGAI COMPANY" width="56" height="56" loading="lazy" class="w-14 h-14 mx-auto opacity-90">
+      <p class="font-mono text-xs tracking-[0.22em] text-ik-silver uppercase m-0">
+        INTELLIGENCE • PURPOSE • FUTURE
+      </p>
+      <p class="text-xs text-ik-steel m-0">
+        IKIGAI COMPANY · WhatsApp Comercial: +55 11 94375-8957 · CNPJ: [A CONFIRMAR]
+      </p>
+      <div class="flex flex-wrap justify-center gap-6 text-xs text-ik-platinum">
+        <button type="button" class="js-open-lgpd underline min-h-[44px] px-2">Política de Privacidade &amp; LGPD</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BARRA FIXA MOBILE -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-ik-obsidian/95 border-t border-white/15 p-3 grid grid-cols-2 gap-3">
+    <a href="#nfc-catalogo" class="ik-btn-outline !min-h-[48px] !py-2 !px-3 !text-xs w-full">
+      Preços NFC
+    </a>
+    <a href="https://wa.me/5511943758957" target="_blank" rel="noopener noreferrer" class="ik-btn-primary !min-h-[48px] !py-2 !px-3 !text-xs w-full">
+      WhatsApp
+    </a>
+  </div>
+
+  <!-- MODAL DE INSPEÇÃO DE CASE DO PORTFÓLIO -->
+  <div id="case-modal" class="fixed inset-0 z-[80] bg-ik-obsidian/92 backdrop-blur-md flex items-center justify-center p-4 overflow-x-hidden" role="dialog" aria-modal="true" aria-labelledby="case-modal-title" hidden>
+    <div class="ik-card w-full max-w-[calc(100vw-2rem)] sm:max-w-3xl rounded-none p-5 sm:p-8 max-h-[88vh] overflow-y-auto overflow-x-hidden space-y-5">
+      <div class="flex items-start justify-between gap-3 border-b border-white/10 pb-4">
+        <div class="min-w-0 flex-1">
+          <span id="case-modal-cat" class="font-mono text-xs text-ik-silver block break-words"></span>
+          <h2 id="case-modal-title" class="font-display font-bold text-2xl sm:text-3xl text-ik-platinum m-0 mt-1 break-words"></h2>
+        </div>
+        <button type="button" id="close-case-modal" class="w-11 h-11 rounded-none border border-white/20 text-ik-platinum shrink-0" aria-label="Fechar janela">✕</button>
+      </div>
+
+      <p id="case-modal-desc" class="text-sm text-ik-silver leading-relaxed m-0"></p>
+
+      <div id="case-modal-gallery" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+
+      <div class="p-4 rounded-none bg-ik-obsidian border border-white/15">
+        <span class="font-mono text-xs text-ik-platinum block mb-2">SOLUÇÕES IMPLEMENTADAS PELA IKIGAI COMPANY:</span>
+        <ul id="case-modal-solutions" class="text-xs text-ik-silver space-y-1.5 pl-4 m-0 list-disc"></ul>
+      </div>
+
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
+        <a id="case-modal-wa" href="https://wa.me/5511943758957" target="_blank" rel="noopener noreferrer" class="ik-btn-primary w-full sm:w-auto">
+          Quero um Projeto Neste Nível
+        </a>
+        <span class="font-mono text-[10px] tracking-[0.14em] uppercase text-ik-steel border border-white/15 rounded-none px-4 py-2.5 text-center">
+          Projeto Registrado · Redirecionamento em Breve
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL LGPD ZERO-STORAGE -->
+  <div id="lgpd-modal" class="fixed inset-0 z-[85] bg-ik-obsidian/92 backdrop-blur-md flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="lgpd-title" hidden>
+    <div class="ik-card max-w-lg w-full rounded-none p-6 sm:p-8 space-y-4">
+      <div class="flex items-center justify-between border-b border-white/10 pb-3">
+        <h2 id="lgpd-title" class="font-display font-bold text-xl text-ik-platinum m-0">Privacidade &amp; Conformidade LGPD</h2>
+        <button type="button" id="close-lgpd-modal" class="w-10 h-10 rounded-none border border-white/20 text-ik-platinum" aria-label="Fechar modal">✕</button>
+      </div>
+      <div class="space-y-3 text-sm text-ik-silver leading-relaxed">
+        <p class="m-0"><strong>1. Arquitetura Zero-Storage:</strong> O site institucional da <strong>IKIGAI COMPANY</strong> não utiliza banco de dados oculto nem cookies invasivos de rastreamento. Os dados digitados no configurador apenas montam a mensagem no seu navegador para envio voluntário ao WhatsApp.</p>
+        <p class="m-0"><strong>2. Finalidade Comercial (Lei nº 13.709/2018):</strong> As informações enviadas destinam-se exclusivamente ao atendimento consultivo e elaboração de orçamento solicitado pelo titular.</p>
+        <p class="m-0"><strong>3. Controlador:</strong> IKIGAI COMPANY · CNPJ: [A CONFIRMAR] · WhatsApp Oficial: +55 11 94375-8957.</p>
+      </div>
+      <button type="button" id="ack-lgpd-btn" class="ik-btn-primary w-full">Entendido</button>
+    </div>
+  </div>
+
+  <!-- SCRIPTS PRINCIPAIS -->
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      const WA_NUMBER = '5511943758957';
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // 1. Header Scroll & Menu Mobile
+      const header = document.getElementById('ik-header');
+      const mobileNav = document.getElementById('mobile-nav');
+      const openNavBtn = document.getElementById('open-mobile-nav');
+      const closeNavBtn = document.getElementById('close-mobile-nav');
+
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 24) header.classList.add('is-scrolled');
+        else header.classList.remove('is-scrolled');
+      }, { passive: true });
+
+      function toggleNav(show) {
+        mobileNav.hidden = !show;
+        openNavBtn.setAttribute('aria-expanded', String(show));
+        document.body.style.overflow = show ? 'hidden' : '';
+      }
+      if (openNavBtn && closeNavBtn) {
+        openNavBtn.addEventListener('click', function () { toggleNav(true); });
+        closeNavBtn.addEventListener('click', function () { toggleNav(false); });
+        document.querySelectorAll('.js-nav-item').forEach(function (el) {
+          el.addEventListener('click', function () { toggleNav(false); });
+        });
+      }
+
+      // 2. Lenis + GSAP ScrollTrigger
+      if (window.Lenis && !prefersReducedMotion) {
+        const lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+        if (window.gsap && window.ScrollTrigger) {
+          gsap.registerPlugin(ScrollTrigger);
+          lenis.on('scroll', ScrollTrigger.update);
+          gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
+          gsap.ticker.lagSmoothing(0);
+        } else {
+          function raf(t) { lenis.raf(t); requestAnimationFrame(raf); }
+          requestAnimationFrame(raf);
+        }
+      }
+
+      if (window.gsap && !prefersReducedMotion) {
+        gsap.fromTo('.gsap-hero',
+          { opacity: 0, y: 20, filter: 'blur(6px)' },
+          { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.85, stagger: 0.1, ease: 'power3.out' }
+        );
+        if (window.ScrollTrigger) {
+          gsap.utils.toArray('.gsap-reveal').forEach(function (el) {
+            gsap.fromTo(el,
+              { opacity: 0, y: 24 },
+              {
+                opacity: 1, y: 0, duration: 0.75, ease: 'power2.out',
+                scrollTrigger: { trigger: el, start: 'top 86%' }
+              }
+            );
+          });
+        }
+      }
+
+      // 3. SpotlightCard Mouse Tracking + Particles Prata
+      document.querySelectorAll('.ik-card').forEach(function (card) {
+        card.addEventListener('pointermove', function (e) {
+          const r = card.getBoundingClientRect();
+          card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+          card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+        });
+      });
+
+      const pCanvas = document.getElementById('ik-particles');
+      if (pCanvas && !prefersReducedMotion) {
+        const ctx = pCanvas.getContext('2d');
+        let w = (pCanvas.width = window.innerWidth);
+        let h = (pCanvas.height = window.innerHeight);
+        window.addEventListener('resize', function () {
+          w = pCanvas.width = window.innerWidth;
+          h = pCanvas.height = window.innerHeight;
+        });
+        const count = window.innerWidth < 768 ? 16 : 30;
+        const pts = Array.from({ length: count }, function () {
+          return {
+            x: Math.random() * w, y: Math.random() * h,
+            r: Math.random() * 1.4 + 0.5,
+            vx: (Math.random() - 0.5) * 0.15, vy: -Math.random() * 0.22 - 0.05,
+            a: Math.random() * 0.35 + 0.1
+          };
+        });
+        function loopParticles() {
+          ctx.clearRect(0, 0, w, h);
+          for (let i = 0; i < pts.length; i++) {
+            const p = pts[i];
+            p.x += p.vx; p.y += p.vy;
+            if (p.y < -10) p.y = h + 10;
+            if (p.x < -10) p.x = w + 10;
+            if (p.x > w + 10) p.x = -10;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(234, 236, 239, ' + p.a + ')';
+            ctx.fill();
+          }
+          requestAnimationFrame(loopParticles);
+        }
+        loopParticles();
+      }
+
+      // 4. Palco Técnico 1:1 Hero (Seleção de Módulos + Showreel 60fps em Loop)
+      const hubTitle = document.getElementById('ik-hub-title');
+      const hubDesc = document.getElementById('ik-hub-desc');
+      const hubModules = {
+        ia: {
+          title: 'AI SYSTEMS · INTELIGÊNCIA APLICADA & GEO',
+          desc: 'Assistentes especializados, llms.txt e estruturas de dados prontas para buscadores de IA.'
+        },
+        automacao: {
+          title: 'AUTOMATION · FLUXOS OPERACIONAIS & WHATSAPP',
+          desc: 'Captação qualificada, roteamento instantâneo e eliminação de gargalos manuais.'
+        },
+        web: {
+          title: 'HIGH-END WEB · PERFORMANCE & CONVERSÃO MOBILE',
+          desc: 'Sites e landing pages autorais em arquitetura limpa com blindagem Security A+.'
+        },
+        nfc: {
+          title: 'NFC HARDWARE · CONEXÃO FÍSICO-DIGITAL',
+          desc: 'Cartões, placas e displays acrílicos que ativam Google Reviews, WhatsApp ou Mini-Sites.'
+        }
+      };
+
+      document.querySelectorAll('.ik-stage-tab').forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          const key = tab.getAttribute('data-hub');
+          const data = hubModules[key];
+          if (!data) return;
+          document.querySelectorAll('.ik-stage-tab').forEach(function (el) { el.classList.remove('is-active'); });
+          tab.classList.add('is-active');
+          if (hubTitle) hubTitle.textContent = data.title;
+          if (hubDesc) hubDesc.textContent = data.desc;
+        });
+      });
+
+      // 5. Simulador Interativo NFC
+      const nfcScenarios = {
+        google: {
+          badge: 'SINAL NFC 13.56 MHz // GOOGLE REVIEWS',
+          title: 'Avaliação Instantânea no Google',
+          desc: 'O cliente encosta o smartphone no Suporte Acrílico 15×10 ou Placa NFC 8×8 e é levado imediatamente para a tela de avaliação da sua empresa.',
+          formats: 'Suporte Acrílico 15×10 (R$ 120,00) · Placa NFC 8×8 (R$ 80,00)'
+        },
+        whatsapp: {
+          badge: 'SINAL NFC 13.56 MHz // WHATSAPP COMERCIAL',
+          title: 'Atendimento Direto no WhatsApp',
+          desc: 'Ao aproximar o celular de uma Etiqueta NFC 7×4 ou Adesivo NFC 10×15, o WhatsApp abre automaticamente com a mensagem pronta para orçamento ou suporte.',
+          formats: 'Etiqueta NFC 7×4 (50 un: R$ 3,00/un | 16 un: R$ 5,70/un) · Adesivo 10×15 (Sob consulta)'
+        },
+        servicos: {
+          badge: 'SINAL NFC 13.56 MHz // VITRINE DE SERVIÇOS',
+          title: 'Apresentação de Serviços & Cardápio',
+          desc: 'Displays e suportes acrílicos direcionam o cliente direto para catálogos digitais, cardápios interativos ou sistemas de agendamento sem precisar de QR Code.',
+          formats: 'Display Acrílico (Sob consulta) · Suporte Acrílico 15×10 (R$ 120,00)'
+        },
+        cartao: {
+          badge: 'SINAL NFC 13.56 MHz // IDENTIDADE EXECUTIVA',
+          title: 'Cartão NFC & Experiências Sob Medida',
+          desc: 'Com um toque do Cartão NFC da empresa, seus dados de contato, portfólio e canais comerciais aparecem imediatamente no celular do cliente ou parceiro.',
+          formats: 'Cartão NFC (R$ 150,00) · Experiência Web Personalizada (Sob projeto)'
+        }
+      };
+
+      document.querySelectorAll('.js-nfc-tab').forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          document.querySelectorAll('.js-nfc-tab').forEach(function (t) {
+            t.classList.remove('border-ik-platinum/45', 'bg-ik-graphite/90');
+            t.classList.add('border-white/10', 'bg-ik-obsidian/60');
+          });
+          tab.classList.add('border-ik-platinum/45', 'bg-ik-graphite/90');
+          tab.classList.remove('border-white/10', 'bg-ik-obsidian/60');
+
+          const data = nfcScenarios[tab.getAttribute('data-nfc')];
+          if (data) {
+            document.getElementById('nfc-sim-badge').textContent = data.badge;
+            document.getElementById('nfc-sim-title').textContent = data.title;
+            document.getElementById('nfc-sim-desc').textContent = data.desc;
+            document.getElementById('nfc-sim-formats').textContent = data.formats;
+          }
+        });
+      });
+
+      // 6. Seletor de Produtos NFC para Pedido WhatsApp
+      const selectedNfc = new Set();
+      const summaryEl = document.getElementById('nfc-selected-summary');
+      const waNfcCta = document.getElementById('nfc-whatsapp-cta');
+
+      function updateNfcSelection() {
+        const list = Array.from(selectedNfc);
+        if (list.length === 0) {
+          summaryEl.textContent = 'Nenhum item selecionado ainda — selecione acima ou envie uma consulta geral.';
+          waNfcCta.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent('Olá! Gostaria de solicitar orçamento para produtos NFC da IKIGAI COMPANY.');
+          waNfcCta.textContent = 'Solicitar Pedido NFC no WhatsApp';
+        } else {
+          summaryEl.textContent = 'Selecionados (' + list.length + '): ' + list.join(' | ');
+          const msg = 'Olá! Vim pelo site da IKIGAI COMPANY e gostaria de orçamento para os seguintes itens NFC:\n- ' + list.join('\n- ');
+          waNfcCta.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+          waNfcCta.textContent = 'Enviar Pedido (' + list.length + ') no WhatsApp';
+        }
+      }
+
+      document.querySelectorAll('.js-select-nfc').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const item = btn.getAttribute('data-item');
+          if (selectedNfc.has(item)) {
+            selectedNfc.delete(item);
+            if (item.indexOf('Upsell') > -1) {
+              btn.textContent = '+ Incluir Upsell';
+            } else {
+              btn.textContent = item.indexOf('Sob consulta') > -1 ? '+ Consultar' : '+ Selecionar';
+            }
+            btn.classList.remove('bg-ik-platinum', 'text-ik-obsidian');
+          } else {
+            selectedNfc.add(item);
+            btn.textContent = '✓ Selecionado';
+            btn.classList.add('bg-ik-platinum', 'text-ik-obsidian');
+          }
+          updateNfcSelection();
+        });
+      });
+
+      // 7. Modal de Inspeção do Portfólio
+      const casesData = {
+        caravella: {
+          cat: 'CASE 01 // BARBEARIA CLÁSSICA & CONTEMPORÂNEA',
+          title: 'Studio Caravella',
+          desc: 'Construção completa da experiência digital de lançamento da barbearia Studio Caravella em Sorocaba/SP, unindo interatividade 3D em WebGL ao toque, comparador visual de visagismo e fluxo direto de agendamento mobile.',
+          gallery: [
+            { src: 'assets/images/case-caravella-capa.jpg', alt: 'Placa de fachada oficial Studio Caravella' },
+            { src: 'assets/images/case-caravella-depois.png', alt: 'Comparativo de resultado de corte Studio Caravella' }
+          ],
+          solutions: [
+            'Placa física texturizada em 3D interativo com rotação tátil dedicada ao projeto.',
+            'Comparador interativo Antes & Depois para apresentação visual de corte e barba.',
+            'Showcase expansível de rituais com efeitos React Bits, Lenis Smooth Scroll e GSAP.',
+            'Blindagem completa: vercel.json, Schema.org BarberShop, llms.txt (GEO) e Modal LGPD.'
+          ],
+          waMsg: 'Olá! Vi o case Studio Caravella no portfólio da IKIGAI COMPANY e gostaria de conversar sobre um projeto semelhante.'
+        },
+        murano: {
+          cat: 'CASE 02 // VIDRAÇARIA DE ALTO PADRÃO & INTEGRAÇÃO NFC',
+          title: 'Murano Vidraçaria',
+          desc: 'Ecossistema físico-digital de alta conversão para especialista em envidraçamento de sacadas em Sorocaba/SP: Plataforma Web (ABNT NBR 16259/14) conectada a Display Físico NFC com automação direta de atendimento no WhatsApp.',
+          gallery: [
+            { src: 'assets/images/case-murano-capa.png', alt: 'Obra real de envidraçamento panorâmico de sacada' },
+            { src: 'assets/images/case-murano-pergolado.jpg', alt: 'Cobertura em vidro executada pela Murano Vidraçaria' }
+          ],
+          video: {
+            src: 'assets/videos/nfc-murano-operacao.mp4',
+            poster: 'assets/images/case-murano-capa.png'
+          },
+          solutions: [
+            'Plataforma Web + Display Físico NFC + Automação de Atendimento no WhatsApp em operação real.',
+            'Simulador tátil interativo da abertura de sacada diretamente sobre fotografia real.',
+            'Galeria de obras reais com Lightbox animado (GSAP Flip) e foco mobile 375px.',
+            'Blindagem completa: vercel.json (Headers A+), GEO llms.txt, Schema.org duplo e LGPD vinculada ao CNPJ do cliente.'
+          ],
+          waMsg: 'Olá! Vi o case Murano Vidraçaria com Display NFC no portfólio da IKIGAI COMPANY e quero estruturar um projeto para minha empresa.'
+        }
+      };
+
+      const caseModal = document.getElementById('case-modal');
+      const closeCaseBtn = document.getElementById('close-case-modal');
+
+      document.querySelectorAll('.js-open-case').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const c = casesData[btn.getAttribute('data-case')];
+          if (!c) return;
+          document.getElementById('case-modal-cat').textContent = c.cat;
+          document.getElementById('case-modal-title').textContent = c.title;
+          document.getElementById('case-modal-desc').textContent = c.desc;
+          document.getElementById('case-modal-wa').href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(c.waMsg);
+
+          const galEl = document.getElementById('case-modal-gallery');
+          galEl.innerHTML = '';
+          c.gallery.forEach(function (img) {
+            const fig = document.createElement('img');
+            fig.src = img.src;
+            fig.alt = img.alt;
+            fig.className = 'w-full aspect-[16/10] object-cover rounded-none border border-white/15';
+            galEl.appendChild(fig);
+          });
+          if (c.video) {
+            const vidWrap = document.createElement('div');
+            vidWrap.className = 'sm:col-span-2 rounded-none overflow-hidden border border-white/15 bg-ik-obsidian';
+            const vid = document.createElement('video');
+            vid.src = c.video.src;
+            vid.poster = c.video.poster;
+            vid.controls = true;
+            vid.muted = true;
+            vid.playsInline = true;
+            vid.preload = 'metadata';
+            vid.className = 'w-full max-h-[280px] object-cover';
+            vidWrap.appendChild(vid);
+            galEl.appendChild(vidWrap);
+          }
+
+          const solEl = document.getElementById('case-modal-solutions');
+          solEl.innerHTML = '';
+          c.solutions.forEach(function (s) {
+            const li = document.createElement('li');
+            li.textContent = s;
+            solEl.appendChild(li);
+          });
+
+          caseModal.hidden = false;
+        });
+      });
+
+      if (closeCaseBtn) closeCaseBtn.addEventListener('click', function () { caseModal.hidden = true; });
+      if (caseModal) caseModal.addEventListener('click', function (e) { if (e.target === caseModal) caseModal.hidden = true; });
+
+      // 8. Formulário Zero-Storage -> WhatsApp Comercial
+      const form = document.getElementById('ik-quote-form');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const sanitize = function (v) { return String(v || '').replace(/[<>]/g, '').trim(); };
+          const name = sanitize(document.getElementById('lead-name').value);
+          const company = sanitize(document.getElementById('lead-company').value);
+          const notes = sanitize(document.getElementById('lead-notes').value);
+          const scopes = Array.from(form.querySelectorAll('input[name="scope"]:checked')).map(function (i) { return i.value; });
+          const nfcList = Array.from(selectedNfc);
+
+          let msg = 'Olá, equipe IKIGAI COMPANY! Meu nome é ' + name;
+          if (company) msg += ' (' + company + ')';
+          msg += '.';
+          if (scopes.length) msg += '\nÁreas de interesse: ' + scopes.join(', ') + '.';
+          if (nfcList.length) msg += '\nItens NFC selecionados: ' + nfcList.join(', ') + '.';
+          if (notes) msg += '\nDetalhes: ' + notes;
+
+          window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg), '_blank', 'noopener,noreferrer');
+        });
+      }
+
+      // 9. Modal LGPD
+      const lgpdModal = document.getElementById('lgpd-modal');
+      document.querySelectorAll('.js-open-lgpd').forEach(function (b) {
+        b.addEventListener('click', function () { lgpdModal.hidden = false; });
+      });
+      ['close-lgpd-modal', 'ack-lgpd-btn'].forEach(function (id) {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('click', function () { lgpdModal.hidden = true; });
+      });
+      if (lgpdModal) lgpdModal.addEventListener('click', function (e) { if (e.target === lgpdModal) lgpdModal.hidden = true; });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          if (mobileNav && !mobileNav.hidden) toggleNav(false);
+          if (caseModal && !caseModal.hidden) caseModal.hidden = true;
+          if (lgpdModal && !lgpdModal.hidden) lgpdModal.hidden = true;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

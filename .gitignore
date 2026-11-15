@@ -1,0 +1,7 @@
+node_modules/
+ikigai-motion/node_modules/
+ikigai-motion/out/
+ikigai-motion/.remotion/
+.DS_Store
+Thumbs.db
+*.log

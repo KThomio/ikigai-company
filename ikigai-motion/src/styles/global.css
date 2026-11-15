@@ -1,0 +1,25 @@
+:root {
+  --ik-obsidian: #0D0E11;
+  --ik-carbon: #13151A;
+  --ik-graphite: #1C1F26;
+  --ik-slate: #353840;
+  --ik-light: #F5F6F8;
+  --ik-platinum: #EAECEF;
+  --ik-silver: #C4C8D0;
+  --ik-steel: #8C919C;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--ik-obsidian);
+  color: var(--ik-platinum);
+  -webkit-font-smoothing: antialiased;
+}

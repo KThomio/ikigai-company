@@ -1,0 +1,29 @@
+{
+  "name": "ikigai-motion",
+  "version": "1.0.0",
+  "description": "IKIGAI COMPANY — Remotion Motion Design Environment (1080x1080 @ 60fps)",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "preview": "remotion studio src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "render:mp4": "remotion render src/index.ts IkigaiLogoReveal out/ikigai-logo-1080x1080-60fps.mp4 --codec=h264 --width=1080 --height=1080 --fps=60",
+    "render:still": "remotion still src/index.ts IkigaiLogoReveal out/ikigai-calibration-frame.png --frame=120"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.543",
+    "@remotion/google-fonts": "4.0.543",
+    "@remotion/motion-blur": "4.0.543",
+    "@remotion/noise": "4.0.543",
+    "@remotion/paths": "4.0.543",
+    "@remotion/studio": "4.0.543",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "4.0.543"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.7.2"
+  }
+}

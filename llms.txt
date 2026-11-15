@@ -1,0 +1,41 @@
+# IKIGAI COMPANY — Tecnologia, Inteligência Artificial, Automação e Experiências NFC (GEO Oficial)
+
+> Empresa independente de tecnologia e soluções digitais. Inteligência, precisão e criatividade aplicadas a sistemas com IA, automação de processos, desenvolvimento web de alta performance e experiências físico-digitais NFC.
+
+## Dados Oficiais
+- **Marca:** IKIGAI COMPANY
+- **Lema Técnico:** INTELLIGENCE • PURPOSE • FUTURE
+- **Posicionamento:** A Nova Era da Tecnologia e Infraestrutura
+- **WhatsApp Comercial:** +55 11 94375-8957 (https://wa.me/5511943758957)
+- **CNPJ / E-mail / Instagram:** [A CONFIRMAR]
+
+---
+
+## Áreas de Atuação
+1. **Inteligência Artificial & Soluções com IA:** Assistentes especializados, estruturação de bases de conhecimento, otimização GEO (`llms.txt`) e fluxos inteligentes.
+2. **Automação de Processos:** Qualificação e roteamento de atendimento no WhatsApp, formulários inteligentes e eliminação de rotinas operacionais repetitivas.
+3. **Desenvolvimento de Sites & Landing Pages:** Plataformas institucionais e landing pages de alta conversão, responsivas Mobile-First, com SEO técnico e blindagem de segurança HTTP.
+4. **Experiências NFC & Soluções Interativas:** Placas, cartões, suportes acrílicos e etiquetas inteligentes que conectam o ambiente físico a avaliações no Google, WhatsApp, catálogos e apresentações digitais por aproximação.
+5. **Design Digital, Motion Design & Experiências Visuais:** Identidades visuais aplicadas, interfaces 3D/WebGL e vitrines interativas sob medida.
+
+---
+
+## Catálogo Oficial de Produtos NFC (Valores Base)
+- **Etiqueta NFC 7x4 — 50 unidades:** R$ 3,00 por unidade
+- **Etiqueta NFC 7x4 — 16 unidades:** R$ 5,70 por unidade
+- **Placa NFC 8x8:** R$ 80,00
+- **Suporte acrílico 15x10:** R$ 120,00
+- **Cartão NFC:** R$ 150,00
+  - **Upsell opcional no Cartão NFC:** Mini-Site / Central de Links personalizada IKIGAI (Instagram, WhatsApp, Avaliações no Google ou Site Oficial — Sob consulta)
+- **Adesivo NFC 10x15:** Sob consulta
+- **Display acrílico:** Sob consulta
+
+*Condições comerciais: Os valores acima referem-se aos dispositivos listados. Desenvolvimento de arte, frete, embalagem, personalização e mini-site são orçados separadamente conforme a especificação do projeto.*
+
+---
+
+## Portfólio Verificado
+1. **Studio Caravella (Barbearia Clássica & Contemporânea — Sorocaba/SP):**
+   - Desenvolvimento de plataforma digital Mobile-First com Medalhão 3D interativo ao toque (Three.js), comparador Antes/Depois de corte e barba, vitrine interativa de serviços, SEO/GEO e integração direta com agendamento AppBarber.
+2. **Murano Vidraçaria (Envidraçamento de Sacadas e Projetos em Vidro — Sorocaba/SP):**
+   - Desenvolvimento de plataforma digital técnica (ABNT NBR 16259/14 e NBR 13.303) integrada a display físico NFC com direcionamento automático ao WhatsApp comercial para atendimento e orçamento em tempo real.

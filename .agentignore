@@ -1,0 +1,7 @@
+ikigai-motion/node_modules/
+ikigai-motion/out/
+ikigai-motion/.remotion/
+node_modules/
+*.mp4
+!assets/videos/nfc-murano-operacao.mp4
+!assets/videos/ikigai-hero-showreel.mp4
