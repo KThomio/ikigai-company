@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IKIGAI COMPANY | Mini Site Oficial &amp; Conexão NFC</title>
+  <meta name="description" content="Central digital oficial da IKIGAI COMPANY conectada por NFC. Acesse WhatsApp comercial, produtos da linha Ikigai Connect, soluções web e automações.">
+  <meta name="theme-color" content="#0D0E11">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'ik-obsidian': '#0D0E11',
+            'ik-carbon': '#13151A',
+            'ik-graphite': '#1C1F26',
+            'ik-platinum': '#EAECEF',
+            'ik-silver': '#C4C8D0',
+            'ik-steel': '#8C919C'
+          },
+          fontFamily: {
+            'display': ['"Montserrat"', 'system-ui', 'sans-serif'],
+            'sans': ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            'mono': ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Montserrat:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ik-obsidian: #0D0E11;
+      --ik-carbon: #13151A;
+      --ik-platinum: #EAECEF;
+      --ik-silver: #C4C8D0;
+      --ik-steel: #8C919C;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-color: var(--ik-obsidian);
+      color: var(--ik-platinum);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .ik-grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.024;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .ik-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 52px;
+      padding: 14px 24px;
+      border-radius: 0px;
+      background: linear-gradient(135deg, #F2F4F8 0%, #D2D6DE 55%, #BCC2CC 100%);
+      color: #0D0E11;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: transform 0.2s ease, filter 0.2s ease;
+      box-shadow: 0 10px 24px -10px rgba(234, 236, 239, 0.28);
+    }
+    .ik-btn-primary:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.04);
+    }
+    .ik-btn-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 54px;
+      padding: 14px 18px;
+      border-radius: 0px;
+      background-color: rgba(28, 31, 38, 0.55);
+      border: 1px solid rgba(234, 236, 239, 0.16);
+      color: var(--ik-platinum);
+      text-decoration: none;
+      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+    .ik-btn-block:hover {
+      background-color: rgba(234, 236, 239, 0.09);
+      border-color: rgba(234, 236, 239, 0.42);
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body class="p-4 sm:p-6 flex flex-col justify-between items-center relative">
+
+  <div class="ik-grain" aria-hidden="true"></div>
+
+  <main class="w-full max-w-md mx-auto my-auto space-y-6 relative z-10 py-6">
+    <!-- Cabeçalho de Perfil Oficial -->
+    <div class="text-center space-y-4">
+      <div class="relative inline-block">
+        <div class="w-24 h-24 mx-auto rounded-none bg-ik-carbon border border-white/20 p-4 flex items-center justify-center">
+          <img
+            src="assets/images/ikigai-simbolo-transparente.png"
+            alt="Símbolo Oficial IKIGAI COMPANY"
+            width="72"
+            height="72"
+            class="w-16 h-16 object-contain"
+          >
+        </div>
+        <span class="inline-block mt-3 font-mono text-[10px] tracking-[0.2em] uppercase px-3 py-1 bg-white/5 border border-white/20 text-ik-platinum">
+          MINI SITE OFICIAL // CONEXÃO NFC
+        </span>
+      </div>
+
+      <div class="space-y-1">
+        <h1 class="font-display font-extrabold text-2xl tracking-[0.06em] text-ik-platinum uppercase m-0">
+          IKIGAI COMPANY
+        </h1>
+        <p class="font-mono text-xs tracking-[0.24em] text-ik-silver uppercase m-0">
+          INTELLIGENCE • PURPOSE • FUTURE
+        </p>
+      </div>
+
+      <p class="text-xs sm:text-sm text-ik-silver leading-relaxed max-w-sm mx-auto m-0">
+        Conexão física e soluções digitais para empresas que querem vender melhor. Toque em uma opção para iniciar atendimento.
+      </p>
+    </div>
+
+    <!-- CTA Principal de Destaque -->
+    <div class="pt-1">
+      <a
+        href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Acessei%20o%20Mini%20Site%20da%20IKIGAI%20COMPANY%20e%20gostaria%20de%20iniciar%20um%20atendimento."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ik-btn-primary w-full text-center"
+      >
+        <span>Falar no WhatsApp Agora</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <!-- Lista de Links Comerciais -->
+    <div class="space-y-2.5">
+      <!-- 1. Linha Ikigai Connect -->
+      <a href="index.html#ikigai-connect" class="ik-btn-block">
+        <div class="text-left">
+          <span class="font-display font-bold text-sm text-ik-platinum block leading-tight">
+            Linha Ikigai Connect (NFC)
+          </span>
+          <span class="text-[11px] text-ik-steel block mt-0.5">
+            Etiquetas adesivas inteligentes por aproximação
+          </span>
+        </div>
+        <span class="font-mono text-xs text-ik-silver shrink-0">01 ↗</span>
+      </a>
+
+      <!-- 2. Placa Google & Totem Acrílico -->
+      <a
+        href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Placa%20Google%20ou%20Totem%20Acr%C3%ADlico%20NFC."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ik-btn-block"
+      >
+        <div class="text-left">
+          <span class="font-display font-bold text-sm text-ik-platinum block leading-tight">
+            Placa Google &amp; Totem Acrílico
+          </span>
+          <span class="text-[11px] text-ik-steel block mt-0.5">
+            Avaliações 5 estrelas e balcão interativo
+          </span>
+        </div>
+        <span class="font-mono text-xs text-ik-silver shrink-0">02 ↗</span>
+      </a>
+
+      <!-- 3. Connect Card -->
+      <a
+        href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20informa%C3%A7%C3%B5es%20sobre%20o%20Connect%20Card%20(cart%C3%A3o%20digital%20NFC)."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ik-btn-block"
+      >
+        <div class="text-left">
+          <span class="font-display font-bold text-sm text-ik-platinum block leading-tight">
+            Connect Card (Cartão NFC)
+          </span>
+          <span class="text-[11px] text-ik-steel block mt-0.5">
+            Compartilhe contatos e redes com 1 aproximação
+          </span>
+        </div>
+        <span class="font-mono text-xs text-ik-silver shrink-0">03 ↗</span>
+      </a>
+
+      <!-- 4. Landing Pages & Mini Sites -->
+      <a href="index.html#solucoes-digitais" class="ik-btn-block">
+        <div class="text-left">
+          <span class="font-display font-bold text-sm text-ik-platinum block leading-tight">
+            Landing Pages &amp; Mini Sites
+          </span>
+          <span class="text-[11px] text-ik-steel block mt-0.5">
+            Páginas de alta conversão para seu negócio
+          </span>
+        </div>
+        <span class="font-mono text-xs text-ik-silver shrink-0">04 ↗</span>
+      </a>
+
+      <!-- 5. Automações de Processos -->
+      <a
+        href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20Automa%C3%A7%C3%B5es%20de%20Processos%20e%20Atendimento."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ik-btn-block"
+      >
+        <div class="text-left">
+          <span class="font-display font-bold text-sm text-ik-platinum block leading-tight">
+            Automações de Atendimento
+          </span>
+          <span class="text-[11px] text-ik-steel block mt-0.5">
+            Agilidade na resposta e organização de pedidos
+          </span>
+        </div>
+        <span class="font-mono text-xs text-ik-silver shrink-0">05 ↗</span>
+      </a>
+
+      <!-- 6. Site Institucional Completo -->
+      <a href="index.html" class="ik-btn-block !bg-ik-obsidian border-white/20">
+        <div class="text-left">
+          <span class="font-display font-bold text-sm text-ik-platinum block leading-tight">
+            Acessar Site Institucional Completo
+          </span>
+          <span class="text-[11px] text-ik-steel block mt-0.5">
+            Conheça todas as soluções e cases da empresa
+          </span>
+        </div>
+        <span class="font-mono text-xs text-ik-platinum shrink-0">↗</span>
+      </a>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="text-center pt-4 border-t border-white/10 space-y-1">
+      <p class="font-mono text-[11px] text-ik-steel m-0">
+        IKIGAI COMPANY · +55 11 94375-8597
+      </p>
+      <p class="text-[10px] text-ik-silver/60 m-0">
+        Tecnologia NFC e Engenharia Digital
+      </p>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 # STATE — IKIGAI COMPANY
 
-- **Fase:** V5 concluída — Site enxuto em 5 seções, linha **Ikigai Connect**, 7 soluções oficiais em 2 frentes e WhatsApp atualizado (`5511943758597`)
-- **Frente 01 (Físico + NFC):** Placa Google Acrílico, Ikigai Connect (Etiquetas NFC), Totem NFC 15×10 cm e Connect Card + Upsell Mini Site
-- **Frente 02 (Digital):** Landing Pages, Mini Sites Profissionais e Automações de Processos (sem tabela pública de preços)
-- **Performance & Blindagem:** Canvas 60fps removido, `preload="none"` no vídeo secundário, `0px` absoluto (`ROUNDED_CLASS_COUNT: 0`), `index.html` = `lp/index.html`, headers `vercel.json` + modal LGPD
+- **Fase:** V5.1 concluída — Motion Hero Background Integrado, Mini Site Oficial da Ikigai (`mini-site.html`), Imagens nos 7 produtos (print real Caravella, print real Mini Site Ikigai e placa real Google) e WhatsApp `5511943758597`
+- **Frente 01 (Físico + NFC):** Vídeo real de operação + 4 produtos físicos com imagens 16:10 + Banner de Upsell com botão para `mini-site.html`
+- **Frente 02 (Digital):** Landing Pages com print do Caravella, Mini Sites com print oficial da Ikigai + link ao vivo, e Automações com diagrama conceitual
+- **Performance & Blindagem:** Motion integrado via máscara radial sem borda dura, zero preços fixos, corte reto 0px (`ROUNDED_CLASS_COUNT: 0`), sincronização integral com `lp/`, headers `vercel.json` e LGPD

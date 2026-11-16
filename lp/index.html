@@ -283,23 +283,32 @@
       border-bottom-color: rgba(234, 236, 239, 0.14);
     }
 
-    /* Moldura Limpa 1:1 do Vídeo Hero */
-    .ik-motion-stage {
-      position: relative;
-      width: 100%;
-      max-width: min(335px, 100%);
-      margin: 0 auto;
-      background: #0D0E11;
-      border: 1px solid rgba(234, 236, 239, 0.18);
-    }
-    @media (min-width: 640px) {
-      .ik-motion-stage { max-width: 420px; }
-    }
-    .ik-motion-viewport {
-      position: relative;
-      aspect-ratio: 1 / 1;
+    /* Motion Hero Background Integrado (com máscara radial suave em fusão com #0D0E11) */
+    .ik-hero-bg-motion {
+      position: absolute;
+      top: 50%;
+      right: -20px;
+      transform: translateY(-50%);
+      width: 580px;
+      height: 580px;
+      max-width: 90vw;
+      max-height: 90vw;
+      z-index: 0;
+      opacity: 0.65;
       overflow: hidden;
-      background: #0D0E11;
+      pointer-events: none;
+      -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 36%, rgba(0, 0, 0, 0) 72%);
+      mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 36%, rgba(0, 0, 0, 0) 72%);
+    }
+    @media (max-width: 1023px) {
+      .ik-hero-bg-motion {
+        top: 58%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 320px;
+        height: 320px;
+        opacity: 0.18;
+      }
     }
 
     .ik-hairline-divider {
@@ -391,20 +400,35 @@
 
   <main id="hero" class="relative z-10">
 
-    <!-- SEÇÃO 01 — HERO MINIMALISTA -->
+    <!-- SEÇÃO 01 — HERO MINIMALISTA COM MOTION BACKGROUND INTEGRADO -->
     <section class="relative min-h-[88vh] pt-28 sm:pt-32 pb-16 px-5 sm:px-8 flex items-center overflow-hidden">
+      <!-- Fundo Radial + Motion Background Integrado com Fusão Radial -->
       <div class="absolute inset-0 -z-10 pointer-events-none bg-[radial-gradient(55%_48%_at_68%_42%,rgba(234,236,239,0.08)_0%,transparent_72%)]"></div>
 
-      <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-        <!-- Coluna de Texto -->
-        <div class="lg:col-span-7 min-w-0 w-full space-y-6 order-2 lg:order-1">
+      <div class="ik-hero-bg-motion" aria-hidden="true">
+        <video
+          id="ik-hero-reel"
+          src="assets/videos/ikigai-hero-showreel.mp4"
+          poster="assets/images/ikigai-selo-oficial.png"
+          autoplay
+          loop
+          muted
+          playsinline
+          preload="auto"
+          class="w-full h-full object-cover block"
+        ></video>
+      </div>
+
+      <div class="max-w-6xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- Coluna de Texto com Contraste Total -->
+        <div class="lg:col-span-8 min-w-0 w-full space-y-6">
           <div class="gsap-hero inline-flex items-center gap-3 pl-3 py-1 border-l-2 border-ik-platinum">
             <span class="font-mono text-[11px] tracking-[0.2em] uppercase text-ik-silver">
               INTELLIGENCE • PURPOSE • FUTURE
             </span>
           </div>
 
-          <h1 class="gsap-hero font-display font-extrabold text-[clamp(1.85rem,7.2vw,3.65rem)] leading-[1.1] tracking-[-0.02em] text-ik-platinum break-words">
+          <h1 class="gsap-hero font-display font-extrabold text-[clamp(2.1rem,4.8vw,3.85rem)] leading-[1.08] tracking-[-0.02em] text-ik-platinum break-words">
             Conexão física e soluções digitais para empresas que querem vender melhor.
           </h1>
 
@@ -419,33 +443,6 @@
             <a href="#ikigai-connect" class="ik-btn-outline">
               Conhecer as Soluções
             </a>
-          </div>
-        </div>
-
-        <!-- Coluna Visual: Moldura Limpa 1:1 com Cantoneiras -->
-        <div class="lg:col-span-5 min-w-0 w-full flex items-center justify-center order-1 lg:order-2">
-          <div
-            id="ik-motion-stage"
-            class="ik-motion-stage"
-            aria-label="Apresentação visual da IKIGAI COMPANY"
-          >
-            <div id="ik-motion-viewport" class="ik-motion-viewport">
-              <span class="ik-corner-tl"></span><span class="ik-corner-tr"></span>
-              <span class="ik-corner-bl"></span><span class="ik-corner-br"></span>
-
-              <video
-                id="ik-hero-reel"
-                src="assets/videos/ikigai-hero-showreel.mp4"
-                poster="assets/images/ikigai-selo-oficial.png"
-                autoplay
-                loop
-                muted
-                playsinline
-                preload="auto"
-                aria-label="Apresentação animada da identidade IKIGAI COMPANY"
-                class="relative z-[1] w-full h-full object-cover block"
-              ></video>
-            </div>
           </div>
         </div>
       </div>
@@ -473,10 +470,10 @@
           </div>
         </div>
 
-        <!-- Demonstração Real (Mídia do Produto em Uso) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/15 border border-white/15 gsap-reveal">
-          <div class="bg-ik-obsidian flex flex-col">
-            <div class="relative bg-black border-b border-white/10">
+        <!-- Demonstração Real: Vídeo de Operação com Preload Leve -->
+        <div class="ik-card rounded-none !border-0 !bg-ik-obsidian overflow-hidden gsap-reveal">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
+            <div class="lg:col-span-7 bg-black">
               <video
                 src="assets/videos/nfc-murano-operacao.mp4"
                 poster="assets/images/case-murano-capa.png"
@@ -484,123 +481,169 @@
                 muted
                 playsinline
                 preload="none"
-                class="w-full aspect-[4/3] object-cover block"
+                class="w-full aspect-[16/10] sm:aspect-[16/9] object-cover block"
               ></video>
             </div>
-            <div class="p-5 sm:p-6 space-y-1.5">
-              <span class="font-mono text-[10px] tracking-[0.16em] uppercase text-ik-silver block">EM OPERAÇÃO REAL</span>
-              <h3 class="font-display font-bold text-lg text-ik-platinum m-0">Do balcão direto para o WhatsApp</h3>
+            <div class="lg:col-span-5 p-6 sm:p-8 space-y-3">
+              <span class="font-mono text-[10px] tracking-[0.18em] uppercase px-2.5 py-1 bg-white/5 border border-white/15 text-ik-platinum inline-block">
+                DEMONSTRAÇÃO REAL // HARDWARE EM OPERAÇÃO
+              </span>
+              <h3 class="font-display font-bold text-xl sm:text-2xl text-ik-platinum m-0">
+                Do toque no balcão direto para o WhatsApp
+              </h3>
               <p class="text-xs sm:text-sm text-ik-silver leading-relaxed m-0">
-                Ao aproximar o celular do totem no ponto de atendimento, a conversa de orçamento abre pronta no aparelho do cliente.
-              </p>
-            </div>
-          </div>
-
-          <div class="bg-ik-obsidian flex flex-col">
-            <div class="relative bg-ik-carbon border-b border-white/10 overflow-hidden">
-              <img
-                src="assets/images/nfc-placas-google-reais.jpg"
-                alt="Placas em acrílico NFC da IKIGAI para avaliações no Google"
-                width="576"
-                height="1024"
-                loading="lazy"
-                class="w-full aspect-[4/3] object-cover object-center block"
-              >
-            </div>
-            <div class="p-5 sm:p-6 space-y-1.5">
-              <span class="font-mono text-[10px] tracking-[0.16em] uppercase text-ik-silver block">ACABAMENTO REAL</span>
-              <h3 class="font-display font-bold text-lg text-ik-platinum m-0">Placas personalizadas em acrílico</h3>
-              <p class="text-xs sm:text-sm text-ik-silver leading-relaxed m-0">
-                Visual limpo com a identidade do seu negócio para incentivar avaliações no Google ou direcionar para seus canais digitais.
+                Veja o funcionamento na prática: ao aproximar o aparelho do totem acrílico no ponto físico, o aplicativo oficial do WhatsApp abre imediatamente com a solicitação pronta para envio.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- Grid dos 4 Produtos Físicos Oficiais -->
+        <!-- Grid dos 4 Produtos Físicos com Área de Imagem 16:10 -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/15 border border-white/15 gsap-reveal">
-          <!-- 1. Placa de avaliação do Google em acrílico -->
-          <article class="ik-card rounded-none !border-0 !bg-ik-obsidian p-6 sm:p-8 flex flex-col justify-between gap-6">
-            <div class="space-y-3">
-              <span class="font-mono text-xs text-ik-steel block border-b border-white/10 pb-2.5">PRODUTO 01 // BALCÃO &amp; RECEPÇÃO</span>
-              <h3 class="font-display font-bold text-xl sm:text-2xl text-ik-platinum m-0">
-                Placa de Avaliação do Google em Acrílico
-              </h3>
-              <p class="text-sm text-ik-silver leading-relaxed m-0">
-                Colocada no caixa ou na recepção, facilita o cliente a deixar uma avaliação no Google em segundos, sem precisar procurar sua empresa na internet.
-              </p>
+          <!-- 1. Placa de avaliação do Google em acrílico (Com Foto Real) -->
+          <article class="ik-card rounded-none !border-0 !bg-ik-obsidian overflow-hidden flex flex-col justify-between">
+            <div>
+              <div class="relative aspect-[16/10] overflow-hidden bg-ik-carbon border-b border-white/10">
+                <img
+                  src="assets/images/nfc-placas-google-reais.jpg"
+                  alt="Placas em acrílico NFC da IKIGAI para avaliações no Google"
+                  width="576"
+                  height="1024"
+                  loading="lazy"
+                  class="w-full h-full object-cover object-center block"
+                >
+                <span class="absolute top-3 left-3 font-mono text-[9px] tracking-[0.16em] uppercase px-2.5 py-1 bg-ik-obsidian/90 border border-white/20 text-ik-platinum">
+                  FOTO REAL // ACRÍLICO PERSONALIZADO
+                </span>
+              </div>
+              <div class="p-6 sm:p-8 space-y-3">
+                <span class="font-mono text-xs text-ik-steel block">PRODUTO 01 // BALCÃO &amp; RECEPÇÃO</span>
+                <h3 class="font-display font-bold text-xl sm:text-2xl text-ik-platinum m-0">
+                  Placa de Avaliação do Google em Acrílico
+                </h3>
+                <p class="text-sm text-ik-silver leading-relaxed m-0">
+                  Colocada no caixa ou na recepção, facilita o cliente a deixar uma avaliação 5 estrelas no Google em segundos, sem precisar procurar sua empresa na internet.
+                </p>
+              </div>
             </div>
-            <a
-              href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20a%20Placa%20de%20Avalia%C3%A7%C3%A3o%20do%20Google%20em%20Acr%C3%ADlico."
-              target="_blank"
-              rel="noopener noreferrer"
-              class="ik-btn-outline w-full sm:w-auto self-start"
-            >
-              Solicitar um Orçamento
-            </a>
+            <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+              <a
+                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20a%20Placa%20de%20Avalia%C3%A7%C3%A3o%20do%20Google%20em%20Acr%C3%ADlico."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ik-btn-outline w-full sm:w-auto"
+              >
+                Solicitar um Orçamento
+              </a>
+            </div>
           </article>
 
-          <!-- 2. Ikigai Connect — etiquetas adesivas NFC -->
-          <article class="ik-card rounded-none !border-0 !bg-ik-obsidian p-6 sm:p-8 flex flex-col justify-between gap-6">
-            <div class="space-y-3">
-              <span class="font-mono text-xs text-ik-platinum block border-b border-white/15 pb-2.5">PRODUTO 02 // LINHA IKIGAI CONNECT</span>
-              <h3 class="font-display font-bold text-xl sm:text-2xl text-ik-platinum m-0">
-                Ikigai Connect — Etiquetas Adesivas NFC
-              </h3>
-              <p class="text-sm text-ik-silver leading-relaxed m-0">
-                Etiquetas adesivas personalizadas que você aplica em mesas, embalagens, produtos ou vitrines. Ao aproximar o celular, o cliente acessa direto seu WhatsApp ou página de destino.
-              </p>
+          <!-- 2. Ikigai Connect — etiquetas adesivas NFC (Placeholder Elegante) -->
+          <article class="ik-card rounded-none !border-0 !bg-ik-obsidian overflow-hidden flex flex-col justify-between">
+            <div>
+              <div class="relative aspect-[16/10] overflow-hidden bg-ik-carbon border-b border-white/10 flex flex-col items-center justify-center p-6 text-center">
+                <div class="w-12 h-12 rounded-none border border-white/20 bg-ik-obsidian flex items-center justify-center mb-2">
+                  <img src="assets/images/ikigai-simbolo-transparente.png" alt="" width="28" height="28" class="w-7 h-7 opacity-60">
+                </div>
+                <span class="font-mono text-[10px] tracking-[0.2em] uppercase text-ik-steel">
+                  [ IMAGEM EM DEFINIÇÃO ]
+                </span>
+                <span class="text-[11px] text-ik-silver/60 mt-0.5">
+                  Fotografia e protótipo em produção
+                </span>
+              </div>
+              <div class="p-6 sm:p-8 space-y-3">
+                <span class="font-mono text-xs text-ik-platinum block">PRODUTO 02 // LINHA IKIGAI CONNECT</span>
+                <h3 class="font-display font-bold text-xl sm:text-2xl text-ik-platinum m-0">
+                  Ikigai Connect — Etiquetas Adesivas NFC
+                </h3>
+                <p class="text-sm text-ik-silver leading-relaxed m-0">
+                  Etiquetas adesivas personalizadas que você aplica em mesas, embalagens, produtos ou vitrines. Ao aproximar o celular, o cliente acessa direto seu WhatsApp ou página de destino.
+                </p>
+              </div>
             </div>
-            <a
-              href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20conhecer%20a%20solu%C3%A7%C3%A3o%20Ikigai%20Connect%20(etiquetas%20adesivas%20NFC)%20e%20pedir%20um%20or%C3%A7amento."
-              target="_blank"
-              rel="noopener noreferrer"
-              class="ik-btn-outline w-full sm:w-auto self-start"
-            >
-              Conhecer a Solução
-            </a>
+            <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+              <a
+                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20conhecer%20a%20solu%C3%A7%C3%A3o%20Ikigai%20Connect%20(etiquetas%20adesivas%20NFC)%20e%20pedir%20um%20or%C3%A7amento."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ik-btn-outline w-full sm:w-auto"
+              >
+                Conhecer a Solução
+              </a>
+            </div>
           </article>
 
-          <!-- 3. Totem personalizado NFC — acrílico 15 x 10 cm -->
-          <article class="ik-card rounded-none !border-0 !bg-ik-obsidian p-6 sm:p-8 flex flex-col justify-between gap-6">
-            <div class="space-y-3">
-              <span class="font-mono text-xs text-ik-steel block border-b border-white/10 pb-2.5">PRODUTO 03 // ACRÍLICO 15 × 10 CM</span>
-              <h3 class="font-display font-bold text-xl sm:text-2xl text-ik-platinum m-0">
-                Totem Personalizado NFC (15 × 10 cm)
-              </h3>
-              <p class="text-sm text-ik-silver leading-relaxed m-0">
-                Totem em acrílico de 15 × 10 cm produzido com a identidade visual da sua empresa e tecnologia NFC integrada, ideal para balcões, mesas de atendimento e vitrines.
-              </p>
+          <!-- 3. Totem personalizado NFC — acrílico 15 x 10 cm (Placeholder Elegante) -->
+          <article class="ik-card rounded-none !border-0 !bg-ik-obsidian overflow-hidden flex flex-col justify-between">
+            <div>
+              <div class="relative aspect-[16/10] overflow-hidden bg-ik-carbon border-b border-white/10 flex flex-col items-center justify-center p-6 text-center">
+                <div class="w-12 h-12 rounded-none border border-white/20 bg-ik-obsidian flex items-center justify-center mb-2">
+                  <img src="assets/images/ikigai-simbolo-transparente.png" alt="" width="28" height="28" class="w-7 h-7 opacity-60">
+                </div>
+                <span class="font-mono text-[10px] tracking-[0.2em] uppercase text-ik-steel">
+                  [ IMAGEM EM DEFINIÇÃO ]
+                </span>
+                <span class="text-[11px] text-ik-silver/60 mt-0.5">
+                  Fotografia e protótipo em produção
+                </span>
+              </div>
+              <div class="p-6 sm:p-8 space-y-3">
+                <span class="font-mono text-xs text-ik-steel block">PRODUTO 03 // ACRÍLICO 15 × 10 CM</span>
+                <h3 class="font-display font-bold text-xl sm:text-2xl text-ik-platinum m-0">
+                  Totem Personalizado NFC (15 × 10 cm)
+                </h3>
+                <p class="text-sm text-ik-silver leading-relaxed m-0">
+                  Totem em acrílico de 15 × 10 cm produzido com a identidade visual da sua empresa e tecnologia NFC integrada, ideal para balcões, mesas de atendimento e vitrines.
+                </p>
+              </div>
             </div>
-            <a
-              href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20o%20Totem%20Personalizado%20NFC%2015x10%20cm."
-              target="_blank"
-              rel="noopener noreferrer"
-              class="ik-btn-outline w-full sm:w-auto self-start"
-            >
-              Solicitar um Orçamento
-            </a>
+            <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+              <a
+                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20o%20Totem%20Personalizado%20NFC%2015x10%20cm."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ik-btn-outline w-full sm:w-auto"
+              >
+                Solicitar um Orçamento
+              </a>
+            </div>
           </article>
 
-          <!-- 4. Connect Card — cartão digital NFC -->
-          <article class="ik-card rounded-none !border-0 !bg-ik-obsidian p-6 sm:p-8 flex flex-col justify-between gap-6">
-            <div class="space-y-3">
-              <span class="font-mono text-xs text-ik-steel block border-b border-white/10 pb-2.5">PRODUTO 04 // CARTÃO PESSOAL &amp; COMERCIAL</span>
-              <h3 class="font-display font-bold text-xl sm:text-2xl text-ik-platinum m-0">
-                Connect Card — Cartão Digital NFC
-              </h3>
-              <p class="text-sm text-ik-silver leading-relaxed m-0">
-                Cartão físico personalizado com sua marca para compartilhar telefone, WhatsApp, redes sociais e serviços em reuniões presenciais com apenas uma aproximação.
-              </p>
+          <!-- 4. Connect Card — cartão digital NFC (Placeholder Elegante) -->
+          <article class="ik-card rounded-none !border-0 !bg-ik-obsidian overflow-hidden flex flex-col justify-between">
+            <div>
+              <div class="relative aspect-[16/10] overflow-hidden bg-ik-carbon border-b border-white/10 flex flex-col items-center justify-center p-6 text-center">
+                <div class="w-12 h-12 rounded-none border border-white/20 bg-ik-obsidian flex items-center justify-center mb-2">
+                  <img src="assets/images/ikigai-simbolo-transparente.png" alt="" width="28" height="28" class="w-7 h-7 opacity-60">
+                </div>
+                <span class="font-mono text-[10px] tracking-[0.2em] uppercase text-ik-steel">
+                  [ IMAGEM EM DEFINIÇÃO ]
+                </span>
+                <span class="text-[11px] text-ik-silver/60 mt-0.5">
+                  Fotografia e protótipo em produção
+                </span>
+              </div>
+              <div class="p-6 sm:p-8 space-y-3">
+                <span class="font-mono text-xs text-ik-steel block">PRODUTO 04 // CARTÃO PESSOAL &amp; COMERCIAL</span>
+                <h3 class="font-display font-bold text-xl sm:text-2xl text-ik-platinum m-0">
+                  Connect Card — Cartão Digital NFC
+                </h3>
+                <p class="text-sm text-ik-silver leading-relaxed m-0">
+                  Cartão físico personalizado com sua marca para compartilhar telefone, WhatsApp, redes sociais e serviços em reuniões presenciais com apenas uma aproximação.
+                </p>
+              </div>
             </div>
-            <a
-              href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20o%20Connect%20Card%20(cart%C3%A3o%20digital%20NFC)."
-              target="_blank"
-              rel="noopener noreferrer"
-              class="ik-btn-outline w-full sm:w-auto self-start"
-            >
-              Solicitar um Orçamento
-            </a>
+            <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+              <a
+                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20o%20Connect%20Card%20(cart%C3%A3o%20digital%20NFC)."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ik-btn-outline w-full sm:w-auto"
+              >
+                Solicitar um Orçamento
+              </a>
+            </div>
           </article>
         </div>
 
@@ -619,14 +662,23 @@
                 Quando o cliente aproximar o celular da sua etiqueta, totem ou Connect Card, ele pode abrir uma página personalizada com todos os seus canais: WhatsApp, Instagram, avaliação no Google, catálogo de serviços e botões de ação.
               </p>
             </div>
-            <a
-              href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20solicitar%20um%20or%C3%A7amento%20combinando%20produtos%20NFC%20com%20Mini%20Site%20Profissional."
-              target="_blank"
-              rel="noopener noreferrer"
-              class="ik-btn-primary shrink-0 w-full lg:w-auto"
-            >
-              Quero Combinar NFC + Mini Site
-            </a>
+            <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+              <a
+                href="mini-site.html"
+                target="_blank"
+                class="ik-btn-outline !bg-white/5 w-full sm:w-auto text-center"
+              >
+                Ver Exemplo de Mini Site ↗
+              </a>
+              <a
+                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20solicitar%20um%20or%C3%A7amento%20combinando%20produtos%20NFC%20com%20Mini%20Site%20Profissional."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ik-btn-primary w-full sm:w-auto text-center"
+              >
+                Quero Combinar NFC + Mini Site
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -634,7 +686,7 @@
 
     <div class="ik-hairline-divider"></div>
 
-    <!-- SEÇÃO 03 — SOLUÇÕES DIGITAIS (3 FAIXAS EDITORIAIS DISTINTAS) -->
+    <!-- SEÇÃO 03 — SOLUÇÕES DIGITAIS (3 FAIXAS EDITORIAIS COM IMAGEM) -->
     <section id="solucoes-digitais" class="py-20 sm:py-24 px-5 sm:px-8 relative">
       <div class="max-w-6xl mx-auto space-y-12">
         <div class="max-w-2xl space-y-3 gsap-reveal">
@@ -646,15 +698,28 @@
           </h2>
         </div>
 
-        <!-- 3 Faixas Horizontais Numeradas (contraste estrutural com os cards da Seção 02) -->
+        <!-- 3 Faixas Horizontais Numeradas com Imagem de Referência -->
         <div class="border-y border-white/15 divide-y divide-white/15 gsap-reveal">
-          <!-- 01. Landing Pages -->
-          <article class="py-8 sm:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-            <div class="lg:col-span-4 space-y-1.5">
+          <!-- 01. Landing Pages (Com Print Real Studio Caravella) -->
+          <article class="py-8 sm:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+            <div class="lg:col-span-4 min-w-0">
+              <div class="relative aspect-[16/10] overflow-hidden bg-ik-carbon border border-white/15">
+                <img
+                  src="assets/images/produto-lp-caravella.png"
+                  alt="Exemplo real de Landing Page — Studio Caravella"
+                  width="1280"
+                  height="800"
+                  loading="lazy"
+                  class="w-full h-full object-cover object-top block"
+                >
+                <span class="absolute top-2.5 left-2.5 font-mono text-[9px] tracking-[0.16em] uppercase px-2 py-0.5 bg-ik-obsidian/90 border border-white/20 text-ik-platinum">
+                  CASE REAL // STUDIO CARAVELLA
+                </span>
+              </div>
+            </div>
+            <div class="lg:col-span-5 space-y-2">
               <span class="font-mono text-xs tracking-[0.16em] text-ik-steel block">01 // LANDING PAGES</span>
               <h3 class="font-display font-bold text-2xl sm:text-3xl text-ik-platinum m-0">Landing Pages</h3>
-            </div>
-            <div class="lg:col-span-5">
               <p class="text-sm sm:text-base text-ik-silver leading-relaxed m-0">
                 Páginas criadas para explicar seu serviço com clareza, passar confiança imediata no celular e no computador e transformar visitas em pedidos de orçamento no WhatsApp.
               </p>
@@ -664,43 +729,76 @@
                 href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20sobre%20uma%20Landing%20Page%20para%20minha%20empresa."
                 target="_blank"
                 rel="noopener noreferrer"
-                class="ik-btn-outline w-full lg:w-auto"
+                class="ik-btn-outline w-full lg:w-auto text-center"
               >
                 Falar com um Especialista
               </a>
             </div>
           </article>
 
-          <!-- 02. Mini Sites Profissionais -->
-          <article class="py-8 sm:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-            <div class="lg:col-span-4 space-y-1.5">
+          <!-- 02. Mini Sites Profissionais (Com Print Real Ikigai + Link ao Vivo) -->
+          <article class="py-8 sm:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+            <div class="lg:col-span-4 min-w-0">
+              <div class="relative aspect-[16/10] overflow-hidden bg-ik-carbon border border-white/15 flex items-center justify-center">
+                <img
+                  src="assets/images/produto-mini-site-ikigai.png"
+                  alt="Modelo oficial de Mini Site da IKIGAI COMPANY"
+                  width="480"
+                  height="800"
+                  loading="lazy"
+                  class="w-full h-full object-cover object-top block"
+                >
+                <span class="absolute top-2.5 left-2.5 font-mono text-[9px] tracking-[0.16em] uppercase px-2 py-0.5 bg-ik-obsidian/90 border border-white/20 text-ik-platinum">
+                  MODELO OFICIAL // IKIGAI
+                </span>
+              </div>
+            </div>
+            <div class="lg:col-span-5 space-y-2">
               <span class="font-mono text-xs tracking-[0.16em] text-ik-steel block">02 // MINI SITES</span>
               <h3 class="font-display font-bold text-2xl sm:text-3xl text-ik-platinum m-0">Mini Sites Profissionais</h3>
-            </div>
-            <div class="lg:col-span-5">
               <p class="text-sm sm:text-base text-ik-silver leading-relaxed m-0">
                 Uma página única com a identidade da sua empresa que reúne contatos, redes sociais, principais serviços e botões diretos de ação — ideal para o link da bio ou integrada aos produtos NFC.
               </p>
             </div>
-            <div class="lg:col-span-3 flex lg:justify-end">
+            <div class="lg:col-span-3 flex flex-col sm:flex-row lg:flex-col gap-2.5 lg:justify-end">
+              <a
+                href="mini-site.html"
+                target="_blank"
+                class="ik-btn-outline !bg-white/5 w-full text-center"
+              >
+                Ver Exemplo ao Vivo ↗
+              </a>
               <a
                 href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20conhecer%20a%20solu%C3%A7%C3%A3o%20de%20Mini%20Site%20Profissional%20da%20IKIGAI%20COMPANY."
                 target="_blank"
                 rel="noopener noreferrer"
-                class="ik-btn-outline w-full lg:w-auto"
+                class="ik-btn-primary w-full text-center"
               >
                 Conhecer a Solução
               </a>
             </div>
           </article>
 
-          <!-- 03. Automações de Processos -->
-          <article class="py-8 sm:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-            <div class="lg:col-span-4 space-y-1.5">
+          <!-- 03. Automações de Processos (Placeholder Elegante) -->
+          <article class="py-8 sm:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+            <div class="lg:col-span-4 min-w-0">
+              <div class="relative aspect-[16/10] overflow-hidden bg-ik-carbon border border-white/15 flex flex-col items-center justify-center p-6 text-center">
+                <div class="w-12 h-12 rounded-none border border-white/20 bg-ik-obsidian flex items-center justify-center mb-2">
+                  <svg class="w-6 h-6 text-ik-platinum" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                  </svg>
+                </div>
+                <span class="font-mono text-[10px] tracking-[0.2em] uppercase text-ik-steel">
+                  [ IMAGEM EM DEFINIÇÃO ]
+                </span>
+                <span class="text-[11px] text-ik-silver/60 mt-0.5">
+                  Diagrama de fluxo comercial em produção
+                </span>
+              </div>
+            </div>
+            <div class="lg:col-span-5 space-y-2">
               <span class="font-mono text-xs tracking-[0.16em] text-ik-steel block">03 // AUTOMAÇÕES</span>
               <h3 class="font-display font-bold text-2xl sm:text-3xl text-ik-platinum m-0">Automações de Processos</h3>
-            </div>
-            <div class="lg:col-span-5">
               <p class="text-sm sm:text-base text-ik-silver leading-relaxed m-0">
                 Fluxos práticos para organizar a entrada de novos contatos, agilizar respostas iniciais e reduzir tarefas manuais repetitivas no atendimento diário da sua equipe.
               </p>
@@ -710,7 +808,7 @@
                 href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20sobre%20Automa%C3%A7%C3%B5es%20de%20Processos%20para%20meu%20neg%C3%B3cio."
                 target="_blank"
                 rel="noopener noreferrer"
-                class="ik-btn-outline w-full lg:w-auto"
+                class="ik-btn-outline w-full lg:w-auto text-center"
               >
                 Falar com um Especialista
               </a>
