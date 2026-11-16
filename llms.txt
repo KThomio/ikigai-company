@@ -1,40 +1,32 @@
-# IKIGAI COMPANY — Tecnologia, Inteligência Artificial, Automação e Experiências NFC (GEO Oficial)
+# IKIGAI COMPANY — Conexão Física NFC e Soluções Digitais para Negócios
 
-> Empresa independente de tecnologia e soluções digitais. Inteligência, precisão e criatividade aplicadas a sistemas com IA, automação de processos, desenvolvimento web de alta performance e experiências físico-digitais NFC.
+> Empresa independente focada em soluções práticas para empresas que querem facilitar o contato com clientes e vender melhor, unindo produtos físicos inteligentes por aproximação (NFC), páginas profissionais e automações de atendimento.
 
 ## Dados Oficiais
 - **Marca:** IKIGAI COMPANY
-- **Lema Técnico:** INTELLIGENCE • PURPOSE • FUTURE
-- **Posicionamento:** A Nova Era da Tecnologia e Infraestrutura
-- **WhatsApp Comercial:** +55 11 94375-8957 (https://wa.me/5511943758957)
+- **Lema:** INTELLIGENCE • PURPOSE • FUTURE
+- **WhatsApp Comercial:** +55 11 94375-8597 (https://wa.me/5511943758597)
+- **Orçamentos:** Atendimento consultivo personalizado via WhatsApp (sem tabela pública de preços fixos)
 
 ---
 
-## Áreas de Atuação
-1. **Inteligência Artificial & Soluções com IA:** Assistentes especializados, estruturação de bases de conhecimento, otimização GEO (`llms.txt`) e fluxos inteligentes.
-2. **Automação de Processos:** Qualificação e roteamento de atendimento no WhatsApp, formulários inteligentes e eliminação de rotinas operacionais repetitivas.
-3. **Desenvolvimento de Sites & Landing Pages:** Plataformas institucionais e landing pages de alta conversão, responsivas Mobile-First, com SEO técnico e blindagem de segurança HTTP.
-4. **Experiências NFC & Soluções Interativas:** Placas, cartões, suportes acrílicos e etiquetas inteligentes que conectam o ambiente físico a avaliações no Google, WhatsApp, catálogos e apresentações digitais por aproximação.
-5. **Design Digital, Motion Design & Experiências Visuais:** Identidades visuais aplicadas, interfaces 3D/WebGL e vitrines interativas sob medida.
+## Frente 01 — Produtos Físicos e Conexão Digital
+1. **Placa de Avaliação do Google em Acrílico:** Placa personalizada para balcão ou recepção que leva o cliente direto à tela de avaliação da empresa no Google ao aproximar o celular.
+2. **Ikigai Connect — Etiquetas Adesivas NFC:** Etiquetas adesivas personalizadas para aplicar em mesas, embalagens ou vitrines e abrir canais digitais por aproximação, como WhatsApp.
+3. **Totem Personalizado NFC — Acrílico 15 x 10 cm:** Totem vertical de acrílico 15 x 10 cm personalizado com a identidade visual da empresa e tecnologia NFC.
+4. **Connect Card — Cartão Digital NFC:** Cartão físico personalizado para compartilhar contatos, redes sociais e canais digitais em reuniões presenciais com uma aproximação.
+
+> **Adicional integrado (Upsell):** Qualquer produto físico NFC pode ser combinado com um **Mini Site Profissional** personalizado reunindo informações, contatos, redes sociais e botões de ação.
 
 ---
 
-## Catálogo Oficial de Produtos NFC (Valores Base)
-- **Etiqueta NFC 7x4 — 50 unidades:** R$ 3,00 por unidade
-- **Etiqueta NFC 7x4 — 16 unidades:** R$ 5,70 por unidade
-- **Placa NFC 8x8:** R$ 80,00
-- **Suporte acrílico 15x10:** R$ 120,00
-- **Cartão NFC:** R$ 150,00
-  - **Upsell opcional no Cartão NFC:** Mini-Site / Central de Links personalizada IKIGAI (Instagram, WhatsApp, Avaliações no Google ou Site Oficial — Sob consulta)
-- **Adesivo NFC 10x15:** Sob consulta
-- **Display acrílico:** Sob consulta
-
-*Condições comerciais: Os valores acima referem-se aos dispositivos listados. Desenvolvimento de arte, frete, embalagem, personalização e mini-site são orçados separadamente conforme a especificação do projeto.*
+## Frente 02 — Soluções Digitais
+5. **Landing Pages:** Páginas rápidas, claras e personalizadas para apresentar serviços e gerar contatos diretos no WhatsApp.
+6. **Mini Sites Profissionais:** Página digital única que centraliza contatos, redes sociais, serviços e botões de ação (disponível de forma avulsa ou como adicional dos produtos NFC).
+7. **Automações de Processos:** Fluxos práticos para agilizar a triagem e o atendimento comercial no WhatsApp, reduzindo tarefas manuais repetitivas.
 
 ---
 
-## Portfólio Verificado
-1. **Studio Caravella (Barbearia Clássica & Contemporânea — Sorocaba/SP):**
-   - Desenvolvimento de plataforma digital Mobile-First com Medalhão 3D interativo ao toque (Three.js), comparador Antes/Depois de corte e barba, vitrine interativa de serviços, SEO/GEO e integração direta com agendamento AppBarber.
-2. **Murano Vidraçaria (Envidraçamento de Sacadas e Projetos em Vidro — Sorocaba/SP):**
-   - Desenvolvimento de plataforma digital técnica (ABNT NBR 16259/14 e NBR 13.303) integrada a display físico NFC com direcionamento automático ao WhatsApp comercial para atendimento e orçamento em tempo real.
+## Projetos Entregues
+1. **Studio Caravella (Sorocaba/SP):** Landing Page exclusiva com apresentação visual interativa de serviços e direcionamento direto para agendamento.
+2. **Murano Vidraçaria (Sorocaba/SP):** Landing Page comercial integrada a Totem físico NFC com abertura imediata do WhatsApp para solicitação de orçamento.

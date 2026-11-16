@@ -1,6 +1,6 @@
 # STATE — IKIGAI COMPANY
 
-- **Fase:** FASE 4 concluída e pronta para publicação (commit local criado em `main`)
-- **Motion Showreel (`ikigai-motion/`):** 4 Atos em loop (`1080×1080 @ 60 FPS`, 8s / 480 frames, `630.7 kB`) em `assets/videos/ikigai-hero-showreel.mp4`
-- **Site `0px` (`index.html` & `lp/index.html`):** Sincronizados 1:1, placeholders de CNPJ/e-mail/Instagram removidos da UI pública (canal oficial via WhatsApp `+55 11 94375-8957`), `ROUNDED_CLASS_COUNT: 0`
-- **Pendências (`[A CONFIRMAR]`):** Autenticação `gh` / criação do repositório remoto no GitHub e login na Vercel para `push` + deploy em produção; URLs públicas futuras dos cases do portfólio
+- **Fase:** V5 concluída — Site enxuto em 5 seções, linha **Ikigai Connect**, 7 soluções oficiais em 2 frentes e WhatsApp atualizado (`5511943758597`)
+- **Frente 01 (Físico + NFC):** Placa Google Acrílico, Ikigai Connect (Etiquetas NFC), Totem NFC 15×10 cm e Connect Card + Upsell Mini Site
+- **Frente 02 (Digital):** Landing Pages, Mini Sites Profissionais e Automações de Processos (sem tabela pública de preços)
+- **Performance & Blindagem:** Canvas 60fps removido, `preload="none"` no vídeo secundário, `0px` absoluto (`ROUNDED_CLASS_COUNT: 0`), `index.html` = `lp/index.html`, headers `vercel.json` + modal LGPD

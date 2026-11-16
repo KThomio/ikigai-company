@@ -3,10 +3,10 @@
     "name": "IKIGAI COMPANY",
     "cnpj": null,
     "tagline": "INTELLIGENCE • PURPOSE • FUTURE",
-    "headlineStatement": "A Nova Era da Tecnologia e Infraestrutura",
-    "whatsapp": "5511943758957",
-    "whatsappDisplay": "+55 11 94375-8957",
-    "whatsappUrl": "https://wa.me/5511943758957",
+    "headlineStatement": "Conexão física e soluções digitais para negócios",
+    "whatsapp": "5511943758597",
+    "whatsappDisplay": "+55 11 94375-8597",
+    "whatsappUrl": "https://wa.me/5511943758597",
     "email": null,
     "instagram": null,
     "location": "Atendimento Comercial Oficial via WhatsApp"
@@ -29,82 +29,66 @@
       "mono": "JetBrains Mono"
     }
   },
-  "nfcCatalog": [
+  "physicalProducts": [
     {
-      "id": "etiqueta-50",
-      "name": "Etiqueta NFC 7x4 — 50 unidades",
-      "dimensions": "7 x 4 cm",
-      "lot": "50 unidades",
-      "unitPrice": 3.00,
-      "priceDisplay": "R$ 3,00 / un",
-      "lotTotalDisplay": "Lote R$ 150,00"
+      "id": "placa-google-acrilico",
+      "name": "Placa de Avaliação do Google em Acrílico",
+      "line": "Produtos Físicos & Conexão Digital",
+      "pricing": "Sob orçamento"
     },
     {
-      "id": "etiqueta-16",
-      "name": "Etiqueta NFC 7x4 — 16 unidades",
-      "dimensions": "7 x 4 cm",
-      "lot": "16 unidades",
-      "unitPrice": 5.70,
-      "priceDisplay": "R$ 5,70 / un",
-      "lotTotalDisplay": "Lote R$ 91,20"
+      "id": "ikigai-connect-etiquetas",
+      "name": "Ikigai Connect — Etiquetas Adesivas NFC",
+      "line": "Ikigai Connect",
+      "pricing": "Sob orçamento"
     },
     {
-      "id": "placa-8x8",
-      "name": "Placa NFC 8x8",
-      "dimensions": "8 x 8 cm",
-      "lot": "Unidade",
-      "unitPrice": 80.00,
-      "priceDisplay": "R$ 80,00"
-    },
-    {
-      "id": "suporte-15x10",
-      "name": "Suporte acrílico 15x10",
+      "id": "totem-nfc-15x10",
+      "name": "Totem Personalizado NFC — Acrílico 15 x 10 cm",
       "dimensions": "15 x 10 cm",
-      "lot": "Unidade",
-      "unitPrice": 120.00,
-      "priceDisplay": "R$ 120,00"
+      "line": "Produtos Físicos & Conexão Digital",
+      "pricing": "Sob orçamento"
     },
     {
-      "id": "cartao-nfc",
-      "name": "Cartão NFC",
-      "dimensions": "Padrão executivo",
-      "lot": "Unidade",
-      "unitPrice": 150.00,
-      "priceDisplay": "R$ 150,00",
+      "id": "connect-card",
+      "name": "Connect Card — Cartão Digital NFC",
+      "line": "Produtos Físicos & Conexão Digital",
+      "pricing": "Sob orçamento",
       "upsell": {
-        "name": "Mini-Site / Central de Links IKIGAI",
-        "priceDisplay": "Sob consulta",
+        "name": "Mini Site Profissional",
         "targets": ["Instagram", "WhatsApp", "Avaliações Google", "Site Oficial"]
       }
+    }
+  ],
+  "digitalSolutions": [
+    {
+      "id": "landing-pages",
+      "name": "Landing Pages",
+      "pricing": "Sob orçamento"
     },
     {
-      "id": "adesivo-10x15",
-      "name": "Adesivo NFC 10x15",
-      "dimensions": "10 x 15 cm",
-      "lot": "Sob medida",
-      "unitPrice": null,
-      "priceDisplay": "Sob consulta"
+      "id": "mini-sites-profissionais",
+      "name": "Mini Sites Profissionais",
+      "note": "Disponível de forma independente ou como adicional para produtos NFC",
+      "pricing": "Sob orçamento"
     },
     {
-      "id": "display-acrilico",
-      "name": "Display acrílico",
-      "dimensions": "Sob especificação",
-      "lot": "Sob medida",
-      "unitPrice": null,
-      "priceDisplay": "Sob consulta"
+      "id": "automacoes-de-processos",
+      "name": "Automações de Processos",
+      "pricing": "Sob orçamento"
     }
   ],
   "portfolioCases": [
     {
       "id": "studio-caravella",
       "name": "Studio Caravella",
-      "category": "Experiência Digital · WebGL 3D · Conversão Mobile",
+      "category": "Landing Page · Experiência Visual · Agendamento Direto",
       "cover": "assets/images/case-caravella-capa.jpg"
     },
     {
       "id": "murano-vidracaria",
       "name": "Murano Vidraçaria",
-      "category": "Engenharia Visual · Simulador CAD · Automação WhatsApp",
+      "category": "Landing Page · Totem NFC · Atendimento WhatsApp",
       "cover": "assets/images/case-murano-capa.png"
     }
   ]
