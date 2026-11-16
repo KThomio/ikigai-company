@@ -34,48 +34,75 @@
       "id": "placa-google-acrilico",
       "name": "Placa de Avaliação do Google em Acrílico",
       "line": "Produtos Físicos & Conexão Digital",
-      "pricing": "Sob orçamento"
+      "price": "R$ 80,00",
+      "comboWithMiniSite": "R$ 210,00"
     },
     {
       "id": "ikigai-connect-etiquetas",
       "name": "Ikigai Connect — Etiquetas Adesivas NFC",
       "line": "Ikigai Connect",
-      "pricing": "Sob orçamento"
+      "price16un": "R$ 91,20",
+      "price50un": "R$ 150,00",
+      "dimensions": "7x4 cm",
+      "note": "Projetos com outros tamanhos, formatos ou recortes especiais sob consulta prévia."
     },
     {
       "id": "totem-nfc-15x10",
       "name": "Totem Personalizado NFC — Acrílico 15 x 10 cm",
       "dimensions": "15 x 10 cm",
       "line": "Produtos Físicos & Conexão Digital",
-      "pricing": "Sob orçamento"
+      "price": "R$ 120,00",
+      "comboWithMiniSite": "R$ 250,00"
     },
     {
       "id": "connect-card",
       "name": "Connect Card — Cartão Digital NFC",
       "line": "Produtos Físicos & Conexão Digital",
-      "pricing": "Sob orçamento",
-      "upsell": {
-        "name": "Mini Site Profissional",
-        "targets": ["Instagram", "WhatsApp", "Avaliações Google", "Site Oficial"]
-      }
+      "pricePVC": "R$ 69,90",
+      "pricePremium": "R$ 150,00",
+      "comboWithMiniSitePVC": "R$ 199,90",
+      "comboWithMiniSitePremium": "R$ 280,00"
+    }
+  ],
+  "promotionalCombos": [
+    {
+      "id": "combo-connect-card-adesivado",
+      "name": "Connect Card (PVC Adesivado) + Mini Site Profissional",
+      "price": "R$ 199,90"
+    },
+    {
+      "id": "combo-placa-google",
+      "name": "Placa de Avaliação Google + Mini Site Profissional",
+      "price": "R$ 210,00",
+      "badge": "Mais Escolhido"
+    },
+    {
+      "id": "combo-totem-15x10",
+      "name": "Totem Personalizado NFC (15x10) + Mini Site Profissional",
+      "price": "R$ 250,00"
+    },
+    {
+      "id": "combo-connect-card-premium",
+      "name": "Connect Card (PVC Premium) + Mini Site Profissional",
+      "price": "R$ 280,00"
     }
   ],
   "digitalSolutions": [
     {
-      "id": "landing-pages",
-      "name": "Landing Pages",
-      "pricing": "Sob orçamento"
-    },
-    {
       "id": "mini-sites-profissionais",
       "name": "Mini Sites Profissionais",
-      "note": "Disponível de forma independente ou como adicional para produtos NFC",
-      "pricing": "Sob orçamento"
+      "price": "R$ 299,00",
+      "note": "Disponível de forma avulsa (R$ 299,00) ou a partir de R$ 199,90 integrado nos Combos com produtos NFC"
+    },
+    {
+      "id": "landing-pages",
+      "name": "Landing Pages de Alta Conversão",
+      "price": "R$ 599,00"
     },
     {
       "id": "automacoes-de-processos",
       "name": "Automações de Processos",
-      "pricing": "Sob orçamento"
+      "price": "Sob Consulta"
     }
   ],
   "portfolioCases": [

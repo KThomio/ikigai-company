@@ -64,7 +64,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js" defer></script>
 
-  <!-- Schema.org JSON-LD: ProfessionalService + OfferCatalog (Sob Orçamento) + FAQPage -->
+  <!-- Schema.org JSON-LD: ProfessionalService + OfferCatalog + FAQPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -77,21 +77,27 @@
         "url": "https://ikigaicompany.vercel.app/",
         "logo": "https://ikigaicompany.vercel.app/assets/images/ikigai-selo-oficial.png",
         "telephone": "+55-11-94375-8597",
-        "description": "Soluções práticas que conectam atendimento físico e presença digital: Placa de Avaliação do Google em Acrílico, Ikigai Connect (etiquetas adesivas NFC), Totem Personalizado NFC 15x10 cm, Connect Card, Landing Pages, Mini Sites Profissionais e Automações de Processos.",
+        "description": "Soluções práticas que conectam atendimento físico e presença digital: Placa de Avaliação do Google em Acrílico, Ikigai Connect (etiquetas adesivas NFC), Totem Personalizado NFC 15x10 cm, Connect Card, Combos Promocionais com Mini Site, Landing Pages e Automações de Processos.",
         "sameAs": [
           "https://wa.me/5511943758597"
         ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Soluções IKIGAI COMPANY",
+          "name": "Catálogo Oficial IKIGAI COMPANY",
           "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Placa de Avaliação do Google em Acrílico" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Ikigai Connect — Etiquetas Adesivas NFC" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Totem Personalizado NFC — Acrílico 15 x 10 cm" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Connect Card — Cartão Digital NFC" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing Pages" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mini Sites Profissionais" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automações de Processos" } }
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Placa de Avaliação do Google em Acrílico" }, "price": "80.00", "priceCurrency": "BRL" },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Ikigai Connect — Etiquetas NFC 7x4 cm (16 un)" }, "price": "91.20", "priceCurrency": "BRL" },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Ikigai Connect — Etiquetas NFC 7x4 cm (50 un)" }, "price": "150.00", "priceCurrency": "BRL" },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Totem Personalizado NFC — Acrílico 15 x 10 cm" }, "price": "120.00", "priceCurrency": "BRL" },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Connect Card — Cartão Digital NFC (PVC Adesivado)" }, "price": "69.90", "priceCurrency": "BRL" },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Connect Card — Cartão Digital NFC (PVC Premium)" }, "price": "150.00", "priceCurrency": "BRL" },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Combo Connect Card Adesivado + Mini Site Profissional" }, "price": "199.90", "priceCurrency": "BRL" },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Combo Placa de Avaliação Google + Mini Site Profissional" }, "price": "210.00", "priceCurrency": "BRL" },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Combo Totem NFC 15x10 + Mini Site Profissional" }, "price": "250.00", "priceCurrency": "BRL" },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Combo Connect Card Premium + Mini Site Profissional" }, "price": "280.00", "priceCurrency": "BRL" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mini Site Profissional (Avulso)" }, "price": "299.00", "priceCurrency": "BRL" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing Page de Alta Conversão" }, "price": "599.00", "priceCurrency": "BRL" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automações de Processos" }, "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "BRL", "description": "Sob Consulta" } }
           ]
         }
       },
@@ -287,27 +293,30 @@
     .ik-hero-bg-motion {
       position: absolute;
       top: 50%;
-      right: -20px;
+      right: -10px;
       transform: translateY(-50%);
       width: 580px;
       height: 580px;
       max-width: 90vw;
       max-height: 90vw;
       z-index: 0;
-      opacity: 0.65;
+      opacity: 0.85;
       overflow: hidden;
       pointer-events: none;
-      -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 36%, rgba(0, 0, 0, 0) 72%);
-      mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 36%, rgba(0, 0, 0, 0) 72%);
+      -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 42%, rgba(0, 0, 0, 0) 74%);
+      mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 42%, rgba(0, 0, 0, 0) 74%);
     }
     @media (max-width: 1023px) {
       .ik-hero-bg-motion {
-        top: 58%;
-        right: 50%;
-        transform: translate(50%, -50%);
-        width: 320px;
-        height: 320px;
-        opacity: 0.18;
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        width: 300px;
+        height: 300px;
+        margin: -8px auto 12px auto;
+        opacity: 0.98;
+        z-index: 10;
       }
     }
 
@@ -341,6 +350,7 @@
       <!-- Menu Desktop -->
       <nav class="hidden lg:flex items-center gap-7 text-xs uppercase tracking-[0.15em] text-ik-steel font-medium" aria-label="Navegação principal">
         <a href="#ikigai-connect" class="hover:text-ik-platinum transition-colors py-2">Produtos NFC</a>
+        <a href="#combos" class="hover:text-ik-platinum transition-colors py-2 text-ik-platinum font-semibold">Combos</a>
         <a href="#solucoes-digitais" class="hover:text-ik-platinum transition-colors py-2">Soluções Digitais</a>
         <a href="#portfolio" class="hover:text-ik-platinum transition-colors py-2">Projetos</a>
         <a href="#como-funciona" class="hover:text-ik-platinum transition-colors py-2">Como Funciona</a>
@@ -384,11 +394,12 @@
     </div>
 
     <nav class="my-auto py-6 space-y-1" aria-label="Menu mobile">
-      <a href="#ikigai-connect" class="js-nav-item flex items-center justify-between py-4 border-b border-white/10 font-display text-lg text-ik-platinum"><span>Produtos NFC &amp; Ikigai Connect</span><span class="font-mono text-xs text-ik-steel">01</span></a>
-      <a href="#solucoes-digitais" class="js-nav-item flex items-center justify-between py-4 border-b border-white/10 font-display text-lg text-ik-platinum"><span>Soluções Digitais</span><span class="font-mono text-xs text-ik-steel">02</span></a>
-      <a href="#portfolio" class="js-nav-item flex items-center justify-between py-4 border-b border-white/10 font-display text-lg text-ik-platinum"><span>Projetos Entregues</span><span class="font-mono text-xs text-ik-steel">03</span></a>
-      <a href="#como-funciona" class="js-nav-item flex items-center justify-between py-4 border-b border-white/10 font-display text-lg text-ik-platinum"><span>Como Funciona</span><span class="font-mono text-xs text-ik-steel">04</span></a>
-      <a href="#contato" class="js-nav-item flex items-center justify-between py-4 border-b border-white/10 font-display text-lg text-ik-platinum"><span>Solicitar Orçamento</span><span class="font-mono text-xs text-ik-steel">05</span></a>
+      <a href="#ikigai-connect" class="js-nav-item flex items-center justify-between py-4 border-b border-white/10 font-display text-lg text-ik-platinum"><span>Produtos NFC</span><span class="font-mono text-xs text-ik-steel">01</span></a>
+      <a href="#combos" class="js-nav-item flex items-center justify-between py-4 border-b border-white/10 font-display text-lg text-ik-platinum"><span class="font-semibold text-white">Combos Promocionais</span><span class="font-mono text-xs text-ik-platinum">02</span></a>
+      <a href="#solucoes-digitais" class="js-nav-item flex items-center justify-between py-4 border-b border-white/10 font-display text-lg text-ik-platinum"><span>Soluções Digitais</span><span class="font-mono text-xs text-ik-steel">03</span></a>
+      <a href="#portfolio" class="js-nav-item flex items-center justify-between py-4 border-b border-white/10 font-display text-lg text-ik-platinum"><span>Projetos Entregues</span><span class="font-mono text-xs text-ik-steel">04</span></a>
+      <a href="#como-funciona" class="js-nav-item flex items-center justify-between py-4 border-b border-white/10 font-display text-lg text-ik-platinum"><span>Como Funciona</span><span class="font-mono text-xs text-ik-steel">05</span></a>
+      <a href="#contato" class="js-nav-item flex items-center justify-between py-4 border-b border-white/10 font-display text-lg text-ik-platinum"><span>Solicitar Orçamento</span><span class="font-mono text-xs text-ik-steel">06</span></a>
     </nav>
 
     <div>
@@ -401,48 +412,51 @@
   <main id="hero" class="relative z-10">
 
     <!-- SEÇÃO 01 — HERO MINIMALISTA COM MOTION BACKGROUND INTEGRADO -->
-    <section class="relative min-h-[88vh] pt-28 sm:pt-32 pb-16 px-5 sm:px-8 flex items-center overflow-hidden">
+    <section class="relative min-h-[88vh] pt-24 sm:pt-32 pb-16 px-5 sm:px-8 flex flex-col justify-center overflow-hidden">
       <!-- Fundo Radial + Motion Background Integrado com Fusão Radial -->
       <div class="absolute inset-0 -z-10 pointer-events-none bg-[radial-gradient(55%_48%_at_68%_42%,rgba(234,236,239,0.08)_0%,transparent_72%)]"></div>
 
-      <div class="ik-hero-bg-motion" aria-hidden="true">
-        <video
-          id="ik-hero-reel"
-          src="assets/videos/ikigai-hero-showreel.mp4"
-          poster="assets/images/ikigai-selo-oficial.png"
-          autoplay
-          loop
-          muted
-          playsinline
-          preload="auto"
-          class="w-full h-full object-cover block"
-        ></video>
-      </div>
+      <div class="max-w-6xl mx-auto w-full relative z-10">
+        <!-- No mobile renderiza no topo com brilho total; no desktop é posicionado absolutamente à direita -->
+        <div class="ik-hero-bg-motion" aria-hidden="true">
+          <video
+            id="ik-hero-reel"
+            src="assets/videos/ikigai-hero-showreel.mp4"
+            poster="assets/images/ikigai-selo-oficial.png"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+            class="w-full h-full object-cover block"
+          ></video>
+        </div>
 
-      <div class="max-w-6xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        <!-- Coluna de Texto com Contraste Total -->
-        <div class="lg:col-span-8 min-w-0 w-full space-y-6">
-          <div class="gsap-hero inline-flex items-center gap-3 pl-3 py-1 border-l-2 border-ik-platinum">
-            <span class="font-mono text-[11px] tracking-[0.2em] uppercase text-ik-silver">
-              INTELLIGENCE • PURPOSE • FUTURE
-            </span>
-          </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- Coluna de Texto com Contraste Total -->
+          <div class="lg:col-span-8 min-w-0 w-full space-y-6">
+            <div class="gsap-hero inline-flex items-center gap-3 pl-3 py-1 border-l-2 border-ik-platinum">
+              <span class="font-mono text-[11px] tracking-[0.2em] uppercase text-ik-silver">
+                INTELLIGENCE • PURPOSE • FUTURE
+              </span>
+            </div>
 
-          <h1 class="gsap-hero font-display font-extrabold text-[clamp(2.1rem,4.8vw,3.85rem)] leading-[1.08] tracking-[-0.02em] text-ik-platinum break-words">
-            Conexão física e soluções digitais para empresas que querem vender melhor.
-          </h1>
+            <h1 class="gsap-hero font-display font-extrabold text-[clamp(2.1rem,4.8vw,3.85rem)] leading-[1.08] tracking-[-0.02em] text-ik-platinum break-words">
+              Conexão física e soluções digitais para empresas que querem vender melhor.
+            </h1>
 
-          <p class="gsap-hero text-ik-silver text-base sm:text-lg leading-relaxed max-w-xl m-0">
-            Unimos produtos inteligentes por aproximação (<strong class="text-ik-platinum font-semibold">Ikigai Connect NFC</strong>), páginas profissionais de alta conversão e automações práticas para facilitar o contato com o seu cliente.
-          </p>
+            <p class="gsap-hero text-ik-silver text-base sm:text-lg leading-relaxed max-w-xl m-0">
+              Unimos produtos inteligentes por aproximação (<strong class="text-ik-platinum font-semibold">Ikigai Connect NFC</strong>), páginas profissionais de alta conversão e automações práticas para facilitar o contato com o seu cliente.
+            </p>
 
-          <div class="gsap-hero pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 max-w-md sm:max-w-none">
-            <a href="#contato" class="ik-btn-primary">
-              Solicitar um Orçamento
-            </a>
-            <a href="#ikigai-connect" class="ik-btn-outline">
-              Conhecer as Soluções
-            </a>
+            <div class="gsap-hero pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 max-w-md sm:max-w-none">
+              <a href="#combos" class="ik-btn-primary">
+                Ver Combos &amp; Preços
+              </a>
+              <a href="#ikigai-connect" class="ik-btn-outline">
+                Conhecer as Soluções
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -498,7 +512,7 @@
           </div>
         </div>
 
-        <!-- Grid dos 4 Produtos Físicos com Área de Imagem 16:10 -->
+        <!-- Grid dos 4 Produtos Físicos com Área de Imagem 16:10 e Faixas Clicáveis de Preços -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/15 border border-white/15 gsap-reveal">
           <!-- 1. Placa de avaliação do Google em acrílico (Com Foto Real) -->
           <article class="ik-card rounded-none !border-0 !bg-ik-obsidian overflow-hidden flex flex-col justify-between">
@@ -526,14 +540,30 @@
                 </p>
               </div>
             </div>
-            <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+            <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-2 space-y-2.5 border-t border-white/10">
+              <span class="text-[11px] font-mono uppercase tracking-[0.16em] text-ik-steel block">
+                Valores Oficiais:
+              </span>
               <a
-                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20a%20Placa%20de%20Avalia%C3%A7%C3%A3o%20do%20Google%20em%20Acr%C3%ADlico."
+                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20pedir%20a%20Placa%20de%20Avalia%C3%A7%C3%A3o%20do%20Google%20em%20Acr%C3%ADlico%20(R$%2080,00)."
                 target="_blank"
                 rel="noopener noreferrer"
-                class="ik-btn-outline w-full sm:w-auto"
+                class="flex items-center justify-between p-3 border border-white/15 bg-white/5 hover:border-ik-platinum hover:bg-white/10 transition-colors text-xs text-ik-platinum"
               >
-                Solicitar um Orçamento
+                <span>Placa em Acrílico Avulsa</span>
+                <span class="font-mono font-bold text-sm text-ik-platinum">R$ 80,00</span>
+              </a>
+              <a
+                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20aproveitar%20o%20Combo%20Placa%20de%20Avalia%C3%A7%C3%A3o%20Google%20+%20Mini%20Site%20Profissional%20(R$%20210,00)."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-between p-3 border border-ik-platinum/40 bg-white/10 hover:border-ik-platinum hover:bg-white/15 transition-colors text-xs text-ik-platinum"
+              >
+                <div class="flex items-center gap-1.5">
+                  <span class="font-semibold">Combo Placa + Mini Site</span>
+                  <span class="font-mono text-[9px] uppercase px-1.5 py-0.5 bg-ik-platinum text-ik-obsidian font-bold">Mais Escolhido</span>
+                </div>
+                <span class="font-mono font-bold text-sm text-ik-platinum">R$ 210,00</span>
               </a>
             </div>
           </article>
@@ -562,15 +592,34 @@
                 </p>
               </div>
             </div>
-            <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+            <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-2 space-y-2.5 border-t border-white/10">
+              <span class="text-[11px] font-mono uppercase tracking-[0.16em] text-ik-steel block">
+                Pacotes Oficiais (7×4 cm):
+              </span>
               <a
-                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20conhecer%20a%20solu%C3%A7%C3%A3o%20Ikigai%20Connect%20(etiquetas%20adesivas%20NFC)%20e%20pedir%20um%20or%C3%A7amento."
+                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20pedir%20o%20Pacote%20de%2016%20un.%20das%20Etiquetas%20NFC%20Ikigai%20Connect%207x4cm%20(R$%2091,20)."
                 target="_blank"
                 rel="noopener noreferrer"
-                class="ik-btn-outline w-full sm:w-auto"
+                class="flex items-center justify-between p-3 border border-white/15 bg-white/5 hover:border-ik-platinum hover:bg-white/10 transition-colors text-xs text-ik-platinum"
               >
-                Conhecer a Solução
+                <span>Pacote 16 un. (7×4 cm)</span>
+                <span class="font-mono font-bold text-sm text-ik-platinum">R$ 91,20</span>
               </a>
+              <a
+                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20pedir%20o%20Pacote%20de%2050%20un.%20das%20Etiquetas%20NFC%20Ikigai%20Connect%207x4cm%20(R$%20150,00)."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-between p-3 border border-ik-platinum/40 bg-white/10 hover:border-ik-platinum hover:bg-white/15 transition-colors text-xs text-ik-platinum"
+              >
+                <div class="flex items-center gap-1.5">
+                  <span class="font-semibold">Pacote 50 un. (7×4 cm)</span>
+                  <span class="font-mono text-[9px] uppercase px-1.5 py-0.5 bg-ik-platinum text-ik-obsidian font-bold">Mais Econômico</span>
+                </div>
+                <span class="font-mono font-bold text-sm text-ik-platinum">R$ 150,00</span>
+              </a>
+              <p class="text-[11px] text-ik-steel leading-tight pt-1 m-0">
+                * Importante: Os valores das etiquetas referem-se estritamente à medida 7×4 cm. Projetos com outros tamanhos, formatos ou recortes especiais estão sujeitos a ajustes orçamentários sob consulta prévia.
+              </p>
             </div>
           </article>
 
@@ -598,14 +647,30 @@
                 </p>
               </div>
             </div>
-            <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+            <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-2 space-y-2.5 border-t border-white/10">
+              <span class="text-[11px] font-mono uppercase tracking-[0.16em] text-ik-steel block">
+                Valores Oficiais:
+              </span>
               <a
-                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20o%20Totem%20Personalizado%20NFC%2015x10%20cm."
+                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20pedir%20o%20Totem%20Personalizado%20NFC%2015x10%20cm%20(R$%20120,00)."
                 target="_blank"
                 rel="noopener noreferrer"
-                class="ik-btn-outline w-full sm:w-auto"
+                class="flex items-center justify-between p-3 border border-white/15 bg-white/5 hover:border-ik-platinum hover:bg-white/10 transition-colors text-xs text-ik-platinum"
               >
-                Solicitar um Orçamento
+                <span>Totem 15×10 cm Avulso</span>
+                <span class="font-mono font-bold text-sm text-ik-platinum">R$ 120,00</span>
+              </a>
+              <a
+                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20aproveitar%20o%20Combo%20Totem%20Personalizado%20NFC%2015x10%20+%20Mini%20Site%20Profissional%20(R$%20250,00)."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-between p-3 border border-ik-platinum/40 bg-white/10 hover:border-ik-platinum hover:bg-white/15 transition-colors text-xs text-ik-platinum"
+              >
+                <div class="flex items-center gap-1.5">
+                  <span class="font-semibold">Combo Totem + Mini Site</span>
+                  <span class="font-mono text-[9px] uppercase px-1.5 py-0.5 bg-ik-platinum text-ik-obsidian font-bold">Recomendado</span>
+                </div>
+                <span class="font-mono font-bold text-sm text-ik-platinum">R$ 250,00</span>
               </a>
             </div>
           </article>
@@ -634,35 +699,50 @@
                 </p>
               </div>
             </div>
-            <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+            <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-2 space-y-2.5 border-t border-white/10">
+              <span class="text-[11px] font-mono uppercase tracking-[0.16em] text-ik-steel block">
+                Modelos e Valores Oficiais:
+              </span>
               <a
-                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20o%20Connect%20Card%20(cart%C3%A3o%20digital%20NFC)."
+                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20pedir%20o%20Connect%20Card%20em%20PVC%20Adesivado%20(R$%2069,90)."
                 target="_blank"
                 rel="noopener noreferrer"
-                class="ik-btn-outline w-full sm:w-auto"
+                class="flex items-center justify-between p-3 border border-white/15 bg-white/5 hover:border-ik-platinum hover:bg-white/10 transition-colors text-xs text-ik-platinum"
               >
-                Solicitar um Orçamento
+                <span>Connect Card (PVC Adesivado)</span>
+                <span class="font-mono font-bold text-sm text-ik-platinum">R$ 69,90</span>
+              </a>
+              <a
+                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20pedir%20o%20Connect%20Card%20em%20PVC%20Premium%20(R$%20150,00)."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-between p-3 border border-ik-platinum/40 bg-white/10 hover:border-ik-platinum hover:bg-white/15 transition-colors text-xs text-ik-platinum"
+              >
+                <div class="flex items-center gap-1.5">
+                  <span class="font-semibold">Connect Card (PVC Premium)</span>
+                  <span class="font-mono text-[9px] uppercase px-1.5 py-0.5 bg-ik-platinum text-ik-obsidian font-bold">Luxo</span>
+                </div>
+                <span class="font-mono font-bold text-sm text-ik-platinum">R$ 150,00</span>
               </a>
             </div>
           </article>
         </div>
 
-        <!-- Faixa de Upsell Integrado: Mini Site Profissional para NFC -->
-        <div class="ik-card rounded-none p-6 sm:p-8 border-l-2 border-l-ik-platinum gsap-reveal">
-          <span class="ik-corner-tl"></span><span class="ik-corner-br"></span>
-          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-            <div class="space-y-2 max-w-2xl">
-              <span class="font-mono text-[11px] tracking-[0.18em] uppercase text-ik-platinum block">
-                ADICIONAL RECOMENDADO PARA QUALQUER PRODUTO NFC
+        <!-- SEÇÃO DE ALTA CONVERSÃO: COMBOS PROMOCIONAIS (FÍSICO + DIGITAL) -->
+        <div id="combos" class="space-y-8 pt-6 gsap-reveal">
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-white/15 pb-6">
+            <div class="space-y-3 max-w-2xl">
+              <span class="font-mono text-xs tracking-[0.2em] uppercase text-ik-platinum block">
+                [ COMBOS PROMOCIONAIS // PRODUTO FÍSICO + DIGITAL ]
               </span>
-              <h3 class="font-display font-bold text-xl sm:text-2xl text-ik-platinum m-0">
-                Potencialize seu NFC com um Mini Site Profissional
+              <h3 class="font-display font-bold text-2xl sm:text-4xl text-ik-platinum leading-tight m-0">
+                Leve seu Produto NFC + Mini Site Profissional pagando menos que o Mini Site avulso.
               </h3>
               <p class="text-sm text-ik-silver leading-relaxed m-0">
-                Quando o cliente aproximar o celular da sua etiqueta, totem ou Connect Card, ele pode abrir uma página personalizada com todos os seus canais: WhatsApp, Instagram, avaliação no Google, catálogo de serviços e botões de ação.
+                O Mini Site Profissional avulso custa <strong class="text-ik-platinum">R$ 299,00</strong>. Ao contratar em qualquer um dos combos abaixo, você digitaliza seu ponto físico e leva o Mini Site completo pagando a partir de <strong class="text-ik-platinum">R$ 199,90</strong>.
               </p>
             </div>
-            <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+            <div class="shrink-0">
               <a
                 href="mini-site.html"
                 target="_blank"
@@ -670,15 +750,113 @@
               >
                 Ver Exemplo de Mini Site ↗
               </a>
-              <a
-                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20solicitar%20um%20or%C3%A7amento%20combinando%20produtos%20NFC%20com%20Mini%20Site%20Profissional."
-                target="_blank"
-                rel="noopener noreferrer"
-                class="ik-btn-primary w-full sm:w-auto text-center"
-              >
-                Quero Combinar NFC + Mini Site
-              </a>
             </div>
+          </div>
+
+          <!-- Grid dos 4 Combos Oficiais -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/15 border border-white/15">
+            <!-- Combo 1 -->
+            <article class="ik-card rounded-none !border-0 !bg-ik-obsidian p-6 sm:p-7 flex flex-col justify-between">
+              <div class="space-y-4">
+                <span class="font-mono text-[10px] tracking-[0.18em] uppercase text-ik-steel block">COMBO 01 // ENTRADA DIGITAL</span>
+                <h4 class="font-display font-bold text-base text-ik-platinum m-0">Connect Card (PVC Adesivado) + Mini Site Profissional</h4>
+                <p class="text-xs text-ik-silver leading-relaxed m-0">
+                  Cartão físico digital NFC com acabamento adesivado + página profissional exclusiva com todos os seus links.
+                </p>
+                <div class="pt-2 border-t border-white/10">
+                  <span class="font-mono text-xs text-ik-steel block">VALOR DO COMBO</span>
+                  <span class="font-mono font-bold text-2xl text-ik-platinum block">R$ 199,90</span>
+                </div>
+              </div>
+              <div class="pt-6">
+                <a
+                  href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20aproveitar%20o%20Combo%20Connect%20Card%20(PVC%20Adesivado)%20+%20Mini%20Site%20Profissional%20por%20R$%20199,90."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ik-btn-outline w-full text-center !text-xs !py-3"
+                >
+                  Garantir Combo
+                </a>
+              </div>
+            </article>
+
+            <!-- Combo 2 (Destaque Mais Escolhido) -->
+            <article class="ik-card rounded-none !border-0 !bg-ik-obsidian p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden ring-1 ring-ik-platinum/40">
+              <span class="absolute top-0 right-0 font-mono text-[9px] uppercase tracking-wider px-2 py-1 bg-ik-platinum text-ik-obsidian font-bold">
+                MAIS ESCOLHIDO
+              </span>
+              <div class="space-y-4">
+                <span class="font-mono text-[10px] tracking-[0.18em] uppercase text-ik-platinum block">COMBO 02 // ESTRELA DE BALCÃO</span>
+                <h4 class="font-display font-bold text-base text-ik-platinum m-0">Placa de Avaliação Google + Mini Site Profissional</h4>
+                <p class="text-xs text-ik-silver leading-relaxed m-0">
+                  Placa de acrílico NFC de balcão para avaliações 5 estrelas + Mini Site completo para apresentar sua marca no celular.
+                </p>
+                <div class="pt-2 border-t border-white/10">
+                  <span class="font-mono text-xs text-ik-steel block">VALOR DO COMBO</span>
+                  <span class="font-mono font-bold text-2xl text-ik-platinum block">R$ 210,00</span>
+                </div>
+              </div>
+              <div class="pt-6">
+                <a
+                  href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20aproveitar%20o%20Combo%20Placa%20de%20Avalia%C3%A7%C3%A3o%20Google%20+%20Mini%20Site%20Profissional%20por%20R$%20210,00."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ik-btn-primary w-full text-center !text-xs !py-3"
+                >
+                  Garantir Combo
+                </a>
+              </div>
+            </article>
+
+            <!-- Combo 3 -->
+            <article class="ik-card rounded-none !border-0 !bg-ik-obsidian p-6 sm:p-7 flex flex-col justify-between">
+              <div class="space-y-4">
+                <span class="font-mono text-[10px] tracking-[0.18em] uppercase text-ik-steel block">COMBO 03 // TOTEM 15×10 CM</span>
+                <h4 class="font-display font-bold text-base text-ik-platinum m-0">Totem Personalizado NFC (15×10) + Mini Site Profissional</h4>
+                <p class="text-xs text-ik-silver leading-relaxed m-0">
+                  Totem de acrílico 15×10 cm com arte da sua empresa + Mini Site com catálogo, contatos e WhatsApp.
+                </p>
+                <div class="pt-2 border-t border-white/10">
+                  <span class="font-mono text-xs text-ik-steel block">VALOR DO COMBO</span>
+                  <span class="font-mono font-bold text-2xl text-ik-platinum block">R$ 250,00</span>
+                </div>
+              </div>
+              <div class="pt-6">
+                <a
+                  href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20aproveitar%20o%20Combo%20Totem%20Personalizado%20NFC%20(15x10)%20+%20Mini%20Site%20Profissional%20por%20R$%20250,00."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ik-btn-outline w-full text-center !text-xs !py-3"
+                >
+                  Garantir Combo
+                </a>
+              </div>
+            </article>
+
+            <!-- Combo 4 -->
+            <article class="ik-card rounded-none !border-0 !bg-ik-obsidian p-6 sm:p-7 flex flex-col justify-between">
+              <div class="space-y-4">
+                <span class="font-mono text-[10px] tracking-[0.18em] uppercase text-ik-steel block">COMBO 04 // PREMIUM EXECUTIVE</span>
+                <h4 class="font-display font-bold text-base text-ik-platinum m-0">Connect Card (PVC Premium) + Mini Site Profissional</h4>
+                <p class="text-xs text-ik-silver leading-relaxed m-0">
+                  Cartão físico NFC com acabamento luxo fosco + Mini Site sob medida para networking executivo de alto padrão.
+                </p>
+                <div class="pt-2 border-t border-white/10">
+                  <span class="font-mono text-xs text-ik-steel block">VALOR DO COMBO</span>
+                  <span class="font-mono font-bold text-2xl text-ik-platinum block">R$ 280,00</span>
+                </div>
+              </div>
+              <div class="pt-6">
+                <a
+                  href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20aproveitar%20o%20Combo%20Connect%20Card%20(PVC%20Premium)%20+%20Mini%20Site%20Profissional%20por%20R$%20280,00."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ik-btn-outline w-full text-center !text-xs !py-3"
+                >
+                  Garantir Combo
+                </a>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -723,15 +901,19 @@
               <p class="text-sm sm:text-base text-ik-silver leading-relaxed m-0">
                 Páginas criadas para explicar seu serviço com clareza, passar confiança imediata no celular e no computador e transformar visitas em pedidos de orçamento no WhatsApp.
               </p>
+              <div class="pt-2">
+                <span class="font-mono text-xs text-ik-steel">Investimento:</span>
+                <span class="font-mono font-bold text-lg text-ik-platinum ml-1.5">R$ 599,00</span>
+              </div>
             </div>
             <div class="lg:col-span-3 flex lg:justify-end">
               <a
-                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20sobre%20uma%20Landing%20Page%20para%20minha%20empresa."
+                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20a%20Landing%20Page%20de%20Alta%20Convers%C3%A3o%20(R$%20599,00)."
                 target="_blank"
                 rel="noopener noreferrer"
-                class="ik-btn-outline w-full lg:w-auto text-center"
+                class="ik-btn-primary w-full lg:w-auto text-center"
               >
-                Falar com um Especialista
+                Contratar Landing Page
               </a>
             </div>
           </article>
@@ -759,6 +941,11 @@
               <p class="text-sm sm:text-base text-ik-silver leading-relaxed m-0">
                 Uma página única com a identidade da sua empresa que reúne contatos, redes sociais, principais serviços e botões diretos de ação — ideal para o link da bio ou integrada aos produtos NFC.
               </p>
+              <div class="pt-2">
+                <span class="font-mono text-xs text-ik-steel">Contratação Avulsa:</span>
+                <span class="font-mono font-bold text-lg text-ik-platinum ml-1.5">R$ 299,00</span>
+                <span class="text-xs text-ik-silver block mt-0.5">(ou a partir de R$ 199,90 integrado nos <a href="#combos" class="underline hover:text-white">Combos Promocionais</a>)</span>
+              </div>
             </div>
             <div class="lg:col-span-3 flex flex-col sm:flex-row lg:flex-col gap-2.5 lg:justify-end">
               <a
@@ -769,12 +956,12 @@
                 Ver Exemplo ao Vivo ↗
               </a>
               <a
-                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20conhecer%20a%20solu%C3%A7%C3%A3o%20de%20Mini%20Site%20Profissional%20da%20IKIGAI%20COMPANY."
+                href="https://wa.me/5511943758597?text=Ol%C3%A1!%20Quero%20contratar%20o%20Mini%20Site%20Profissional%20da%20IKIGAI%20COMPANY%20(R$%20299,00)."
                 target="_blank"
                 rel="noopener noreferrer"
                 class="ik-btn-primary w-full text-center"
               >
-                Conhecer a Solução
+                Contratar Mini Site
               </a>
             </div>
           </article>
@@ -802,6 +989,10 @@
               <p class="text-sm sm:text-base text-ik-silver leading-relaxed m-0">
                 Fluxos práticos para organizar a entrada de novos contatos, agilizar respostas iniciais e reduzir tarefas manuais repetitivas no atendimento diário da sua equipe.
               </p>
+              <div class="pt-2">
+                <span class="font-mono text-xs text-ik-steel">Investimento:</span>
+                <span class="font-mono font-bold text-lg text-ik-platinum ml-1.5">Sob Consulta</span>
+              </div>
             </div>
             <div class="lg:col-span-3 flex lg:justify-end">
               <a
@@ -810,7 +1001,7 @@
                 rel="noopener noreferrer"
                 class="ik-btn-outline w-full lg:w-auto text-center"
               >
-                Falar com um Especialista
+                Solicitar Diagnóstico
               </a>
             </div>
           </article>
@@ -974,28 +1165,36 @@
                 <span class="font-mono text-xs text-ik-silver block mb-2">O que você procura?</span>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
                   <label class="flex items-center gap-2.5 p-3 rounded-none bg-ik-carbon border border-white/15 cursor-pointer min-h-[48px]">
-                    <input type="checkbox" name="scope" value="Placa Google / Totem NFC 15x10" class="w-4 h-4 accent-neutral-200">
-                    <span>Placa Google / Totem NFC</span>
+                    <input type="checkbox" name="scope" value="Combo Promocional NFC + Mini Site (a partir de R$ 199,90)" class="w-4 h-4 accent-neutral-200">
+                    <span class="font-medium text-ik-platinum">Combos Promocionais (a partir de R$ 199,90)</span>
                   </label>
                   <label class="flex items-center gap-2.5 p-3 rounded-none bg-ik-carbon border border-white/15 cursor-pointer min-h-[48px]">
-                    <input type="checkbox" name="scope" value="Ikigai Connect (Etiquetas NFC)" class="w-4 h-4 accent-neutral-200">
-                    <span>Ikigai Connect (Etiquetas NFC)</span>
+                    <input type="checkbox" name="scope" value="Placa de Avaliação Google em Acrílico (R$ 80,00)" class="w-4 h-4 accent-neutral-200">
+                    <span>Placa Google Acrílico (R$ 80,00)</span>
                   </label>
                   <label class="flex items-center gap-2.5 p-3 rounded-none bg-ik-carbon border border-white/15 cursor-pointer min-h-[48px]">
-                    <input type="checkbox" name="scope" value="Connect Card (Cartão NFC)" class="w-4 h-4 accent-neutral-200">
-                    <span>Connect Card (Cartão NFC)</span>
+                    <input type="checkbox" name="scope" value="Ikigai Connect — Etiquetas NFC 7x4cm (a partir de R$ 91,20)" class="w-4 h-4 accent-neutral-200">
+                    <span>Etiquetas NFC 7x4cm (a partir de R$ 91,20)</span>
                   </label>
                   <label class="flex items-center gap-2.5 p-3 rounded-none bg-ik-carbon border border-white/15 cursor-pointer min-h-[48px]">
-                    <input type="checkbox" name="scope" value="Mini Site Profissional" class="w-4 h-4 accent-neutral-200">
-                    <span>Mini Site Profissional</span>
+                    <input type="checkbox" name="scope" value="Totem Personalizado NFC 15x10 cm (R$ 120,00)" class="w-4 h-4 accent-neutral-200">
+                    <span>Totem Personalizado NFC (R$ 120,00)</span>
                   </label>
                   <label class="flex items-center gap-2.5 p-3 rounded-none bg-ik-carbon border border-white/15 cursor-pointer min-h-[48px]">
-                    <input type="checkbox" name="scope" value="Landing Page" class="w-4 h-4 accent-neutral-200">
-                    <span>Landing Page</span>
+                    <input type="checkbox" name="scope" value="Connect Card — Cartão Digital NFC (a partir de R$ 69,90)" class="w-4 h-4 accent-neutral-200">
+                    <span>Connect Card NFC (a partir de R$ 69,90)</span>
                   </label>
                   <label class="flex items-center gap-2.5 p-3 rounded-none bg-ik-carbon border border-white/15 cursor-pointer min-h-[48px]">
-                    <input type="checkbox" name="scope" value="Automação de Processos" class="w-4 h-4 accent-neutral-200">
-                    <span>Automação de Processos</span>
+                    <input type="checkbox" name="scope" value="Mini Site Profissional Avulso (R$ 299,00)" class="w-4 h-4 accent-neutral-200">
+                    <span>Mini Site Profissional (R$ 299,00)</span>
+                  </label>
+                  <label class="flex items-center gap-2.5 p-3 rounded-none bg-ik-carbon border border-white/15 cursor-pointer min-h-[48px]">
+                    <input type="checkbox" name="scope" value="Landing Page de Alta Conversão (R$ 599,00)" class="w-4 h-4 accent-neutral-200">
+                    <span>Landing Page (R$ 599,00)</span>
+                  </label>
+                  <label class="flex items-center gap-2.5 p-3 rounded-none bg-ik-carbon border border-white/15 cursor-pointer min-h-[48px]">
+                    <input type="checkbox" name="scope" value="Automação de Processos (Sob Consulta)" class="w-4 h-4 accent-neutral-200">
+                    <span>Automações (Sob Consulta)</span>
                   </label>
                 </div>
               </div>
@@ -1150,6 +1349,7 @@
               }
             );
           });
+          window.addEventListener('load', function () { ScrollTrigger.refresh(); });
         }
       }
 
