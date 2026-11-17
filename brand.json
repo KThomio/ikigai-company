@@ -56,18 +56,17 @@
     },
     {
       "id": "connect-card",
-      "name": "Connect Card — Cartão Digital NFC",
+      "name": "Connect Card — Cartão Digital NFC (PVC Adesivado)",
       "line": "Produtos Físicos & Conexão Digital",
-      "pricePVC": "R$ 69,90",
-      "pricePremium": "R$ 150,00",
-      "comboWithMiniSitePVC": "R$ 199,90",
-      "comboWithMiniSitePremium": "R$ 280,00"
+      "material": "PVC Adesivado",
+      "price": "R$ 79,90",
+      "comboWithMiniSite": "R$ 199,90"
     }
   ],
   "promotionalCombos": [
     {
-      "id": "combo-connect-card-adesivado",
-      "name": "Connect Card (PVC Adesivado) + Mini Site Profissional",
+      "id": "combo-connect-card",
+      "name": "Connect Card + Mini Site Profissional",
       "price": "R$ 199,90"
     },
     {
@@ -80,11 +79,6 @@
       "id": "combo-totem-15x10",
       "name": "Totem Personalizado NFC (15x10) + Mini Site Profissional",
       "price": "R$ 250,00"
-    },
-    {
-      "id": "combo-connect-card-premium",
-      "name": "Connect Card (PVC Premium) + Mini Site Profissional",
-      "price": "R$ 280,00"
     }
   ],
   "digitalSolutions": [
@@ -102,6 +96,11 @@
     {
       "id": "automacoes-de-processos",
       "name": "Automações de Processos",
+      "price": "Sob Consulta"
+    },
+    {
+      "id": "motion-design",
+      "name": "Motion Design & Vídeos Animados",
       "price": "Sob Consulta"
     }
   ],
