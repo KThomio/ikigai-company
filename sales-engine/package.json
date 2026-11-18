@@ -1,0 +1,15 @@
+{
+  "name": "ikigai-sales-engine",
+  "version": "1.0.0",
+  "description": "IKIGAI COMPANY — Motor Autônomo de Prospecção Google Maps e SDR WhatsApp (Chip Secundário)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "prospect": "node scraper-gmaps.js",
+    "sdr": "node whatsapp-sdr-bot.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.22.3"
+  }
+}

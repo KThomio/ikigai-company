@@ -2,6 +2,7 @@ node_modules/
 ikigai-motion/node_modules/
 ikigai-motion/out/
 ikigai-motion/.remotion/
+sales-engine/node_modules/
 .DS_Store
 Thumbs.db
 *.log

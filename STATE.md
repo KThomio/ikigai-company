@@ -1,9 +1,13 @@
 # STATE — IKIGAI COMPANY
 
-- **Fase:** V5.4 concluída — 4 imagens ilustrativas realistas com logo oficial IKIGAI integradas nos cards (zero placeholders `[ IMAGEM EM DEFINIÇÃO ]`), mantendo estrutura, preços e combos V5.3 intactos.
-- **Imagens Criadas (`1280×800` PNG 16:10):**
-  - `assets/images/produto-etiquetas-nfc.png` — Etiqueta `7×4 cm` com relevo físico do chip `Ø25 mm` e versão semi-destacada revelando a bobina NFC.
-  - `assets/images/produto-totem-nfc.png` — Totem cristal em L `15×10×5 cm` personalizado com logo IKIGAI.
-  - `assets/images/produto-connect-card.png` — Connect Card padrão `CR80` (frente vertical + verso horizontal).
-  - `assets/images/produto-automacoes.png` — Visualização arquitetônica Obsidian & Platinum de fluxos WhatsApp/Instagram.
-- **Selos & Auditoria:** Tags `IMAGEM ILUSTRATIVA // PERSONALIZÁVEL COM SUA MARCA` (físicos) e `IMAGEM ILUSTRATIVA // FLUXO AUTOMATIZADO` (automações), `OLD_WA_HITS: 0`, `ROUNDED_NON_ZERO_COUNT: 0`, `lp/index.html` sincronizado e validado em 375px e 1440px no Chrome.
+- **Fase:** V6.0 concluída — Motor Comercial & Prospecção B2B 100% operacional.
+- **Fase 1 (Estúdio Remotion — 2 Vídeos Comerciais 9:16 @ 60fps):**
+  - Locução Neural PT-BR (`pt-BR-AntonioNeural` via `edge-tts` / 10 faixas de áudio por ato sincronizadas).
+  - `comercial-01-nfc.mp4` (4.2 MB): Linha Física NFC (Placa Google R$ 80, Totem 15x10 R$ 120, Connect Card CR80 R$ 79,90, Etiquetas 7x4 R$ 91,20/R$ 150) e Combos Promocionais a partir de R$ 199,90.
+  - `comercial-02-digital.mp4` (2.3 MB): Soluções Digitais (Mini Sites R$ 299, Landing Pages R$ 599, Motion Design e Automações de Processos WhatsApp).
+- **Fase 2 (Motor de Prospecção Google Maps + Robô SDR WhatsApp Chip Secundário):**
+  - `sales-engine/scraper-gmaps.js`: Extrator Google Maps com classificador automático de dor e oferta (`OFERTA_NFC` vs `OFERTA_DIGITAL`).
+  - `sales-engine/whatsapp-sdr-bot.js`: Bot para Chip Secundário com cadência anti-ban (45s–120s), limite diário de 25 disparos e simulação "digitando".
+  - `sales-engine/sdr-brain.js`: IA consultiva alimentada pelo `brand.json` com Handoff automático de fechamento para o WhatsApp principal do Diretor (`5511943758597`).
+  - `sales-engine/server.js` + `dashboard/`: Painel Web Local 0px Obsidian & Platinum rodando na porta 4000.
+- **Auditoria de Qualidade:** Validado no Chrome Headless em 1440px e 375px (`audit-desktop-1440px.png` e `audit-mobile-375px.png`), zero erros de console e 100% alinhado ao `brand.json`.

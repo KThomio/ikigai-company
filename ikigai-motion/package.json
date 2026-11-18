@@ -1,14 +1,18 @@
 {
   "name": "ikigai-motion",
   "version": "1.0.0",
-  "description": "IKIGAI COMPANY — Remotion Motion Design Environment (1080x1080 @ 60fps)",
+  "description": "IKIGAI COMPANY — Remotion Motion Design Environment (1080x1920 @ 60fps)",
   "private": true,
   "scripts": {
     "studio": "remotion studio src/index.ts",
     "preview": "remotion studio src/index.ts",
     "typecheck": "tsc --noEmit",
     "render:mp4": "remotion render src/index.ts IkigaiLogoReveal out/ikigai-logo-1080x1080-60fps.mp4 --codec=h264 --width=1080 --height=1080 --fps=60",
-    "render:still": "remotion still src/index.ts IkigaiLogoReveal out/ikigai-calibration-frame.png --frame=120"
+    "render:still": "remotion still src/index.ts IkigaiLogoReveal out/ikigai-calibration-frame.png --frame=120",
+    "render:comercial-nfc": "remotion render src/index.ts IkigaiCommercialNFC ../assets/videos/comercial-01-nfc.mp4 --codec=h264",
+    "render:comercial-digital": "remotion render src/index.ts IkigaiCommercialDigital ../assets/videos/comercial-02-digital.mp4 --codec=h264",
+    "still:nfc": "remotion still src/index.ts IkigaiCommercialNFC out/still-nfc-act2.png --frame=360",
+    "still:digital": "remotion still src/index.ts IkigaiCommercialDigital out/still-digital-act2.png --frame=360"
   },
   "dependencies": {
     "@remotion/cli": "4.0.543",

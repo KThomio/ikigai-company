@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IKIGAI COMPANY — Sales Engine & WhatsApp SDR</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { border-radius: 0px !important; }
+    body {
+      background-color: #09090B;
+      color: #E4E4E7;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-mono-tech { font-family: 'JetBrains Mono', monospace; }
+    .font-display { font-family: 'Syne', sans-serif; }
+    .border-specular { border: 1px solid rgba(228, 228, 231, 0.2); }
+    .bg-carbon { background-color: #111217; }
+    .bg-carbon-hover:hover { background-color: #161820; }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #09090B; }
+    ::-webkit-scrollbar-thumb { background: rgba(228, 228, 231, 0.2); }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#09090B] text-[#E4E4E7]">
+
+  <!-- Top Navigation Header -->
+  <header class="border-b border-specular bg-[#09090B]/95 sticky top-0 z-50 px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center gap-4">
+      <div class="w-8 h-8 bg-carbon border border-sky-400 flex items-center justify-center font-bold text-sky-400 font-mono-tech">
+        生
+      </div>
+      <div>
+        <div class="flex items-center gap-2">
+          <h1 class="font-display font-extrabold text-xl tracking-wider text-white">IKIGAI COMPANY</h1>
+          <span class="text-zinc-600">//</span>
+          <span class="font-mono-tech text-xs tracking-widest text-sky-400 bg-sky-950/40 border border-sky-800/60 px-2 py-0.5">SALES ENGINE V6.0</span>
+        </div>
+        <p class="font-mono-tech text-[11px] text-zinc-400">PROSPECÇÃO GOOGLE MAPS + SDR WHATSAPP 24/7 (CHIP SECUNDÁRIO)</p>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-6">
+      <div class="flex items-center gap-2 bg-carbon border border-specular px-3 py-1.5 font-mono-tech text-xs">
+        <span class="w-2.5 h-2.5 bg-emerald-500 animate-pulse"></span>
+        <span class="text-zinc-400">CHIP SECUNDÁRIO:</span>
+        <span id="chip-status-text" class="text-emerald-400 font-bold">CONECTADO (+55 11 98888-7777)</span>
+      </div>
+
+      <div class="flex items-center gap-2 bg-carbon border border-specular px-3 py-1.5 font-mono-tech text-xs">
+        <span class="text-zinc-400">DIRETOR (FECHAMENTO):</span>
+        <span class="text-white font-bold">(11) 94375-8597</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex-1 p-6 space-y-6 max-w-7xl mx-auto w-full">
+
+    <!-- Top Grid: Controls & Stats -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- Box 1: Scraper Google Maps -->
+      <div class="bg-carbon border border-specular p-5 space-y-4">
+        <div class="flex items-center justify-between border-b border-specular pb-3">
+          <span class="font-mono-tech text-xs text-sky-400 font-semibold tracking-wider">01 // GOOGLE MAPS SCRAPER</span>
+          <span class="font-mono-tech text-[10px] text-zinc-500">KIT MAHANAI</span>
+        </div>
+        <div class="space-y-3">
+          <div>
+            <label class="block font-mono-tech text-[11px] text-zinc-400 mb-1">NICHO DE ATUAÇÃO</label>
+            <input id="prospect-niche" type="text" value="Clínica de Estética" class="w-full bg-[#09090B] border border-specular px-3 py-2 text-sm font-mono-tech text-white focus:border-sky-400 outline-none">
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block font-mono-tech text-[11px] text-zinc-400 mb-1">CIDADE / REGIÃO</label>
+              <input id="prospect-city" type="text" value="Sorocaba, SP" class="w-full bg-[#09090B] border border-specular px-3 py-2 text-sm font-mono-tech text-white focus:border-sky-400 outline-none">
+            </div>
+            <div>
+              <label class="block font-mono-tech text-[11px] text-zinc-400 mb-1">LIMITE LEADS</label>
+              <input id="prospect-limit" type="number" value="15" class="w-full bg-[#09090B] border border-specular px-3 py-2 text-sm font-mono-tech text-white focus:border-sky-400 outline-none">
+            </div>
+          </div>
+          <button id="btn-prospect" onclick="runProspector()" class="w-full bg-white text-black font-mono-tech font-bold text-xs py-2.5 uppercase tracking-wider hover:bg-zinc-200 transition">
+            ▶ EXTRAIR & QUALIFICAR LEADS
+          </button>
+        </div>
+      </div>
+
+      <!-- Box 2: Anti-Ban & Chip Secundário -->
+      <div class="bg-carbon border border-specular p-5 space-y-4">
+        <div class="flex items-center justify-between border-b border-specular pb-3">
+          <span class="font-mono-tech text-xs text-emerald-400 font-semibold tracking-wider">02 // ANTI-BAN & CHIP SECUNDÁRIO</span>
+          <span class="font-mono-tech text-[10px] text-zinc-500">PROTEÇÃO 100%</span>
+        </div>
+        <div class="space-y-2.5 font-mono-tech text-xs">
+          <div class="flex justify-between py-1 border-b border-zinc-800">
+            <span class="text-zinc-400">Cadência Aleatória:</span>
+            <span class="text-white font-bold">45s a 120s / lead</span>
+          </div>
+          <div class="flex justify-between py-1 border-b border-zinc-800">
+            <span class="text-zinc-400">Limite Diário Seguro:</span>
+            <span class="text-white font-bold">25 abordagens/dia</span>
+          </div>
+          <div class="flex justify-between py-1 border-b border-zinc-800">
+            <span class="text-zinc-400">Abordados Hoje:</span>
+            <span id="stat-sent-today" class="text-sky-400 font-bold">0 de 25</span>
+          </div>
+          <div class="flex justify-between py-1">
+            <span class="text-zinc-400">Simulação Digitando:</span>
+            <span class="text-emerald-400 font-bold">ATIVA (3.5s)</span>
+          </div>
+          <button onclick="approachNextLead()" class="w-full mt-2 bg-emerald-600 text-white font-mono-tech font-bold text-xs py-2.5 uppercase tracking-wider hover:bg-emerald-500 transition">
+            🚀 ABORDAR PRÓXIMO LEAD COM VÍDEO
+          </button>
+        </div>
+      </div>
+
+      <!-- Box 3: Comerciais Verticais MP4 Prontos -->
+      <div class="bg-carbon border border-specular p-5 space-y-4">
+        <div class="flex items-center justify-between border-b border-specular pb-3">
+          <span class="font-mono-tech text-xs text-sky-400 font-semibold tracking-wider">03 // MUNIÇÃO COMERCIAL (9:16)</span>
+          <span class="font-mono-tech text-[10px] text-emerald-400">RENDERIZADOS</span>
+        </div>
+        <div class="space-y-3 font-mono-tech text-xs">
+          <div class="p-2.5 border border-specular bg-[#09090B]">
+            <div class="flex justify-between items-center mb-1">
+              <span class="text-white font-bold">COMERCIAL 01: NFC & COMBOS</span>
+              <span class="text-[10px] text-zinc-400">4.2 MB</span>
+            </div>
+            <p class="text-[11px] text-zinc-500">Placa Google R$ 80, Totem R$ 120 e Combos a R$ 210.</p>
+            <a href="videos/comercial-01-nfc.mp4" target="_blank" class="inline-block mt-2 text-sky-400 hover:underline text-[11px]">▶ ABRIR VÍDEO (1080×1920)</a>
+          </div>
+
+          <div class="p-2.5 border border-specular bg-[#09090B]">
+            <div class="flex justify-between items-center mb-1">
+              <span class="text-white font-bold">COMERCIAL 02: DIGITAL & MOTION</span>
+              <span class="text-[10px] text-zinc-400">2.3 MB</span>
+            </div>
+            <p class="text-[11px] text-zinc-500">Landing Pages R$ 599, Mini Sites R$ 299 e Automações.</p>
+            <a href="videos/comercial-02-digital.mp4" target="_blank" class="inline-block mt-2 text-sky-400 hover:underline text-[11px]">▶ ABRIR VÍDEO (1080×1920)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kanban / Leads Pipeline -->
+    <div class="bg-carbon border border-specular p-5 space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-4 border-b border-specular pb-3">
+        <div>
+          <h2 class="font-display font-bold text-lg text-white">FUNIL DE PROSPECÇÃO & QUALIFICAÇÃO SDR</h2>
+          <p class="font-mono-tech text-xs text-zinc-400">O robô prospecta e qualifica. Só transfere para você quando o cliente quer fechar.</p>
+        </div>
+        <div class="flex gap-2">
+          <button onclick="filterLeads('ALL')" class="font-mono-tech text-xs px-3 py-1 bg-white text-black font-bold">TODOS (<span id="count-all">0</span>)</button>
+          <button onclick="filterLeads('OFERTA_NFC')" class="font-mono-tech text-xs px-3 py-1 bg-[#09090B] border border-specular text-sky-400">OFERTA NFC (<span id="count-nfc">0</span>)</button>
+          <button onclick="filterLeads('OFERTA_DIGITAL')" class="font-mono-tech text-xs px-3 py-1 bg-[#09090B] border border-specular text-purple-400">OFERTA DIGITAL (<span id="count-digital">0</span>)</button>
+        </div>
+      </div>
+
+      <!-- Kanban Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <!-- Col 1: Extraídos -->
+        <div class="border border-specular bg-[#09090B] p-3 space-y-3">
+          <div class="flex justify-between items-center border-b border-specular pb-2">
+            <span class="font-mono-tech text-xs text-zinc-300 font-bold">1. EXTRAÍDOS</span>
+            <span id="badge-extraidos" class="font-mono-tech text-[10px] bg-zinc-800 text-zinc-300 px-1.5 py-0.5">0</span>
+          </div>
+          <div id="col-extraidos" class="space-y-2 max-h-[500px] overflow-y-auto"></div>
+        </div>
+
+        <!-- Col 2: Abordados -->
+        <div class="border border-specular bg-[#09090B] p-3 space-y-3">
+          <div class="flex justify-between items-center border-b border-specular pb-2">
+            <span class="font-mono-tech text-xs text-sky-400 font-bold">2. ABORDADOS (VÍDEO)</span>
+            <span id="badge-abordados" class="font-mono-tech text-[10px] bg-sky-950 text-sky-300 px-1.5 py-0.5">0</span>
+          </div>
+          <div id="col-abordados" class="space-y-2 max-h-[500px] overflow-y-auto"></div>
+        </div>
+
+        <!-- Col 3: Em Negociação -->
+        <div class="border border-specular bg-[#09090B] p-3 space-y-3">
+          <div class="flex justify-between items-center border-b border-specular pb-2">
+            <span class="font-mono-tech text-xs text-yellow-400 font-bold">3. EM NEGOCIAÇÃO IA</span>
+            <span id="badge-negociacao" class="font-mono-tech text-[10px] bg-yellow-950 text-yellow-300 px-1.5 py-0.5">0</span>
+          </div>
+          <div id="col-negociacao" class="space-y-2 max-h-[500px] overflow-y-auto"></div>
+        </div>
+
+        <!-- Col 4: Prontos para Fechar -->
+        <div class="border border-emerald-500/50 bg-[#09090B] p-3 space-y-3 shadow-lg shadow-emerald-950/20">
+          <div class="flex justify-between items-center border-b border-emerald-500/40 pb-2">
+            <span class="font-mono-tech text-xs text-emerald-400 font-bold">4. PRONTOS PARA FECHAR</span>
+            <span id="badge-fechar" class="font-mono-tech text-[10px] bg-emerald-900 text-emerald-200 px-1.5 py-0.5">0</span>
+          </div>
+          <div id="col-fechar" class="space-y-2 max-h-[500px] overflow-y-auto"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Simulator Modal / Drawer -->
+    <div id="chat-modal" class="hidden bg-carbon border border-specular p-6 space-y-4">
+      <div class="flex justify-between items-center border-b border-specular pb-3">
+        <div>
+          <span class="font-mono-tech text-xs text-sky-400 font-bold">SIMULADOR DE QUALIFICAÇÃO SDR EM TEMPO REAL</span>
+          <h3 id="modal-lead-name" class="font-display text-lg text-white font-bold">Nome do Lead</h3>
+        </div>
+        <button onclick="closeModal()" class="text-zinc-400 hover:text-white font-mono-tech text-sm">[ FECHAR ✕ ]</button>
+      </div>
+
+      <div id="modal-chat-history" class="bg-[#09090B] border border-specular p-4 min-h-[220px] max-h-[300px] overflow-y-auto space-y-3 font-mono-tech text-xs"></div>
+
+      <div class="flex gap-2">
+        <input id="modal-input-msg" type="text" placeholder="Digite uma dúvida ou 'Gostei do Combo da Placa, quero fechar'..." class="flex-1 bg-[#09090B] border border-specular px-4 py-2.5 text-xs font-mono-tech text-white outline-none focus:border-sky-400">
+        <button onclick="sendSimulatedMessage()" class="bg-sky-500 hover:bg-sky-400 text-black font-mono-tech font-bold px-5 text-xs uppercase">ENVIAR</button>
+      </div>
+    </div>
+
+    <!-- Live SDR Bot Logs -->
+    <div class="bg-carbon border border-specular p-5 space-y-3">
+      <div class="flex justify-between items-center border-b border-specular pb-2">
+        <span class="font-mono-tech text-xs text-zinc-400 font-bold">CONSOLE DE OPERAÇÕES DO SDR (LOGS EM TEMPO REAL)</span>
+        <button onclick="loadLogs()" class="font-mono-tech text-[10px] text-sky-400 hover:underline">ATUALIZAR</button>
+      </div>
+      <div id="console-logs" class="bg-[#09090B] p-4 font-mono-tech text-xs space-y-1 max-h-48 overflow-y-auto text-zinc-400">
+        [19:42:00] [SISTEMA] Motor operacional da Ikigai carregado.
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    let currentLeads = [];
+    let currentFilter = 'ALL';
+    let activeModalLead = null;
+
+    async function loadData() {
+      try {
+        const res = await fetch('/api/leads');
+        currentLeads = await res.json();
+        renderKanban();
+        loadLogs();
+      } catch (e) {
+        console.error('Erro ao carregar dados:', e);
+      }
+    }
+
+    async function loadLogs() {
+      try {
+        const res = await fetch('/api/logs');
+        const logs = await res.json();
+        const container = document.getElementById('console-logs');
+        container.innerHTML = logs.map(l => `<div>${escapeHtml(l)}</div>`).join('');
+      } catch (e) {}
+    }
+
+    function renderKanban() {
+      const filtered = currentLeads.filter(l => currentFilter === 'ALL' || l.recommendedOffer === currentFilter);
+
+      // Counts
+      document.getElementById('count-all').textContent = currentLeads.length;
+      document.getElementById('count-nfc').textContent = currentLeads.filter(l => l.recommendedOffer === 'OFERTA_NFC').length;
+      document.getElementById('count-digital').textContent = currentLeads.filter(l => l.recommendedOffer === 'OFERTA_DIGITAL').length;
+
+      const cols = {
+        'EXTRAIDO': document.getElementById('col-extraidos'),
+        'ABORDADO': document.getElementById('col-abordados'),
+        'EM_NEGOCIACAO': document.getElementById('col-negociacao'),
+        'PRONTO_PARA_FECHAR': document.getElementById('col-fechar')
+      };
+
+      Object.values(cols).forEach(c => c.innerHTML = '');
+
+      const counts = { 'EXTRAIDO': 0, 'ABORDADO': 0, 'EM_NEGOCIACAO': 0, 'PRONTO_PARA_FECHAR': 0 };
+
+      filtered.forEach(lead => {
+        const col = cols[lead.status] || cols['EXTRAIDO'];
+        counts[lead.status] = (counts[lead.status] || 0) + 1;
+
+        const card = document.createElement('div');
+        card.className = `p-3 border ${lead.status === 'PRONTO_PARA_FECHAR' ? 'border-emerald-500 bg-emerald-950/20' : 'border-specular bg-carbon'} space-y-2 text-xs`;
+        card.innerHTML = `
+          <div class="flex justify-between items-start">
+            <span class="font-bold text-white text-xs">${escapeHtml(lead.name)}</span>
+            <span class="font-mono-tech text-[10px] ${lead.recommendedOffer === 'OFERTA_NFC' ? 'text-sky-400' : 'text-purple-400'}">${lead.recommendedOffer === 'OFERTA_NFC' ? 'NFC' : 'DIGITAL'}</span>
+          </div>
+          <div class="font-mono-tech text-[11px] text-zinc-400">
+            📍 ${escapeHtml(lead.city)} | ⭐ ${lead.rating} (${lead.reviewsCount} avaliações)
+          </div>
+          <div class="font-mono-tech text-[11px] text-zinc-300">
+            📞 ${escapeHtml(lead.phoneFormatted || lead.phone)}
+          </div>
+          <div class="pt-2 border-t border-zinc-800 flex justify-between items-center">
+            <button onclick="openChatModal('${lead.id}')" class="text-sky-400 hover:underline font-mono-tech text-[11px]">
+              💬 TESTAR SDR
+            </button>
+            ${lead.status === 'PRONTO_PARA_FECHAR' ? `
+              <a href="https://wa.me/${lead.phone.replace(/\\D/g,'')}" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-2 py-0.5 text-[10px] font-bold">ASSUMIR NO WHATSAPP ➔</a>
+            ` : ''}
+          </div>
+        `;
+        col.appendChild(card);
+      });
+
+      document.getElementById('badge-extraidos').textContent = counts['EXTRAIDO'] || 0;
+      document.getElementById('badge-abordados').textContent = counts['ABORDADO'] || 0;
+      document.getElementById('badge-negociacao').textContent = counts['EM_NEGOCIACAO'] || 0;
+      document.getElementById('badge-fechar').textContent = counts['PRONTO_PARA_FECHAR'] || 0;
+    }
+
+    function filterLeads(offer) {
+      currentFilter = offer;
+      renderKanban();
+    }
+
+    async function runProspector() {
+      const niche = document.getElementById('prospect-niche').value;
+      const city = document.getElementById('prospect-city').value;
+      const limit = document.getElementById('prospect-limit').value;
+      const btn = document.getElementById('btn-prospect');
+
+      btn.textContent = '⏳ EXTRAINDO NO GOOGLE MAPS...';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch('/api/prospect', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ niche, city, limit })
+        });
+        const data = await res.json();
+        if (data.success) {
+          await loadData();
+        }
+      } catch (e) {
+        alert('Erro ao extrair: ' + e.message);
+      } finally {
+        btn.textContent = '▶ EXTRAIR & QUALIFICAR LEADS';
+        btn.disabled = false;
+      }
+    }
+
+    async function approachNextLead() {
+      try {
+        const res = await fetch('/api/approach-next', { method: 'POST' });
+        const data = await res.json();
+        if (data.result) {
+          alert(`Lead "${data.result.lead.name}" abordado com sucesso! Vídeo ${data.result.lead.videoSent} anexado.`);
+          await loadData();
+        } else {
+          alert('Nenhum lead pendente ou limite atingido.');
+        }
+      } catch (e) {
+        alert(e.message);
+      }
+    }
+
+    function openChatModal(leadId) {
+      activeModalLead = currentLeads.find(l => l.id === leadId);
+      if (!activeModalLead) return;
+
+      document.getElementById('modal-lead-name').textContent = `${activeModalLead.name} (${activeModalLead.city})`;
+      const history = document.getElementById('modal-chat-history');
+      history.innerHTML = `
+        <div class="p-2 border border-sky-800/60 bg-sky-950/20 text-sky-300">
+          <strong>IKIGAI SDR (ABERTURA COMERCIAL):</strong><br>
+          ${escapeHtml(activeModalLead.initialPitch)}
+          <div class="mt-1 text-[10px] text-zinc-400">📎 Anexo: ${activeModalLead.commercialVideo}</div>
+        </div>
+      `;
+
+      if (activeModalLead.lastMessage) {
+        history.innerHTML += `
+          <div class="p-2 bg-zinc-800 text-white text-right">
+            <strong>CLIENTE:</strong> ${escapeHtml(activeModalLead.lastMessage)}
+          </div>
+          <div class="p-2 border border-zinc-700 bg-carbon text-zinc-200">
+            <strong>IKIGAI SDR:</strong> ${escapeHtml(activeModalLead.lastReply)}
+          </div>
+        `;
+      }
+
+      if (activeModalLead.readyToClose) {
+        history.innerHTML += `
+          <div class="p-3 border border-emerald-500 bg-emerald-950/40 text-emerald-300 font-bold">
+            🚨 LEAD PRONTO PARA FECHAR! CARD DE NOTIFICAÇÃO ENVIADO PARA O KAUÊ (11 94375-8597)
+          </div>
+        `;
+      }
+
+      document.getElementById('chat-modal').classList.remove('hidden');
+      document.getElementById('chat-modal').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function closeModal() {
+      document.getElementById('chat-modal').classList.add('hidden');
+      activeModalLead = null;
+    }
+
+    async function sendSimulatedMessage() {
+      const input = document.getElementById('modal-input-msg');
+      const msg = input.value.trim();
+      if (!msg || !activeModalLead) return;
+
+      const history = document.getElementById('modal-chat-history');
+      history.innerHTML += `
+        <div class="p-2 bg-zinc-800 text-white text-right">
+          <strong>CLIENTE:</strong> ${escapeHtml(msg)}
+        </div>
+      `;
+      input.value = '';
+
+      try {
+        const res = await fetch('/api/simulate-chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ leadId: activeModalLead.id, message: msg })
+        });
+        const data = await res.json();
+        if (data.success) {
+          const result = data.response.result;
+          history.innerHTML += `
+            <div class="p-2 border border-zinc-700 bg-carbon text-zinc-200">
+              <strong>IKIGAI SDR:</strong> ${escapeHtml(result.botReply)}
+            </div>
+          `;
+          if (result.readyToClose) {
+            history.innerHTML += `
+              <div class="p-3 border border-emerald-500 bg-emerald-950/40 text-emerald-300 font-bold">
+                🚨 LEAD FECHADO! CARD DE NOTIFICAÇÃO DISPARADO PARA O DIRETOR (5511943758597):
+                <pre class="mt-2 text-[10px] text-zinc-300 font-mono-tech whitespace-pre-wrap">${escapeHtml(result.handoffCard)}</pre>
+              </div>
+            `;
+          }
+          await loadData();
+        }
+      } catch (e) {
+        alert(e.message);
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    loadData();
+    setInterval(loadLogs, 4000);
+  </script>
+</body>
+</html>
